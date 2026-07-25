@@ -1,98 +1,87 @@
-# vinext-starter
+# Lavender Lash Love
 
-A clean full-stack starter running on
-[vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
-Drizzle support.
+Lavender Lash Love Prototype v1 is the approved interactive foundation for a
+luxury lash artistry marketing website by Jen Shedrock.
 
-## Prerequisites
+Current private preview:
+[lavender-lash-love-preview.editoredgar.chatgpt.site](https://lavender-lash-love-preview.editoredgar.chatgpt.site)
 
-- Node.js `>=22.13.0`
+## Local development
 
-## Quick Start
+Prerequisite: Node.js 22.13.0 or newer.
 
 ```bash
 npm install
 npm run dev
+```
+
+Open the local URL printed by the development server.
+
+Validation:
+
+```bash
+npm run lint
 npm run build
 ```
 
-This starter does not use `wrangler.jsonc`.
+## Approved sitemap
 
-## Included Shape
+- Home
+- Services
+- Gallery
+- The Experience
+- About Jen
+- Locations
+- FAQ
+- Contact
+- Policies
+- Branded 404
 
-- edit site code under `app/`
-- `.openai/hosting.json` declares optional Sites D1 and R2 bindings
-- `vite.config.ts` simulates declared bindings for local development
-- `db/schema.ts` starts intentionally empty
-- `examples/d1/` contains an optional D1 example surface
-- `drizzle.config.ts` supports local migration generation when needed
+Book Now is a persistent action that points to a centrally configured external
+booking URL. The prototype does not include a booking system, backend, CMS,
+database, authentication, payments, or user accounts.
 
-## Workspace Auth Headers
+## Technology
 
-OpenAI workspace sites can read the current user's email from
-`oai-authenticated-user-email`.
+- Next.js-compatible App Router architecture powered by vinext
+- React and TypeScript
+- Tailwind CSS with a project-specific responsive design system
+- Cloudflare Workers-compatible build output
+- Optimized responsive images
+- Accessible navigation, accordions, gallery lightbox, keyboard controls,
+  reduced-motion support, and persistent mobile booking access
 
-SIWC-authenticated workspace sites may also receive
-`oai-authenticated-user-full-name` when the user's SIWC profile has a non-empty
-`name` claim. The full-name value is percent-encoded UTF-8 and is accompanied by
-`oai-authenticated-user-full-name-encoding: percent-encoded-utf-8`.
+## Protected logo
 
-Treat the full name as optional and fall back to email when it is absent:
+The supplied Lavender Lash Love logo in
+`public/brand/lavender-lash-love-logo.jpeg` is a protected brand asset. It must
+be used exactly as provided:
 
-```tsx
-import { headers } from "next/headers";
+- no redrawing or AI reinterpretation
+- no font, color, spacing, or artwork changes
+- no cropping or altered proportions
+- proportional resizing only
 
-export default async function Home() {
-  const requestHeaders = await headers();
-  const email = requestHeaders.get("oai-authenticated-user-email");
-  const encodedFullName = requestHeaders.get("oai-authenticated-user-full-name");
-  const fullName =
-    encodedFullName &&
-    requestHeaders.get("oai-authenticated-user-full-name-encoding") ===
-      "percent-encoded-utf-8"
-      ? decodeURIComponent(encodedFullName)
-      : null;
+## Temporary assets
 
-  const displayName = fullName ?? email;
-  // ...
-}
-```
+Current-site media and licensed stock photography are committed as temporary
+prototype assets. They make the prototype realistic but are not the final
+photography direction. Each image is referenced centrally in `app/media.ts` so
+it can be replaced individually without redesigning layouts or components.
+Source and replacement details are preserved in `ASSET_INVENTORY.md`.
 
-## Optional Dispatch-Owned ChatGPT Sign-In
+## Remaining placeholders
 
-Import the ready-to-use helpers from `app/chatgpt-auth.ts` when the site needs
-optional or required ChatGPT sign-in:
+- Final booking URL
+- Approved phone, email, response-time, address, availability, and map details
+- Final service names, descriptions, durations, pricing, and maintenance terms
+- Approved biography, credentials, personal note, testimonials, FAQ answers,
+  policies, and aftercare guidance
+- Final brand campaign, service, gallery, Jen, experience, location, aftercare,
+  contact, FAQ, and social-preview photography
 
-- Use `getChatGPTUser()` for optional signed-in UI.
-- Use `requireChatGPTUser(returnTo)` for server-rendered pages that should send
-  anonymous visitors through Sign in with ChatGPT.
-- Use `chatGPTSignInPath(returnTo)` and `chatGPTSignOutPath(returnTo)` for
-  browser links or actions.
-- Pass a same-origin relative `returnTo` path for the destination after sign-in
-  or sign-out. The helper validates and safely encodes it.
-- Mark protected pages with `export const dynamic = "force-dynamic"` because
-  they depend on per-request identity headers.
+## Production boundary
 
-Dispatch owns `/signin-with-chatgpt`, `/signout-with-chatgpt`, `/callback`, the
-OAuth cookies, and identity header injection. Do not implement app routes for
-those reserved paths. Routes that do not import and call the helper remain
-anonymous-compatible.
-
-SIWC establishes identity only; it does not prove workspace membership. Use the
-Sites hosting platform's access policy controls for workspace-wide restrictions,
-or enforce explicit server-side membership or allowlist checks.
-
-Use SIWC for account pages, user-specific dashboards, saved records, and write
-actions tied to the current ChatGPT user. Leave public content anonymous.
-
-## Useful Commands
-
-- `npm run dev`: start local development
-- `npm run build`: verify the vinext build output
-- `npm test`: build the starter and verify its rendered loading skeleton
-- `npm run db:generate`: generate Drizzle migrations after schema changes
-
-## Learn More
-
-- [vinext Documentation](https://github.com/cloudflare/vinext)
-- [Drizzle D1 Guide](https://orm.drizzle.team/docs/get-started/d1-new)
+This repository contains only the independent prototype. The current Lavender
+Lash Love production website and production domain remain untouched and are
+not connected to this project.
