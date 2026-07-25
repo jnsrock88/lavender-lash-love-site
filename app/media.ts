@@ -20,6 +20,10 @@ export const media = {
     jenPortrait: `${temporaryCurrentSite}/jen-portrait.png`,
     philosophyDetail: `${temporaryCurrentSite}/gallery-04.jpg`,
   },
+  locations: {
+    studioCity: "/images/location-studio-city-temporary.jpeg",
+    thousandOaks: "/images/location-thousand-oaks-temporary.jpeg",
+  },
   experience: {
     hero: `${temporaryCurrentSite}/gallery-06.jpg`,
     consultation: `${temporaryCurrentSite}/gallery-08.jpg`,
@@ -35,9 +39,9 @@ export const media = {
       className: "tall",
     },
     {
-      src: `${temporaryCurrentSite}/gallery-02.png`,
-      alt: "Finished lash artistry portrait",
-      label: "Portrait study",
+      src: "/images/beauty-portrait-01.jpeg",
+      alt: "Temporary editorial beauty portrait",
+      label: "Editorial portrait",
       className: "wide",
     },
     {
@@ -65,8 +69,8 @@ export const media = {
       className: "portrait crop-low",
     },
     {
-      src: `${temporaryCurrentSite}/gallery-07.jpg`,
-      alt: "Finished lash portrait from the Lavender Lash Love portfolio",
+      src: "/images/beauty-portrait-02.jpeg",
+      alt: "Temporary full-face beauty portrait",
       label: "Portrait study",
       className: "tall",
     },

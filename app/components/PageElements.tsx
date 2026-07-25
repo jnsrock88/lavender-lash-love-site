@@ -87,12 +87,17 @@ export function BookingCTA({
 export function PlaceholderImage({
   className = "",
   label,
+  src,
+  alt = "",
 }: {
   className?: string;
   label: string;
+  src?: string;
+  alt?: string;
 }) {
   return (
     <div className={`neutral-placeholder ${className}`} role="img" aria-label={label}>
+      {src ? <Image src={src} alt={alt} fill sizes="(max-width: 700px) 100vw, 48vw" /> : null}
       <span>{label}</span>
     </div>
   );

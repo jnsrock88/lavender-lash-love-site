@@ -1,5 +1,6 @@
 import { BOOKING_URL } from "../content";
 import { Arrow, BookingCTA, PageHero, PlaceholderImage } from "../components/PageElements";
+import { media } from "../media";
 
 export const metadata = {
   title: "Locations | Lavender Lash Love",
@@ -7,8 +8,8 @@ export const metadata = {
 };
 
 const locations = [
-  { name: "Studio City", region: "Los Angeles", visual: "studio-city" },
-  { name: "Thousand Oaks", region: "Conejo Valley", visual: "thousand-oaks" },
+  { name: "Studio City", region: "Los Angeles", visual: "studio-city", image: media.locations.studioCity },
+  { name: "Thousand Oaks", region: "Conejo Valley", visual: "thousand-oaks", image: media.locations.thousandOaks },
 ] as const;
 
 export default function LocationsPage() {
@@ -23,7 +24,12 @@ export default function LocationsPage() {
       <section className="locations-page section-pad">
         {locations.map((location, index) => (
           <article className="location-detail" key={location.name}>
-            <PlaceholderImage className={location.visual} label={`${location.name} photography placeholder`} />
+            <PlaceholderImage
+              className={location.visual}
+              label={`${location.name} temporary studio photography`}
+              src={location.image}
+              alt={`Temporary luxury studio interior representing the ${location.name} location`}
+            />
             <div className="location-detail-copy">
               <span className="editorial-index">0{index + 1}</span>
               <p className="eyebrow">{location.region}</p>

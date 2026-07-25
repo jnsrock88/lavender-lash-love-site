@@ -251,8 +251,9 @@ export function HomePage() {
           <div className="location-line">
             <article>
               <span>01 · Los Angeles</span>
-              <div className="location-visual" aria-label="Studio City photography placeholder">
-                <span>Studio photography</span>
+              <div className="location-visual" aria-label="Temporary studio interior representing Studio City">
+                <Image src={media.locations.studioCity} alt="Temporary luxury studio interior representing Studio City" fill sizes="(max-width: 640px) 92vw, 40vw" />
+                <span>Temporary interior</span>
               </div>
               <h3>Studio City</h3>
               <p>Address and studio photography to be supplied.</p>
@@ -261,8 +262,9 @@ export function HomePage() {
             <div className="location-divider" aria-hidden="true"><span>♥</span></div>
             <article>
               <span>02 · Ventura County</span>
-              <div className="location-visual location-visual-alt" aria-label="Thousand Oaks photography placeholder">
-                <span>Studio photography</span>
+              <div className="location-visual location-visual-alt" aria-label="Temporary studio interior representing Thousand Oaks">
+                <Image src={media.locations.thousandOaks} alt="Temporary luxury studio interior representing Thousand Oaks" fill sizes="(max-width: 640px) 92vw, 40vw" />
+                <span>Temporary interior</span>
               </div>
               <h3>Thousand Oaks</h3>
               <p>Address and studio photography to be supplied.</p>
