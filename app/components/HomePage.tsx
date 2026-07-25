@@ -146,13 +146,12 @@ export function HomePage() {
           <div className="hero-copy">
             <p className="eyebrow">Luxury lash artistry · by Jen Shedrock</p>
             <h1>
-              The art of
-              <span>looking effortlessly</span>
-              <em>yourself.</em>
+              Luxury lashes,
+              <em>designed around you.</em>
             </h1>
             <p className="hero-support">
-              Custom lash artistry shaped around your features, your rhythm,
-              and the way you want to feel.
+              Customized lash artistry ranging from subtle refinement to full
+              glamour, shaped around your features and the way you want to feel.
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href={BOOKING_URL}>
@@ -197,13 +196,12 @@ export function HomePage() {
 
         <section className="services section-pad" id="services">
           <SectionIntro
-            eyebrow="The services"
+            eyebrow="Our services"
             title="An expression of you, considered in every detail."
           />
-          <div className="services-list">
+          <div className="services-grid">
             {services.map((service, index) => (
-              <article className="service-row" key={service.name}>
-                <span className="service-number">{service.number}</span>
+              <article className="service-card" key={service.name}>
                 <div className="service-image">
                   <Image
                     src={service.image}
@@ -212,11 +210,14 @@ export function HomePage() {
                     sizes="(max-width: 760px) 38vw, 20vw"
                   />
                 </div>
-                <h3>{service.name}</h3>
-                <p>{service.copy}</p>
-                <a href={`#service-${index + 1}`} aria-label={`Discover ${service.name}`}>
-                  <Arrow />
-                </a>
+                <div className="service-card-copy">
+                  <span className="service-number">{service.number}</span>
+                  <h3>{service.name} lashes</h3>
+                  <p>{service.copy}</p>
+                  <a href={`#service-${index + 1}`} aria-label={`Discover ${service.name}`}>
+                    Learn more <Arrow />
+                  </a>
+                </div>
               </article>
             ))}
           </div>
@@ -227,12 +228,12 @@ export function HomePage() {
 
         <section className="gallery section-pad" id="gallery">
           <SectionIntro
-            eyebrow="Selected work"
+            eyebrow="Gallery preview"
             title="A study in softness, shape, and light."
             align="right"
           />
           <div className="editorial-gallery">
-            <figure className="gallery-one">
+            <figure>
               <Image
                 src="/images/lash-detail-01.jpeg"
                 alt="Prototype close-up lash detail"
@@ -241,27 +242,41 @@ export function HomePage() {
               />
               <figcaption>Classic · Detail study</figcaption>
             </figure>
-            <figure className="gallery-two">
+            <figure>
               <Image
-                src="/images/beauty-portrait-02.jpeg"
+                src="/images/beauty-portrait-01.jpeg"
                 alt="Prototype full-face beauty portrait"
                 fill
                 sizes="(max-width: 760px) 76vw, 27vw"
               />
               <figcaption>Portrait · Soft volume</figcaption>
             </figure>
-            <div className="gallery-quote">
-              <p>“The smallest details change the whole expression.”</p>
-              <span>— Lavender Lash Love</span>
-            </div>
-            <figure className="gallery-three">
+            <figure>
               <Image
-                src="/images/beauty-portrait-03.jpeg"
+                src="/images/lash-detail-01.jpeg"
+                alt="Prototype close-up lash detail"
+                fill
+                sizes="(max-width: 760px) 60vw, 20vw"
+              />
+              <figcaption>Hybrid · Detail study</figcaption>
+            </figure>
+            <figure>
+              <Image
+                src="/images/beauty-portrait-02.jpeg"
                 alt="Prototype editorial beauty portrait"
                 fill
-                sizes="(max-width: 760px) 82vw, 38vw"
+                sizes="(max-width: 760px) 60vw, 20vw"
               />
-              <figcaption>Hybrid · Editorial portrait</figcaption>
+              <figcaption>Volume · Portrait</figcaption>
+            </figure>
+            <figure>
+              <Image
+                src="/images/lash-detail-01.jpeg"
+                alt="Prototype close-up lash detail"
+                fill
+                sizes="(max-width: 760px) 60vw, 20vw"
+              />
+              <figcaption>Lift · Detail study</figcaption>
             </figure>
           </div>
           <div className="gallery-action">
@@ -300,6 +315,9 @@ export function HomePage() {
           <div className="location-line">
             <article>
               <span>01 · Los Angeles</span>
+              <div className="location-visual" aria-label="Studio City photography placeholder">
+                <span>Studio photography</span>
+              </div>
               <h3>Studio City</h3>
               <p>Address and studio photography to be supplied.</p>
               <TextLink href="#locations">Location details</TextLink>
@@ -307,6 +325,9 @@ export function HomePage() {
             <div className="location-divider" aria-hidden="true"><span>♥</span></div>
             <article>
               <span>02 · Ventura County</span>
+              <div className="location-visual location-visual-alt" aria-label="Thousand Oaks photography placeholder">
+                <span>Studio photography</span>
+              </div>
               <h3>Thousand Oaks</h3>
               <p>Address and studio photography to be supplied.</p>
               <TextLink href="#locations">Location details</TextLink>
@@ -317,19 +338,15 @@ export function HomePage() {
         <section className="testimonials section-pad">
           <p className="eyebrow">Kind words · Placeholder testimonials</p>
           <div className="testimonial-layout">
+            <button type="button" aria-label="Previous testimonial">‹</button>
             <blockquote>
+              <span className="testimonial-stars" aria-label="Five stars">★★★★★</span>
               “Approved client testimonial will appear here. This space is
               designed for a thoughtful note about Jen’s care, artistry, and
               attention to detail.”
               <cite>— Client name placeholder</cite>
             </blockquote>
-            <div className="testimonial-side">
-              <span>02 / 03</span>
-              <p>
-                “A second approved client testimonial will complete this
-                editorial review sequence.”
-              </p>
-            </div>
+            <button type="button" aria-label="Next testimonial">›</button>
           </div>
         </section>
 
@@ -341,7 +358,7 @@ export function HomePage() {
         <section className="final-cta section-pad">
           <div className="final-arch" aria-hidden="true" />
           <p className="eyebrow">Begin your appointment</p>
-          <h2>Your most effortless look is waiting.</h2>
+          <h2>Ready to love your lashes?</h2>
           <p>
             Choose your preferred location and explore the available appointment
             times through our external booking service.
