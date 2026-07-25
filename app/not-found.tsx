@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BOOKING_URL } from "./content";
+import { media } from "./media";
 import { Arrow } from "./components/PageElements";
 
 export default function NotFound() {
@@ -8,7 +9,7 @@ export default function NotFound() {
     <main id="main" className="not-found">
       <div className="not-found-arch" aria-hidden="true" />
       <Image
-        src="/brand/lavender-lash-love-logo.jpeg"
+        src={media.brand.logo}
         alt="Lavender Lash Love by Jen Shedrock"
         width={1125}
         height={546}

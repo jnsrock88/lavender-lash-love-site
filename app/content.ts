@@ -18,25 +18,25 @@ export const services = [
     number: "01",
     name: "Classic",
     copy: "A refined, natural-looking enhancement designed around your eye shape.",
-    image: "/images/lash-detail-01.jpeg",
+    image: media.services.classic,
   },
   {
     number: "02",
     name: "Hybrid",
     copy: "A softly textured balance of definition, dimension, and effortless polish.",
-    image: "/images/beauty-portrait-03.jpeg",
+    image: media.services.hybrid,
   },
   {
     number: "03",
     name: "Volume",
     copy: "Airy, customized fullness with an elegant finish—never one-size-fits-all.",
-    image: "/images/beauty-portrait-01.jpeg",
+    image: media.services.volume,
   },
   {
     number: "04",
     name: "Lash Lift",
     copy: "A low-maintenance option that celebrates and elevates your natural lashes.",
-    image: "/images/beauty-portrait-02.jpeg",
+    image: media.services.fourthPlaceholder,
   },
 ] as const;
 
@@ -108,3 +108,4 @@ export const faqGroups = [
     ],
   },
 ] as const;
+import { media } from "./media";

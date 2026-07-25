@@ -1,5 +1,6 @@
 import { BookingCTA, PageHero } from "../components/PageElements";
 import { LightboxGallery } from "../components/LightboxGallery";
+import { media } from "../media";
 
 export const metadata = {
   title: "Gallery | Lavender Lash Love",
@@ -12,9 +13,10 @@ export default function GalleryPage() {
       <PageHero
         eyebrow="Selected work"
         title="Portraits in softness, shape, and light."
-        intro="A curated study of detail and expression. Every image currently shown is prototype imagery awaiting Jen’s approved portfolio."
-        image="/images/beauty-portrait-02.jpeg"
-        imageAlt="Prototype editorial beauty portrait"
+        intro="A curated study of detail and expression. Current images are temporary selections from Lavender Lash Love’s existing portfolio."
+        image={media.pageHeroes.gallery}
+        imageAlt="Finished lash artistry from the Lavender Lash Love portfolio"
+        label="Temporary current-site imagery"
       />
       <section className="portfolio-intro section-pad">
         <p className="eyebrow">The portfolio</p>

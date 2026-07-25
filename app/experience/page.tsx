@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { BookingCTA, PageHero, PlaceholderImage } from "../components/PageElements";
+import { media } from "../media";
 
 export const metadata = {
   title: "The Experience | Lavender Lash Love",
@@ -11,29 +12,29 @@ const chapters = [
     eyebrow: "It begins with listening",
     title: "A consultation that feels like a conversation.",
     copy: "Your appointment begins with space to share what you love, what you want to avoid, and how you want to feel. Placeholder copy will be refined with Jen’s approved consultation approach.",
-    image: "/images/beauty-portrait-03.jpeg",
-    alt: "Prototype beauty consultation imagery",
+    image: media.experience.consultation,
+    alt: "Temporary portrait representing a personal consultation",
   },
   {
     eyebrow: "Designed for your features",
     title: "Custom mapping, drawn with intention.",
     copy: "Eye shape, natural lashes, symmetry, lifestyle, and desired finish all inform a map created for you—not selected from a standard menu.",
-    image: "/images/lash-detail-01.jpeg",
-    alt: "Prototype close-up imagery representing custom lash mapping",
+    image: media.experience.mapping,
+    alt: "Close-up lash artistry representing custom lash mapping",
   },
   {
     eyebrow: "The quiet part",
     title: "Application as a moment to exhale.",
     copy: "A calm, detail-oriented application is designed to feel unrushed and comfortable. Approved appointment timing and comfort guidance will be added before launch.",
-    image: "/images/beauty-portrait-01.jpeg",
-    alt: "Prototype portrait representing the calm application experience",
+    image: media.experience.application,
+    alt: "Temporary portfolio image representing the application experience",
   },
   {
     eyebrow: "The reveal",
     title: "Still you. Just more considered.",
     copy: "The final look is checked from every angle and refined until it feels balanced, expressive, and entirely at home on your face.",
-    image: "/images/beauty-portrait-02.jpeg",
-    alt: "Prototype editorial portrait representing the finished reveal",
+    image: media.experience.reveal,
+    alt: "Temporary portfolio image representing the finished reveal",
   },
 ] as const;
 
@@ -44,8 +45,9 @@ export default function ExperiencePage() {
         eyebrow="The Lavender Lash Love experience"
         title="An appointment designed to feel like care."
         intro="Personal, unhurried, and reassuring—from the first conversation to the moment you see your finished look."
-        image="/images/beauty-portrait-01.jpeg"
-        imageAlt="Prototype portrait representing the appointment experience"
+        image={media.experience.hero}
+        imageAlt="Temporary portfolio image representing the appointment experience"
+        label="Temporary current-site imagery"
       />
       <section className="experience-opening section-pad">
         <p className="eyebrow">A quieter kind of luxury</p>
@@ -56,7 +58,7 @@ export default function ExperiencePage() {
           <article className={index % 2 ? "experience-chapter reverse" : "experience-chapter"} key={chapter.title}>
             <div className="experience-media">
               <Image src={chapter.image} alt={chapter.alt} fill sizes="(max-width: 700px) 100vw, 50vw" />
-              <span className="placeholder-label">Prototype imagery</span>
+              <span className="placeholder-label">Temporary current-site imagery</span>
             </div>
             <div className="experience-copy">
               <span className="experience-line" aria-hidden="true" />

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { BOOKING_URL, services } from "../content";
 import { Arrow, BookingCTA, PageHero } from "../components/PageElements";
+import { media } from "../media";
 
 export const metadata = {
   title: "Services | Lavender Lash Love",
@@ -14,8 +15,9 @@ export default function ServicesPage() {
         eyebrow="The service collection"
         title="Every look begins with you."
         intro="A considered edit of lash services, each shaped around your features, desired finish, and day-to-day rhythm."
-        image="/images/lash-detail-01.jpeg"
-        imageAlt="Prototype close-up lash imagery"
+        image={media.pageHeroes.services}
+        imageAlt="Close-up of finished lash artistry"
+        label="Temporary current-site imagery"
       />
 
       <section className="inner-intro section-pad">
@@ -32,7 +34,7 @@ export default function ServicesPage() {
           <article className={index % 2 ? "service-feature reverse" : "service-feature"} key={service.name}>
             <div className="service-feature-media">
               <Image src={service.image} alt={`Prototype imagery for ${service.name}`} fill sizes="(max-width: 700px) 100vw, 48vw" />
-              <span className="placeholder-label">Prototype service imagery</span>
+              <span className="placeholder-label">Temporary current-site imagery</span>
             </div>
             <div className="service-feature-copy">
               <span className="editorial-index">{service.number}</span>

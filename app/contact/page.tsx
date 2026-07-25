@@ -6,6 +6,7 @@ import {
   RESPONSE_TIME_PLACEHOLDER,
 } from "../content";
 import { Arrow, PageHero } from "../components/PageElements";
+import { media } from "../media";
 
 export const metadata = {
   title: "Contact | Lavender Lash Love",
@@ -19,7 +20,7 @@ export default function ContactPage() {
         eyebrow="Contact"
         title="A thoughtful answer is never far away."
         intro="For appointment availability, use the external booking service. For all other questions, choose the contact method that feels easiest."
-        image="/images/beauty-portrait-03.jpeg"
+        image={media.pageHeroes.contact}
         imageAlt="Prototype editorial beauty imagery"
       />
       <section className="contact-page section-pad">

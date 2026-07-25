@@ -2,17 +2,9 @@
 
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { media } from "../media";
 
-const portfolio = [
-  { src: "/images/lash-detail-01.jpeg", alt: "Prototype close-up lash detail", label: "Classic · Detail", className: "tall" },
-  { src: "/images/beauty-portrait-01.jpeg", alt: "Prototype full-face beauty portrait", label: "Volume · Portrait", className: "wide" },
-  { src: "/images/beauty-portrait-02.jpeg", alt: "Prototype editorial portrait", label: "Hybrid · Portrait", className: "portrait" },
-  { src: "/images/lash-detail-01.jpeg", alt: "Prototype macro lash study", label: "Detail study", className: "wide crop-right" },
-  { src: "/images/beauty-portrait-03.jpeg", alt: "Prototype horizontal beauty portrait", label: "Editorial portrait", className: "landscape" },
-  { src: "/images/lash-detail-01.jpeg", alt: "Prototype lash detail from the side", label: "Soft volume · Detail", className: "portrait crop-low" },
-  { src: "/images/beauty-portrait-02.jpeg", alt: "Prototype full-face portrait", label: "Portrait study", className: "tall" },
-  { src: "/images/beauty-portrait-01.jpeg", alt: "Prototype beauty portrait", label: "Volume · Portrait", className: "wide crop-high" },
-] as const;
+const portfolio = media.gallery;
 
 export function LightboxGallery() {
   const [active, setActive] = useState<number | null>(null);
@@ -53,7 +45,7 @@ export function LightboxGallery() {
             <button type="button" onClick={() => setActive(index)} aria-label={`Open ${item.label} image`}>
               <Image src={item.src} alt={item.alt} fill sizes="(max-width: 700px) 92vw, 45vw" />
             </button>
-            <figcaption>{item.label} · Prototype imagery</figcaption>
+            <figcaption>{item.label} · Temporary portfolio imagery</figcaption>
           </figure>
         ))}
       </div>
@@ -83,7 +75,7 @@ export function LightboxGallery() {
               sizes="95vw"
               priority
             />
-            <figcaption>{portfolio[active].label} · Prototype imagery</figcaption>
+            <figcaption>{portfolio[active].label} · Temporary portfolio imagery</figcaption>
           </figure>
           <button className="lightbox-next" type="button" onClick={next} aria-label="Next image">›</button>
         </div>

@@ -10,6 +10,7 @@ import {
   PHONE_PLACEHOLDER,
   navigation,
 } from "../content";
+import { media } from "../media";
 
 function Arrow() {
   return <span aria-hidden="true">↗</span>;
@@ -27,7 +28,7 @@ export function SiteHeader() {
     <header className="site-header">
       <Link href="/" className="logo-link" aria-label="Lavender Lash Love home">
         <Image
-          src="/brand/lavender-lash-love-logo.jpeg"
+          src={media.brand.logo}
           alt="Lavender Lash Love by Jen Shedrock"
           width={1125}
           height={546}
@@ -84,7 +85,7 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="footer-brand">
         <Image
-          src="/brand/lavender-lash-love-logo.jpeg"
+          src={media.brand.logo}
           alt="Lavender Lash Love by Jen Shedrock"
           width={1125}
           height={546}

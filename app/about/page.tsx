@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { BookingCTA, PageHero } from "../components/PageElements";
+import { media } from "../media";
 
 export const metadata = {
   title: "About Jen | Lavender Lash Love",
@@ -13,9 +14,9 @@ export default function AboutPage() {
         eyebrow="Meet Jen Shedrock"
         title="Artistry, precision, and personal care."
         intro="Jen sees each appointment as a portrait and each client as a collaboration. This biography is placeholder copy awaiting Jen’s approved story."
-        image="/images/beauty-portrait-03.jpeg"
-        imageAlt="Portrait placeholder for Jen Shedrock"
-        label="Jen portrait needed"
+        image={media.about.jenPortrait}
+        imageAlt="Jen Shedrock, artist behind Lavender Lash Love"
+        label="Temporary current-site portrait"
       />
       <section className="about-story section-pad">
         <div className="about-statement">
@@ -30,8 +31,8 @@ export default function AboutPage() {
       </section>
       <section className="philosophy section-pad">
         <div className="philosophy-image">
-          <Image src="/images/lash-detail-01.jpeg" alt="Prototype close-up representing Jen's artistic philosophy" fill sizes="(max-width: 700px) 100vw, 48vw" />
-          <span className="placeholder-label">Approved work needed</span>
+          <Image src={media.about.philosophyDetail} alt="Close-up of Jen's lash artistry" fill sizes="(max-width: 700px) 100vw, 48vw" />
+          <span className="placeholder-label">Temporary current-site imagery</span>
         </div>
         <div>
           <p className="eyebrow">Her philosophy</p>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import { headers } from "next/headers";
 import { MobileBooking, SiteFooter, SiteHeader } from "./components/SiteChrome";
+import { media } from "./media";
 import "./globals.css";
 
 const display = Cormorant_Garamond({
@@ -29,7 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
     metadataBase: new URL(origin),
     title,
     description,
-    icons: { icon: "/brand/lavender-lash-love-logo.jpeg" },
+    icons: { icon: media.brand.logo },
     openGraph: {
       title,
       description,

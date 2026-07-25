@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { BOOKING_URL, faqs, services } from "../content";
+import { media } from "../media";
 
 function Arrow() {
   return <span aria-hidden="true">↗</span>;
@@ -100,7 +101,7 @@ export function HomePage() {
             <div className="starburst" aria-hidden="true">✦</div>
             <div className="hero-image">
               <Image
-                src="/images/beauty-portrait-01.jpeg"
+                src={media.prototype.portraitPrimary}
                 alt="Prototype beauty portrait; to be replaced with approved Lavender Lash Love photography"
                 fill
                 priority
@@ -170,7 +171,7 @@ export function HomePage() {
           <div className="editorial-gallery">
             <figure>
               <Image
-                src="/images/lash-detail-01.jpeg"
+                src={media.gallery[0].src}
                 alt="Prototype close-up lash detail"
                 fill
                 sizes="(max-width: 760px) 72vw, 35vw"
@@ -179,7 +180,7 @@ export function HomePage() {
             </figure>
             <figure>
               <Image
-                src="/images/beauty-portrait-01.jpeg"
+                src={media.gallery[1].src}
                 alt="Prototype full-face beauty portrait"
                 fill
                 sizes="(max-width: 760px) 76vw, 27vw"
@@ -188,7 +189,7 @@ export function HomePage() {
             </figure>
             <figure>
               <Image
-                src="/images/lash-detail-01.jpeg"
+                src={media.gallery[2].src}
                 alt="Prototype close-up lash detail"
                 fill
                 sizes="(max-width: 760px) 60vw, 20vw"
@@ -197,7 +198,7 @@ export function HomePage() {
             </figure>
             <figure>
               <Image
-                src="/images/beauty-portrait-02.jpeg"
+                src={media.gallery[4].src}
                 alt="Prototype editorial beauty portrait"
                 fill
                 sizes="(max-width: 760px) 60vw, 20vw"
@@ -206,7 +207,7 @@ export function HomePage() {
             </figure>
             <figure>
               <Image
-                src="/images/lash-detail-01.jpeg"
+                src={media.gallery[5].src}
                 alt="Prototype close-up lash detail"
                 fill
                 sizes="(max-width: 760px) 60vw, 20vw"
@@ -222,12 +223,12 @@ export function HomePage() {
         <section className="jen section-pad" id="jen">
           <div className="jen-image">
             <Image
-              src="/images/beauty-portrait-03.jpeg"
-              alt="Portrait placeholder for Jen Shedrock"
+              src={media.about.jenPortrait}
+              alt="Jen Shedrock, artist behind Lavender Lash Love"
               fill
               sizes="(max-width: 760px) 86vw, 42vw"
             />
-            <span className="placeholder-label">Jen portrait needed</span>
+            <span className="placeholder-label">Temporary current-site portrait</span>
           </div>
           <div className="jen-copy">
             <p className="eyebrow">Meet the artist</p>

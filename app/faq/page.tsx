@@ -1,6 +1,7 @@
 import { Accordion } from "../components/Accordion";
 import { BookingCTA, PageHero } from "../components/PageElements";
 import { faqGroups } from "../content";
+import { media } from "../media";
 
 export const metadata = {
   title: "FAQ | Lavender Lash Love",
@@ -14,8 +15,9 @@ export default function FAQPage() {
         eyebrow="Frequently asked questions"
         title="A little clarity, before you arrive."
         intro="This prototype organizes the questions clients ask most. Final answers will be reviewed and approved by Jen before launch."
-        image="/images/lash-detail-01.jpeg"
-        imageAlt="Prototype lash detail"
+        image={media.pageHeroes.faq}
+        imageAlt="Close-up of finished lash artistry"
+        label="Temporary current-site imagery"
       />
       <section className="faq-groups section-pad">
         {faqGroups.map((group, index) => (
