@@ -1,12 +1,16 @@
 export const BOOKING_URL = "https://example.com/booking-placeholder";
+export const INSTAGRAM_URL = "https://instagram.com/lavenderlashlove";
+export const EMAIL_PLACEHOLDER = "email placeholder";
+export const PHONE_PLACEHOLDER = "phone placeholder";
+export const RESPONSE_TIME_PLACEHOLDER = "Response-time guidance placeholder";
 
 export const navigation = [
-  { label: "Services", href: "#services" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "The Experience", href: "#experience" },
-  { label: "About Jen", href: "#jen" },
-  { label: "Locations", href: "#locations" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Services", href: "/services" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "The Experience", href: "/experience" },
+  { label: "About Jen", href: "/about" },
+  { label: "Locations", href: "/locations" },
+  { label: "FAQ", href: "/faq" },
 ] as const;
 
 export const services = [
@@ -56,5 +60,51 @@ export const faqs = [
     question: "Where are appointments available?",
     answer:
       "Appointments are offered in Studio City and Thousand Oaks. Exact public addresses and arrival details will be added once approved.",
+  },
+] as const;
+
+export const faqGroups = [
+  {
+    title: "Before the appointment",
+    items: [
+      ["How should I arrive for my appointment?", "Placeholder: Approved preparation instructions will be added here. Guidance may include arriving with clean lashes and avoiding eye makeup."],
+      ["How do I choose the right service?", "Placeholder: Jen’s approved consultation guidance will explain how eye shape, natural lashes, lifestyle, and desired finish inform the recommendation."],
+      ["Can I wear contact lenses?", "Placeholder: Approved contact-lens guidance will be added before launch."],
+    ],
+  },
+  {
+    title: "During the appointment",
+    items: [
+      ["What does the appointment feel like?", "Placeholder: A reassuring description of the application experience will be supplied by Jen."],
+      ["How long will I be there?", "Placeholder: Appointment durations vary by service and will be added when approved."],
+    ],
+  },
+  {
+    title: "Aftercare",
+    items: [
+      ["How do I care for my lashes?", "Placeholder: Approved cleansing, brushing, and product guidance will be added here."],
+      ["Can I get my lashes wet?", "Placeholder: Jen’s approved post-appointment timing and care instructions will be added here."],
+    ],
+  },
+  {
+    title: "Fills and maintenance",
+    items: [
+      ["When should I schedule a fill?", "Placeholder: Approved maintenance intervals and eligibility requirements will be added here."],
+      ["What qualifies as a fill?", "Placeholder: Jen’s approved fill criteria will be added here."],
+    ],
+  },
+  {
+    title: "Sensitivities and safety",
+    items: [
+      ["What if I have sensitive eyes?", "Placeholder: Approved sensitivity, consultation, and patch-test guidance will be added here."],
+      ["Can I book if I have an eye condition?", "Placeholder: Approved safety guidance and referral language will be added here."],
+    ],
+  },
+  {
+    title: "Cancellations and policies",
+    items: [
+      ["What is the cancellation policy?", "Placeholder: The approved cancellation window and related terms will be added here."],
+      ["What happens if I am late?", "Placeholder: Approved late-arrival guidance will be added here."],
+    ],
   },
 ] as const;

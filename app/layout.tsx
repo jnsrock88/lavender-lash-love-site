@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import { headers } from "next/headers";
+import { MobileBooking, SiteFooter, SiteHeader } from "./components/SiteChrome";
 import "./globals.css";
 
 const display = Cormorant_Garamond({
@@ -48,7 +49,13 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${display.variable} ${sans.variable}`}>{children}</body>
+      <body className={`${display.variable} ${sans.variable}`}>
+        <a className="skip-link" href="#main">Skip to content</a>
+        <SiteHeader />
+        {children}
+        <SiteFooter />
+        <MobileBooking />
+      </body>
     </html>
   );
 }

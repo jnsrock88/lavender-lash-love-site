@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import { BOOKING_URL, faqs, navigation, services } from "../content";
+import { useState } from "react";
+import { BOOKING_URL, faqs, services } from "../content";
 
 function Arrow() {
   return <span aria-hidden="true">↗</span>;
@@ -20,69 +20,6 @@ function TextLink({
       <span>{children}</span>
       <Arrow />
     </a>
-  );
-}
-
-function Header() {
-  const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    document.body.classList.toggle("menu-open", open);
-    return () => document.body.classList.remove("menu-open");
-  }, [open]);
-
-  return (
-    <header className="site-header">
-      <a href="#top" className="logo-link" aria-label="Lavender Lash Love home">
-        <Image
-          src="/brand/lavender-lash-love-logo.jpeg"
-          alt="Lavender Lash Love by Jen Shedrock"
-          width={1125}
-          height={546}
-          priority
-          className="logo"
-        />
-      </a>
-      <nav className="desktop-nav" aria-label="Primary navigation">
-        {navigation.map((item) => (
-          <a key={item.href} href={item.href}>
-            {item.label}
-          </a>
-        ))}
-      </nav>
-      <a className="header-book" href={BOOKING_URL}>
-        Book now <Arrow />
-      </a>
-      <button
-        className="menu-button"
-        type="button"
-        aria-expanded={open}
-        aria-controls="mobile-menu"
-        onClick={() => setOpen((value) => !value)}
-      >
-        <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
-        <span />
-        <span />
-      </button>
-      <div
-        id="mobile-menu"
-        className={`mobile-menu ${open ? "is-open" : ""}`}
-        aria-hidden={!open}
-      >
-        <nav aria-label="Mobile navigation">
-          {navigation.map((item, index) => (
-            <a key={item.href} href={item.href} onClick={() => setOpen(false)}>
-              <span>0{index + 1}</span>
-              {item.label}
-            </a>
-          ))}
-        </nav>
-        <div className="mobile-menu-foot">
-          <p>Studio City · Thousand Oaks</p>
-          <a href={BOOKING_URL}>Reserve your appointment <Arrow /></a>
-        </div>
-      </div>
-    </header>
   );
 }
 
@@ -139,8 +76,6 @@ function FAQ() {
 export function HomePage() {
   return (
     <>
-      <a className="skip-link" href="#main">Skip to content</a>
-      <Header />
       <main id="main">
         <section className="hero" id="top">
           <div className="hero-copy">
@@ -200,7 +135,7 @@ export function HomePage() {
             title="An expression of you, considered in every detail."
           />
           <div className="services-grid">
-            {services.map((service, index) => (
+            {services.map((service) => (
               <article className="service-card" key={service.name}>
                 <div className="service-image">
                   <Image
@@ -214,7 +149,7 @@ export function HomePage() {
                   <span className="service-number">{service.number}</span>
                   <h3>{service.name} lashes</h3>
                   <p>{service.copy}</p>
-                  <a href={`#service-${index + 1}`} aria-label={`Discover ${service.name}`}>
+                  <a href="/services" aria-label={`Discover ${service.name}`}>
                     Learn more <Arrow />
                   </a>
                 </div>
@@ -222,7 +157,7 @@ export function HomePage() {
             ))}
           </div>
           <div className="section-action">
-            <TextLink href="#services">View the service collection</TextLink>
+            <TextLink href="/services">View the service collection</TextLink>
           </div>
         </section>
 
@@ -280,7 +215,7 @@ export function HomePage() {
             </figure>
           </div>
           <div className="gallery-action">
-            <TextLink href="#gallery">Enter the full portfolio</TextLink>
+            <TextLink href="/gallery">Enter the full portfolio</TextLink>
           </div>
         </section>
 
@@ -306,7 +241,7 @@ export function HomePage() {
               story, philosophy, experience, and credentials will replace it
               before launch.
             </p>
-            <TextLink href="#jen">Learn more about Jen</TextLink>
+            <TextLink href="/about">Learn more about Jen</TextLink>
           </div>
         </section>
 
@@ -320,7 +255,7 @@ export function HomePage() {
               </div>
               <h3>Studio City</h3>
               <p>Address and studio photography to be supplied.</p>
-              <TextLink href="#locations">Location details</TextLink>
+              <TextLink href="/locations">Location details</TextLink>
             </article>
             <div className="location-divider" aria-hidden="true"><span>♥</span></div>
             <article>
@@ -330,7 +265,7 @@ export function HomePage() {
               </div>
               <h3>Thousand Oaks</h3>
               <p>Address and studio photography to be supplied.</p>
-              <TextLink href="#locations">Location details</TextLink>
+              <TextLink href="/locations">Location details</TextLink>
             </article>
           </div>
         </section>
@@ -368,43 +303,6 @@ export function HomePage() {
           </a>
         </section>
       </main>
-
-      <footer className="site-footer">
-        <div className="footer-brand">
-          <Image
-            src="/brand/lavender-lash-love-logo.jpeg"
-            alt="Lavender Lash Love by Jen Shedrock"
-            width={1125}
-            height={546}
-          />
-          <p>Luxury lash artistry in Studio City and Thousand Oaks.</p>
-        </div>
-        <div className="footer-nav">
-          <p>Explore</p>
-          {navigation.slice(0, 5).map((item) => (
-            <a key={item.href} href={item.href}>{item.label}</a>
-          ))}
-        </div>
-        <div className="footer-nav">
-          <p>Connect</p>
-          <a href="#contact">Instagram placeholder</a>
-          <a href="#contact">Email placeholder</a>
-          <a href="#contact">Phone placeholder</a>
-        </div>
-        <div className="footer-book">
-          <p>Ready when you are.</p>
-          <a href={BOOKING_URL}>Book an appointment <Arrow /></a>
-        </div>
-        <div className="footer-base">
-          <span>© Lavender Lash Love · Copyright year placeholder</span>
-          <span>Policies · Contact</span>
-        </div>
-      </footer>
-
-      <a className="mobile-booking" href={BOOKING_URL}>
-        <span>Reserve your appointment</span>
-        <Arrow />
-      </a>
     </>
   );
 }
