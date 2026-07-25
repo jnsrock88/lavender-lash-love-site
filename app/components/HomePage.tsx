@@ -5,10 +5,6 @@ import { useState } from "react";
 import { BOOKING_URL, faqs, services } from "../content";
 import { media } from "../media";
 
-function Arrow() {
-  return <span aria-hidden="true">↗</span>;
-}
-
 function TextLink({
   href,
   children,
@@ -19,7 +15,6 @@ function TextLink({
   return (
     <a className="text-link" href={href}>
       <span>{children}</span>
-      <Arrow />
     </a>
   );
 }
@@ -91,7 +86,7 @@ export function HomePage() {
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href={BOOKING_URL}>
-                Book an appointment <Arrow />
+                Book an appointment
               </a>
               <TextLink href="#services">Explore services</TextLink>
             </div>
@@ -151,7 +146,7 @@ export function HomePage() {
                   <h3>{service.name} lashes</h3>
                   <p>{service.copy}</p>
                   <a href="/services" aria-label={`Discover ${service.name}`}>
-                    Learn more <Arrow />
+                    Learn more
                   </a>
                 </div>
               </article>
@@ -276,7 +271,7 @@ export function HomePage() {
         <section className="testimonials section-pad">
           <p className="eyebrow">Kind words · Placeholder testimonials</p>
           <div className="testimonial-layout">
-            <button type="button" aria-label="Previous testimonial">‹</button>
+            <button type="button" aria-label="Previous testimonial">Previous</button>
             <blockquote>
               <span className="testimonial-stars" aria-label="Five stars">★★★★★</span>
               “Approved client testimonial will appear here. This space is
@@ -284,7 +279,7 @@ export function HomePage() {
               attention to detail.”
               <cite>— Client name placeholder</cite>
             </blockquote>
-            <button type="button" aria-label="Next testimonial">›</button>
+            <button type="button" aria-label="Next testimonial">Next</button>
           </div>
         </section>
 
@@ -302,7 +297,7 @@ export function HomePage() {
             times through our external booking service.
           </p>
           <a className="button button-light" href={BOOKING_URL}>
-            Book with Jen <Arrow />
+            Book with Jen
           </a>
         </section>
       </main>

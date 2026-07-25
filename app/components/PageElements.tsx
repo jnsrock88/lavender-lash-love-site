@@ -1,10 +1,6 @@
 import Image from "next/image";
 import { BOOKING_URL } from "../content";
 
-export function Arrow() {
-  return <span aria-hidden="true">↗</span>;
-}
-
 export function TextLink({
   href,
   children,
@@ -15,7 +11,6 @@ export function TextLink({
   return (
     <a className="text-link" href={href}>
       <span>{children}</span>
-      <Arrow />
     </a>
   );
 }
@@ -78,7 +73,7 @@ export function BookingCTA({
       <h2>{title}</h2>
       <p>{copy}</p>
       <a className="button button-primary" href={BOOKING_URL}>
-        Book with Jen <Arrow />
+        Book with Jen
       </a>
     </section>
   );

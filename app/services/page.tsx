@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { BOOKING_URL, services } from "../content";
-import { Arrow, BookingCTA, PageHero } from "../components/PageElements";
+import { BookingCTA, PageHero } from "../components/PageElements";
 import { media } from "../media";
 
 export const metadata = {
@@ -46,7 +46,7 @@ export default function ServicesPage() {
                 <div><dt>Investment</dt><dd>Placeholder pricing</dd></div>
                 <div><dt>Maintenance</dt><dd>Placeholder interval</dd></div>
               </dl>
-              <a className="text-link" href={BOOKING_URL}>Book this service <Arrow /></a>
+              <a className="text-link" href={BOOKING_URL}>Book this service</a>
             </div>
           </article>
         ))}
@@ -81,7 +81,7 @@ export default function ServicesPage() {
           <p className="eyebrow">Maintenance & aftercare</p>
           <h2>Beautiful between appointments.</h2>
           <p>Approved cleansing, brushing, retention, and refill guidance will be added here. This prototype reserves space for Jen’s complete aftercare approach.</p>
-          <a className="text-link" href="/faq">Explore common questions <Arrow /></a>
+          <a className="text-link" href="/faq">Explore common questions</a>
         </div>
         <div className="aftercare-geometry" aria-hidden="true"><span>✦</span></div>
       </section>

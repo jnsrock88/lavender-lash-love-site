@@ -12,10 +12,6 @@ import {
 } from "../content";
 import { media } from "../media";
 
-function Arrow() {
-  return <span aria-hidden="true">↗</span>;
-}
-
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
@@ -42,7 +38,7 @@ export function SiteHeader() {
         ))}
       </nav>
       <a className="header-book" href={BOOKING_URL}>
-        Book now <Arrow />
+        Book now
       </a>
       <button
         className="menu-button"
@@ -73,7 +69,7 @@ export function SiteHeader() {
         </nav>
         <div className="mobile-menu-foot">
           <p>Studio City · Thousand Oaks</p>
-          <a href={BOOKING_URL}>Reserve your appointment <Arrow /></a>
+          <a href={BOOKING_URL}>Reserve your appointment</a>
         </div>
       </div>
     </header>
@@ -107,7 +103,7 @@ export function SiteFooter() {
       </div>
       <div className="footer-book">
         <p>Ready when you are.</p>
-        <a href={BOOKING_URL}>Book an appointment <Arrow /></a>
+        <a href={BOOKING_URL}>Book an appointment</a>
       </div>
       <div className="footer-base">
         <span>© Lavender Lash Love · Copyright year placeholder</span>
@@ -121,7 +117,6 @@ export function MobileBooking() {
   return (
     <a className="mobile-booking" href={BOOKING_URL}>
       <span>Reserve your appointment</span>
-      <Arrow />
     </a>
   );
 }

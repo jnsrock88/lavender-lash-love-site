@@ -1,5 +1,5 @@
 import { BOOKING_URL } from "../content";
-import { Arrow, BookingCTA, PageHero, PlaceholderImage } from "../components/PageElements";
+import { BookingCTA, PageHero, PlaceholderImage } from "../components/PageElements";
 import { media } from "../media";
 
 export const metadata = {
@@ -40,8 +40,8 @@ export default function LocationsPage() {
                 <div><dt>Parking</dt><dd>Placeholder parking and arrival notes</dd></div>
               </dl>
               <div className="location-actions">
-                <a className="button button-primary" href={BOOKING_URL}>Book {location.name} <Arrow /></a>
-                <a className="text-link" href="#map-placeholder">Map link placeholder <Arrow /></a>
+                <a className="button button-primary" href={BOOKING_URL}>Book {location.name}</a>
+                <a className="text-link" href="#map-placeholder">Map link placeholder</a>
               </div>
             </div>
           </article>

@@ -66,7 +66,7 @@ export function LightboxGallery() {
           }}
         >
           <button ref={closeButton} className="lightbox-close" type="button" onClick={close} aria-label="Close image viewer">×</button>
-          <button className="lightbox-prev" type="button" onClick={previous} aria-label="Previous image">‹</button>
+          <button className="lightbox-prev" type="button" onClick={previous} aria-label="Previous image">Previous</button>
           <figure>
             <Image
               src={portfolio[active].src}
@@ -77,7 +77,7 @@ export function LightboxGallery() {
             />
             <figcaption>{portfolio[active].label} · Temporary portfolio imagery</figcaption>
           </figure>
-          <button className="lightbox-next" type="button" onClick={next} aria-label="Next image">›</button>
+          <button className="lightbox-next" type="button" onClick={next} aria-label="Next image">Next</button>
         </div>
       )}
     </>

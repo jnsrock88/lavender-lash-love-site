@@ -651,8 +651,11 @@ img { object-fit: cover; }
   border: 0;
   background: transparent;
   color: var(--aubergine);
-  font-family: var(--font-display);
-  font-size: 3rem;
+  font-family: var(--font-sans);
+  font-size: .58rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
   cursor: pointer;
 }
 .testimonial-layout blockquote {
@@ -1206,6 +1209,14 @@ img { object-fit: cover; }
   font-family: var(--font-display);
   font-size: 3rem;
 }
+.lightbox-prev,
+.lightbox-next {
+  font-family: var(--font-sans);
+  font-size: .58rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
 .lightbox-close {
   position: absolute;
   top: 1rem;
@@ -1609,13 +1620,19 @@ body {
 }
 
 .logo-link {
+  position: relative;
+  isolation: isolate;
   padding: .35rem .55rem .35rem 0;
 }
 
-.text-link > span[aria-hidden="true"],
-.service-card a > span[aria-hidden="true"],
-.footer-book a > span[aria-hidden="true"] {
-  display: none;
+.logo-link::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -.25rem -.45rem;
+  border: 1px solid rgba(187, 139, 87, .22);
+  background: rgba(255, 250, 244, .72);
+  box-shadow: 0 10px 32px rgba(50, 18, 61, .045);
 }
 
 .text-link {
