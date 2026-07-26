@@ -4,6 +4,9 @@ export const media = {
   brand: {
     logo: "/brand/logo-primary-transparent.png",
   },
+  home: {
+    hero: "/images/approved/home-hero-lash-application.jpg",
+  },
   prototype: {
     portraitPrimary: "/images/beauty-portrait-01.jpeg",
     portraitSecondary: "/images/beauty-portrait-02.jpeg",

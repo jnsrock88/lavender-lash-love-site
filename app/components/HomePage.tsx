@@ -96,8 +96,8 @@ export function HomePage() {
             <div className="starburst" aria-hidden="true">✦</div>
             <div className="hero-image">
               <Image
-                src={media.prototype.portraitPrimary}
-                alt="Editorial beauty portrait"
+                src={media.home.hero}
+                alt="Jen applying eyelash extensions to a client"
                 fill
                 priority
                 sizes="(max-width: 760px) 100vw, 48vw"
