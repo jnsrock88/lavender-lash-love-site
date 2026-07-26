@@ -15,8 +15,30 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    document.body.classList.toggle("menu-open", open);
-    return () => document.body.classList.remove("menu-open");
+    if (!open) return;
+
+    const scrollPosition = window.scrollY;
+    const body = document.body;
+
+    body.classList.add("menu-open");
+    body.style.position = "fixed";
+    body.style.top = `-${scrollPosition}px`;
+    body.style.width = "100%";
+
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+
+    document.addEventListener("keydown", closeOnEscape);
+
+    return () => {
+      document.removeEventListener("keydown", closeOnEscape);
+      body.classList.remove("menu-open");
+      body.style.position = "";
+      body.style.top = "";
+      body.style.width = "";
+      window.scrollTo(0, scrollPosition);
+    };
   }, [open]);
 
   return (

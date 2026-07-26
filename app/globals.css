@@ -242,6 +242,8 @@ img { object-fit: cover; }
   .mobile-menu {
     display: flex; position: fixed; inset: 88px 0 0; padding: 6vh 7vw 4vh;
     flex-direction: column; justify-content: space-between; background: var(--plum); color: var(--cream);
+    max-height: 100dvh; overflow-y: auto; overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
     opacity: 0; visibility: hidden; transform: translateY(-1rem); transition: .3s ease;
   }
   .mobile-menu.is-open { opacity: 1; visibility: visible; transform: none; }
@@ -349,7 +351,12 @@ img { object-fit: cover; }
   height: 2px;
   background: var(--aubergine);
 }
-.mobile-menu { inset: 0; padding-top: 9rem; }
+.mobile-menu {
+  inset: 0;
+  height: 100dvh;
+  padding-top: max(9rem, calc(7rem + env(safe-area-inset-top)));
+  padding-bottom: max(4vh, env(safe-area-inset-bottom));
+}
 
 .hero {
   min-height: 760px;
@@ -747,7 +754,11 @@ img { object-fit: cover; }
     padding: .35rem 1rem;
   }
   .logo-link { width: 195px; }
-  .mobile-menu { inset: 0; padding-top: 7rem; }
+  .mobile-menu {
+    inset: 0;
+    padding-top: max(7rem, calc(5.5rem + env(safe-area-inset-top)));
+    padding-bottom: max(5.5rem, calc(3.5rem + env(safe-area-inset-bottom)));
+  }
   .hero {
     display: grid;
     grid-template-columns: 1fr;
