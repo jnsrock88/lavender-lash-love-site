@@ -3,8 +3,8 @@
 Lavender Lash Love Prototype v1 is the approved interactive foundation for a
 luxury lash artistry marketing website by Jen Shedrock.
 
-Current private preview:
-[lavender-lash-love-preview.editoredgar.chatgpt.site](https://lavender-lash-love-preview.editoredgar.chatgpt.site)
+Current public preview:
+[lavender-lash-love-site-lub.pages.dev](https://lavender-lash-love-site-lub.pages.dev)
 
 ## Local development
 
@@ -82,3 +82,10 @@ preserved in `ASSET_INVENTORY.md`.
 This repository contains only the independent prototype. The current Lavender
 Lash Love production website and production domain remain untouched and are
 not connected to this project.
+
+## Owner-friendly updates
+
+- [Client instructions](CLIENT_INSTRUCTIONS.md)
+- [Project rules for Codex](PROJECT_RULES.md)
+- [Safe update examples](UPDATE_EXAMPLES.md)
+- [Current project status](PROJECT_STATUS.md)
