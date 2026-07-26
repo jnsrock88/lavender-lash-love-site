@@ -67,6 +67,16 @@ export default function AboutPage() {
           <li><span>License or certification placeholder</span><small>Approved details required</small></li>
         </ul>
       </section>
+      <section className="about-personality section-pad" aria-label="Jen beyond the studio">
+        <div>
+          <Image
+            src={media.about.personality}
+            alt="Jen Shedrock smiling beyond the studio"
+            fill
+            sizes="(max-width: 700px) 100vw, 58vw"
+          />
+        </div>
+      </section>
       <section className="jen-note section-pad">
         <p className="eyebrow">A note from Jen</p>
         <blockquote>

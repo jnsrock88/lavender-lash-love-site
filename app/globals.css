@@ -1914,6 +1914,22 @@ body {
   min-height: 720px;
 }
 
+.about-page .page-hero-copy h1 {
+  font-size: clamp(4.9rem, 8vw, 9.2rem);
+}
+
+.about-page .page-hero-media > img {
+  object-position: center 58%;
+  transform: scale(1.03);
+}
+
+.about-page .about-story h2,
+.about-page .philosophy h2,
+.about-page .trust-section > h2,
+.about-page .credentials h2 {
+  font-size: clamp(3.4rem, 6.35vw, 7.1rem);
+}
+
 .about-story {
   grid-template-columns: 1.5fr .5fr;
   gap: 12vw;
@@ -1927,6 +1943,28 @@ body {
 
 .philosophy-image {
   min-height: min(76vw, 920px);
+}
+
+.about-page .trust-section {
+  padding-top: clamp(9rem, 14vw, 15rem);
+  padding-bottom: clamp(10rem, 16vw, 17rem);
+}
+
+.about-personality {
+  display: flex;
+  justify-content: center;
+  background: var(--cream);
+}
+
+.about-personality > div {
+  position: relative;
+  width: min(58vw, 52rem);
+  min-height: min(82vw, 70rem);
+  overflow: hidden;
+}
+
+.about-personality img {
+  object-position: center 24%;
 }
 
 .jen-note {
@@ -1982,6 +2020,10 @@ body {
   .page-hero-copy h1 {
     font-size: clamp(3.55rem, 15.5vw, 4.8rem);
     line-height: .9;
+  }
+
+  .about-page .page-hero-copy h1 {
+    font-size: clamp(4rem, 17.5vw, 5.4rem);
   }
 
   .page-hero-copy > p:last-child {
@@ -2156,6 +2198,16 @@ body {
 
   .about-image-pair > div:nth-child(2) {
     margin-top: 0;
+  }
+
+  .about-page .trust-section {
+    padding-top: 8rem;
+    padding-bottom: 9rem;
+  }
+
+  .about-personality > div {
+    width: 100%;
+    min-height: 142vw;
   }
 
   .faq-group {
