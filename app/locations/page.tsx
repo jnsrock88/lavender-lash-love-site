@@ -1,4 +1,4 @@
-import { BOOKING_URL } from "../content";
+import { business } from "../content";
 import { BookingCTA, PageHero, PlaceholderImage } from "../components/PageElements";
 import { media } from "../media";
 
@@ -8,8 +8,8 @@ export const metadata = {
 };
 
 const locations = [
-  { name: "Studio City", region: "Los Angeles", visual: "studio-city", image: media.locations.studioCity },
-  { name: "Thousand Oaks", region: "Conejo Valley", visual: "thousand-oaks", image: media.locations.thousandOaks },
+  { ...business.locations.studioCity, visual: "studio-city", image: media.locations.studioCity },
+  { ...business.locations.thousandOaks, visual: "thousand-oaks", image: media.locations.thousandOaks },
 ] as const;
 
 export default function LocationsPage() {
@@ -18,39 +18,41 @@ export default function LocationsPage() {
       <PageHero
         eyebrow="Two convenient locations"
         title="Your appointment, a little closer to home."
-        intro="Choose between Studio City and Thousand Oaks. Exact public addresses and arrival details will be added only after approval."
-        label="Location photography needed"
+        intro="Choose between Studio City and Thousand Oaks, each with its own schedule and Vagaro booking page."
+        image={media.about.studio}
+        imageAlt="Lavender Lash Love appointment studio"
+        label="Lavender Lash Love studio"
       />
-      <section className="locations-page section-pad">
+      <section className="locations-page section-pad" id="booking-options">
         {locations.map((location, index) => (
-          <article className="location-detail" key={location.name}>
+          <article className="location-detail" key={location.city}>
             <PlaceholderImage
               className={location.visual}
-              label={`${location.name} temporary studio photography`}
+              label={`${location.city} salon interior`}
               src={location.image}
-              alt={`Temporary luxury studio interior representing the ${location.name} location`}
+              alt={`Interior of ${location.salon} in ${location.city}`}
+              showLabel={false}
             />
             <div className="location-detail-copy">
               <span className="editorial-index">0{index + 1}</span>
               <p className="eyebrow">{location.region}</p>
-              <h2>{location.name}</h2>
+              <h2>{location.city}</h2>
+              <p className="location-salon">{location.salon}</p>
               <dl>
-                <div><dt>Address</dt><dd>Placeholder address — not for navigation</dd></div>
-                <div><dt>Availability</dt><dd>Placeholder availability</dd></div>
-                <div><dt>Parking</dt><dd>Placeholder parking and arrival notes</dd></div>
+                <div><dt>Address</dt><dd>{location.addressLines.map((line) => <span key={line}>{line}<br /></span>)}</dd></div>
+                <div><dt>Schedule</dt><dd>{location.schedule.map((line) => <span key={line}>{line}<br /></span>)}</dd></div>
               </dl>
               <div className="location-actions">
-                <a className="button button-primary" href={BOOKING_URL}>Book {location.name}</a>
-                <a className="text-link" href="#map-placeholder">Map link placeholder</a>
+                <a className="button button-primary" href={location.bookingUrl} target="_blank" rel="noreferrer">
+                  Book {location.city} on Vagaro
+                </a>
+                <a className="text-link" href={location.mapsUrl} target="_blank" rel="noreferrer">
+                  Get directions
+                </a>
               </div>
             </div>
           </article>
         ))}
-      </section>
-      <section className="arrival-note section-pad" id="map-placeholder">
-        <p className="eyebrow">Before you travel</p>
-        <h2>Arrival made simple.</h2>
-        <p>Approved building access, parking, suite, accessibility, and arrival instructions for both locations will be provided here before launch.</p>
       </section>
       <BookingCTA title="Choose the location that works for you." />
     </main>

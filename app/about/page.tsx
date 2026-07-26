@@ -14,9 +14,9 @@ export default function AboutPage() {
         eyebrow="Meet Jen Shedrock"
         title="Artistry, precision, and personal care."
         intro="Jen sees each appointment as a portrait and each client as a collaboration. This biography is placeholder copy awaiting Jen’s approved story."
-        image={media.about.jenPortrait}
+        image={media.about.hero}
         imageAlt="Jen Shedrock, artist behind Lavender Lash Love"
-        label="Temporary current-site portrait"
+        label="Jen Shedrock"
       />
       <section className="about-story section-pad">
         <div className="about-statement">
@@ -32,7 +32,6 @@ export default function AboutPage() {
       <section className="philosophy section-pad">
         <div className="philosophy-image">
           <Image src={media.about.philosophyDetail} alt="Close-up of Jen's lash artistry" fill sizes="(max-width: 700px) 100vw, 48vw" />
-          <span className="placeholder-label">Temporary current-site imagery</span>
         </div>
         <div>
           <p className="eyebrow">Her philosophy</p>
@@ -47,6 +46,14 @@ export default function AboutPage() {
           <article><span>01</span><h3>Thoughtful listening</h3><p>Preferences, comfort, and lifestyle shape every recommendation.</p></article>
           <article><span>02</span><h3>Consistent care</h3><p>Placeholder: Jen’s approved client-care approach will be described here.</p></article>
           <article><span>03</span><h3>Refined detail</h3><p>Each appointment is approached with patience and close attention.</p></article>
+        </div>
+        <div className="about-image-pair">
+          <div>
+            <Image src={media.about.consultation} alt="Jen consulting with a client about lash styling" fill sizes="(max-width: 700px) 100vw, 48vw" />
+          </div>
+          <div>
+            <Image src={media.about.studio} alt="Lavender Lash Love appointment studio" fill sizes="(max-width: 700px) 100vw, 48vw" />
+          </div>
         </div>
       </section>
       <section className="credentials section-pad">

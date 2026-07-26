@@ -1,8 +1,112 @@
-export const BOOKING_URL = "https://example.com/booking-placeholder";
-export const INSTAGRAM_URL = "https://instagram.com/lavenderlashlove";
-export const EMAIL_PLACEHOLDER = "email placeholder";
-export const PHONE_PLACEHOLDER = "phone placeholder";
-export const RESPONSE_TIME_PLACEHOLDER = "Response-time guidance placeholder";
+import { media } from "./media";
+
+export const business = {
+  booking: {
+    chooser: "/locations#booking-options",
+    studioCity: "https://www.vagaro.com/lavenderlashlove",
+    thousandOaks: "https://www.vagaro.com/us02/lavlashluvgoddess",
+  },
+  contact: {
+    phoneDisplay: "661-733-5266",
+    phoneHref: "tel:+16617335266",
+    emailDisplay: "jen@lavlashluv.com",
+    emailHref: "mailto:jen@lavlashluv.com",
+  },
+  social: {
+    instagram: "https://www.instagram.com/lavenderlashlove",
+    facebook: "https://www.facebook.com/lavenderlashlove",
+  },
+  locations: {
+    studioCity: {
+      city: "Studio City",
+      region: "Los Angeles",
+      salon: "D. Miller Hair Lounge",
+      addressLines: ["4054 Laurel Canyon Blvd", "Studio City, CA 91604"],
+      address: "4054 Laurel Canyon Blvd, Studio City, CA 91604",
+      schedule: [
+        "Tuesday: 11:00 AM–8:00 PM",
+        "Wednesday: 11:00 AM–8:00 PM",
+        "Thursday: Closed",
+        "Friday: 10:00 AM–8:00 PM",
+      ],
+      bookingUrl: "https://www.vagaro.com/lavenderlashlove",
+      mapsUrl:
+        "https://www.google.com/maps/dir/?api=1&destination=4054%20Laurel%20Canyon%20Blvd%2C%20Studio%20City%2C%20CA%2091604%2C%20USA",
+      mapsStatus: "approved",
+    },
+    thousandOaks: {
+      city: "Thousand Oaks",
+      region: "Conejo Valley",
+      salon: "Goddess Beauty Salon",
+      addressLines: ["1421 E Thousand Oaks Blvd", "Thousand Oaks, CA 91362"],
+      address: "1421 E Thousand Oaks Blvd, Thousand Oaks, CA 91362",
+      schedule: [
+        "Saturday: 10:00 AM–6:00 PM",
+        "Sunday: Closed",
+        "Monday: Closed",
+      ],
+      bookingUrl: "https://www.vagaro.com/us02/lavlashluvgoddess",
+      mapsUrl:
+        "https://www.google.com/maps/dir/?api=1&destination=1421%20E%20Thousand%20Oaks%20Blvd%2C%20Thousand%20Oaks%2C%20CA%2091362%2C%20USA",
+      mapsStatus: "generated-awaiting-confirmation",
+    },
+  },
+  serviceMenu: [
+    {
+      number: "01",
+      name: "Lash Full Set",
+      description: "A complete custom lash application shaped around your features and desired finish.",
+      image: media.services.hybrid,
+      offerings: [{ name: "Full Set", price: "$300" }],
+    },
+    {
+      number: "02",
+      name: "Classic Lashes",
+      description: "A refined, natural-looking enhancement designed around your eye shape.",
+      image: media.services.classic,
+      offerings: [
+        { name: "Touch-Up", price: "$60" },
+        { name: "2 Week Fill", price: "$85" },
+        { name: "3–5 Week Fill", price: "$110" },
+      ],
+    },
+    {
+      number: "03",
+      name: "Volume Lashes",
+      description: "Airy, customized fullness with an elegant finish—never one-size-fits-all.",
+      image: media.services.volume,
+      offerings: [
+        { name: "Touch-Up", price: "$80" },
+        { name: "2 Week Fill", price: "$105" },
+        { name: "3–5 Week Fill", price: "$130" },
+      ],
+    },
+    {
+      number: "04",
+      name: "Additional Services",
+      description: "Focused support for maintenance, transitions, and safe removal.",
+      image: media.services.fourthPlaceholder,
+      offerings: [
+        { name: "Outside Fill", price: "$160" },
+        { name: "Lash Removal", price: "$45" },
+      ],
+    },
+    {
+      number: "05",
+      name: "Keratin Boosted Lash & Brow",
+      description: "Lift and tint options for a polished, low-maintenance finish.",
+      image: media.services.keratin,
+      offerings: [
+        { name: "Lash or Brow Tint", price: "$25" },
+        { name: "Lash or Brow Lift", price: "$135" },
+        { name: "Lash or Brow Lift & Tint", price: "$160" },
+      ],
+    },
+  ],
+} as const;
+
+export const BOOKING_CHOOSER_URL = business.booking.chooser;
+export const INSTAGRAM_URL = business.social.instagram;
 
 export const navigation = [
   { label: "Services", href: "/services" },
@@ -13,32 +117,7 @@ export const navigation = [
   { label: "FAQ", href: "/faq" },
 ] as const;
 
-export const services = [
-  {
-    number: "01",
-    name: "Classic",
-    copy: "A refined, natural-looking enhancement designed around your eye shape.",
-    image: media.services.classic,
-  },
-  {
-    number: "02",
-    name: "Hybrid",
-    copy: "A softly textured balance of definition, dimension, and effortless polish.",
-    image: media.services.hybrid,
-  },
-  {
-    number: "03",
-    name: "Volume",
-    copy: "Airy, customized fullness with an elegant finish—never one-size-fits-all.",
-    image: media.services.volume,
-  },
-  {
-    number: "04",
-    name: "Lash Lift",
-    copy: "A low-maintenance option that celebrates and elevates your natural lashes.",
-    image: media.services.fourthPlaceholder,
-  },
-] as const;
+export const services = business.serviceMenu.slice(0, 4);
 
 export const faqs = [
   {
@@ -59,7 +138,7 @@ export const faqs = [
   {
     question: "Where are appointments available?",
     answer:
-      "Appointments are offered in Studio City and Thousand Oaks. Exact public addresses and arrival details will be added once approved.",
+      "Appointments are offered at D. Miller Hair Lounge in Studio City and Goddess Beauty Salon in Thousand Oaks.",
   },
 ] as const;
 
@@ -108,4 +187,3 @@ export const faqGroups = [
     ],
   },
 ] as const;
-import { media } from "./media";

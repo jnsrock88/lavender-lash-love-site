@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { BOOKING_URL, faqs, services } from "../content";
+import { BOOKING_CHOOSER_URL, business, faqs, services } from "../content";
 import { media } from "../media";
 
 function TextLink({
@@ -85,7 +85,7 @@ export function HomePage() {
               glamour, shaped around your features and the way you want to feel.
             </p>
             <div className="hero-actions">
-              <a className="button button-primary" href={BOOKING_URL}>
+              <a className="button button-primary" href={BOOKING_CHOOSER_URL}>
                 Book an appointment
               </a>
               <TextLink href="#services">Explore services</TextLink>
@@ -97,12 +97,11 @@ export function HomePage() {
             <div className="hero-image">
               <Image
                 src={media.prototype.portraitPrimary}
-                alt="Prototype beauty portrait; to be replaced with approved Lavender Lash Love photography"
+                alt="Editorial beauty portrait"
                 fill
                 priority
                 sizes="(max-width: 760px) 100vw, 48vw"
               />
-              <span className="placeholder-label">Prototype imagery</span>
             </div>
             <p className="hero-caption">Personal. Considered. Entirely yours.</p>
           </div>
@@ -136,15 +135,18 @@ export function HomePage() {
                 <div className="service-image">
                   <Image
                     src={service.image}
-                    alt={`Prototype imagery for ${service.name} service`}
+                    alt={`${service.name} service imagery`}
                     fill
                     sizes="(max-width: 760px) 38vw, 20vw"
                   />
                 </div>
                 <div className="service-card-copy">
                   <span className="service-number">{service.number}</span>
-                  <h3>{service.name} lashes</h3>
-                  <p>{service.copy}</p>
+                  <h3>{service.name}</h3>
+                  <p>{service.description}</p>
+                  <p className="service-card-price">
+                    {service.offerings[0].name} · {service.offerings[0].price}
+                  </p>
                   <a href="/services" aria-label={`Discover ${service.name}`}>
                     Learn more
                   </a>
@@ -167,7 +169,7 @@ export function HomePage() {
             <figure>
               <Image
                 src={media.gallery[0].src}
-                alt="Prototype close-up lash detail"
+                alt="Close-up lash detail"
                 fill
                 sizes="(max-width: 760px) 72vw, 35vw"
               />
@@ -176,7 +178,7 @@ export function HomePage() {
             <figure>
               <Image
                 src={media.gallery[1].src}
-                alt="Prototype full-face beauty portrait"
+                alt="Full-face beauty portrait"
                 fill
                 sizes="(max-width: 760px) 76vw, 27vw"
               />
@@ -185,7 +187,7 @@ export function HomePage() {
             <figure>
               <Image
                 src={media.gallery[2].src}
-                alt="Prototype close-up lash detail"
+                alt="Close-up lash detail"
                 fill
                 sizes="(max-width: 760px) 60vw, 20vw"
               />
@@ -194,7 +196,7 @@ export function HomePage() {
             <figure>
               <Image
                 src={media.gallery[4].src}
-                alt="Prototype editorial beauty portrait"
+                alt="Editorial beauty portrait"
                 fill
                 sizes="(max-width: 760px) 60vw, 20vw"
               />
@@ -203,7 +205,7 @@ export function HomePage() {
             <figure>
               <Image
                 src={media.gallery[5].src}
-                alt="Prototype close-up lash detail"
+                alt="Close-up lash detail"
                 fill
                 sizes="(max-width: 760px) 60vw, 20vw"
               />
@@ -218,12 +220,11 @@ export function HomePage() {
         <section className="jen section-pad" id="jen">
           <div className="jen-image">
             <Image
-              src={media.about.jenPortrait}
+              src={media.about.homePortrait}
               alt="Jen Shedrock, artist behind Lavender Lash Love"
               fill
               sizes="(max-width: 760px) 86vw, 42vw"
             />
-            <span className="placeholder-label">Temporary current-site portrait</span>
           </div>
           <div className="jen-copy">
             <p className="eyebrow">Meet the artist</p>
@@ -231,11 +232,6 @@ export function HomePage() {
             <p className="jen-lead">
               Jen approaches every set as a portrait—looking closely, listening
               carefully, and designing for the person in front of her.
-            </p>
-            <p>
-              This introductory biography is placeholder copy. Jen’s approved
-              story, philosophy, experience, and credentials will replace it
-              before launch.
             </p>
             <TextLink href="/about">Learn more about Jen</TextLink>
           </div>
@@ -246,24 +242,28 @@ export function HomePage() {
           <div className="location-line">
             <article>
               <span>01 · Los Angeles</span>
-              <div className="location-visual" aria-label="Temporary studio interior representing Studio City">
-                <Image src={media.locations.studioCity} alt="Temporary luxury studio interior representing Studio City" fill sizes="(max-width: 640px) 92vw, 40vw" />
-                <span>Temporary interior</span>
+              <div className="location-visual" aria-label="D. Miller Hair Lounge in Studio City">
+                <Image src={media.locations.studioCity} alt="Interior of D. Miller Hair Lounge in Studio City" fill sizes="(max-width: 640px) 92vw, 40vw" />
               </div>
               <h3>Studio City</h3>
-              <p>Address and studio photography to be supplied.</p>
+              <p>{business.locations.studioCity.salon} · {business.locations.studioCity.address}</p>
               <TextLink href="/locations">Location details</TextLink>
+              <a className="text-link" href={business.booking.studioCity} target="_blank" rel="noreferrer">
+                Book Studio City on Vagaro
+              </a>
             </article>
             <div className="location-divider" aria-hidden="true"><span>♥</span></div>
             <article>
               <span>02 · Ventura County</span>
-              <div className="location-visual location-visual-alt" aria-label="Temporary studio interior representing Thousand Oaks">
-                <Image src={media.locations.thousandOaks} alt="Temporary luxury studio interior representing Thousand Oaks" fill sizes="(max-width: 640px) 92vw, 40vw" />
-                <span>Temporary interior</span>
+              <div className="location-visual location-visual-alt" aria-label="Goddess Beauty Salon in Thousand Oaks">
+                <Image src={media.locations.thousandOaks} alt="Interior of Goddess Beauty Salon in Thousand Oaks" fill sizes="(max-width: 640px) 92vw, 40vw" />
               </div>
               <h3>Thousand Oaks</h3>
-              <p>Address and studio photography to be supplied.</p>
+              <p>{business.locations.thousandOaks.salon} · {business.locations.thousandOaks.address}</p>
               <TextLink href="/locations">Location details</TextLink>
+              <a className="text-link" href={business.booking.thousandOaks} target="_blank" rel="noreferrer">
+                Book Thousand Oaks on Vagaro
+              </a>
             </article>
           </div>
         </section>
@@ -296,7 +296,7 @@ export function HomePage() {
             Choose your preferred location and explore the available appointment
             times through our external booking service.
           </p>
-          <a className="button button-light" href={BOOKING_URL}>
+          <a className="button button-light" href={BOOKING_CHOOSER_URL}>
             Book with Jen
           </a>
         </section>

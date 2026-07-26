@@ -2,7 +2,7 @@ const temporaryCurrentSite = "/images/temporary-current-site";
 
 export const media = {
   brand: {
-    logo: "/brand/lavender-lash-love-logo.jpeg",
+    logo: "/brand/logo-primary-transparent.png",
   },
   prototype: {
     portraitPrimary: "/images/beauty-portrait-01.jpeg",
@@ -15,21 +15,29 @@ export const media = {
     hybrid: `${temporaryCurrentSite}/service-hybrid.png`,
     volume: `${temporaryCurrentSite}/service-volume.jpg`,
     fourthPlaceholder: "/images/beauty-portrait-02.jpeg",
+    keratin: `${temporaryCurrentSite}/gallery-04.jpg`,
   },
   about: {
-    jenPortrait: `${temporaryCurrentSite}/jen-portrait.png`,
-    philosophyDetail: `${temporaryCurrentSite}/gallery-04.jpg`,
+    homePortrait: "/images/approved/jen-about-hero.jpeg",
+    hero: "/images/approved/jen-about-hero.jpeg",
+    working: "/images/approved/jen-working.jpg",
+    consultation: "/images/approved/jen-consultation.jpg",
+    studio: "/images/approved/jen-studio.jpg",
+    studioDetail: "/images/approved/studio-detail.jpg",
+    personality: "/images/approved/jen-personality.jpg",
+    jenPortrait: "/images/approved/jen-about-hero.jpeg",
+    philosophyDetail: "/images/approved/jen-working.jpg",
   },
   locations: {
-    studioCity: "/images/location-studio-city-temporary.jpeg",
-    thousandOaks: "/images/location-thousand-oaks-temporary.jpeg",
+    studioCity: "/images/approved/home-location-studio-city.jpg",
+    thousandOaks: "/images/approved/home-location-thousand-oaks.jpg",
   },
   experience: {
-    hero: `${temporaryCurrentSite}/gallery-06.jpg`,
-    consultation: `${temporaryCurrentSite}/gallery-08.jpg`,
+    hero: "/images/approved/jen-studio.jpg",
+    consultation: "/images/approved/jen-consultation.jpg",
     mapping: `${temporaryCurrentSite}/gallery-03.png`,
-    application: `${temporaryCurrentSite}/gallery-01.png`,
-    reveal: `${temporaryCurrentSite}/gallery-07.jpg`,
+    application: "/images/approved/jen-working.jpg",
+    reveal: "/images/approved/studio-detail.jpg",
   },
   gallery: [
     {

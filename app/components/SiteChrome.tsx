@@ -4,10 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import {
-  BOOKING_URL,
-  EMAIL_PLACEHOLDER,
+  BOOKING_CHOOSER_URL,
   INSTAGRAM_URL,
-  PHONE_PLACEHOLDER,
+  business,
   navigation,
 } from "../content";
 import { media } from "../media";
@@ -26,8 +25,8 @@ export function SiteHeader() {
         <Image
           src={media.brand.logo}
           alt="Lavender Lash Love by Jen Shedrock"
-          width={1125}
-          height={546}
+          width={1536}
+          height={1024}
           priority
           className="logo"
         />
@@ -37,7 +36,7 @@ export function SiteHeader() {
           <a key={item.href} href={item.href}>{item.label}</a>
         ))}
       </nav>
-      <a className="header-book" href={BOOKING_URL}>
+      <a className="header-book" href={BOOKING_CHOOSER_URL}>
         Book now
       </a>
       <button
@@ -69,7 +68,7 @@ export function SiteHeader() {
         </nav>
         <div className="mobile-menu-foot">
           <p>Studio City · Thousand Oaks</p>
-          <a href={BOOKING_URL}>Reserve your appointment</a>
+          <a href={BOOKING_CHOOSER_URL}>Reserve your appointment</a>
         </div>
       </div>
     </header>
@@ -83,8 +82,8 @@ export function SiteFooter() {
         <Image
           src={media.brand.logo}
           alt="Lavender Lash Love by Jen Shedrock"
-          width={1125}
-          height={546}
+          width={1536}
+          height={1024}
         />
         <p>Luxury lash artistry in Studio City and Thousand Oaks.</p>
       </div>
@@ -97,13 +96,14 @@ export function SiteFooter() {
       </div>
       <div className="footer-nav">
         <p>Connect</p>
-        <a href={INSTAGRAM_URL}>Instagram</a>
-        <a href="/contact">{EMAIL_PLACEHOLDER}</a>
-        <a href="/contact">{PHONE_PLACEHOLDER}</a>
+        <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" aria-label="Lavender Lash Love on Instagram (opens in a new tab)">Instagram</a>
+        <a href={business.social.facebook} target="_blank" rel="noreferrer" aria-label="Lavender Lash Love on Facebook (opens in a new tab)">Facebook</a>
+        <a href={business.contact.emailHref}>{business.contact.emailDisplay}</a>
+        <a href={business.contact.phoneHref}>{business.contact.phoneDisplay}</a>
       </div>
       <div className="footer-book">
         <p>Ready when you are.</p>
-        <a href={BOOKING_URL}>Book an appointment</a>
+        <a href={BOOKING_CHOOSER_URL}>Book an appointment</a>
       </div>
       <div className="footer-base">
         <span>© Lavender Lash Love · Copyright year placeholder</span>
@@ -115,7 +115,7 @@ export function SiteFooter() {
 
 export function MobileBooking() {
   return (
-    <a className="mobile-booking" href={BOOKING_URL}>
+    <a className="mobile-booking" href={BOOKING_CHOOSER_URL}>
       <span>Reserve your appointment</span>
     </a>
   );

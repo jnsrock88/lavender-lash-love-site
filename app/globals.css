@@ -1625,16 +1625,6 @@ body {
   padding: .35rem .55rem .35rem 0;
 }
 
-.logo-link::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  inset: -.25rem -.45rem;
-  border: 1px solid rgba(187, 139, 87, .22);
-  background: rgba(255, 250, 244, .72);
-  box-shadow: 0 10px 32px rgba(50, 18, 61, .045);
-}
-
 .text-link {
   gap: .5rem;
   border-bottom-color: rgba(187, 139, 87, .55);
@@ -1694,6 +1684,12 @@ body {
   position: relative;
   max-width: 34rem;
   padding: 2rem 0 0;
+}
+
+.service-card-price {
+  color: var(--aubergine);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
 }
 
 .service-card-copy::before {
@@ -1797,7 +1793,47 @@ body {
 .neutral-placeholder > img {
   z-index: 1;
   object-fit: cover;
-  filter: saturate(.62) sepia(.12);
+  filter: none;
+}
+
+.location-salon {
+  margin: -1rem 0 2rem;
+  color: var(--champagne);
+  font-size: .7rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.about-image-pair {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: clamp(1rem, 3vw, 3rem);
+  margin-top: clamp(4rem, 8vw, 8rem);
+}
+
+.about-image-pair > div {
+  position: relative;
+  min-height: clamp(430px, 55vw, 760px);
+  overflow: hidden;
+}
+
+.about-image-pair > div:nth-child(2) {
+  margin-top: clamp(3rem, 8vw, 8rem);
+}
+
+.about-image-pair img,
+.jen-image img,
+.page-hero-media > img,
+.philosophy-image img,
+.experience-media img {
+  filter: none;
+}
+
+.booking-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .location-visual > span,
@@ -2112,6 +2148,14 @@ body {
 
   .location-detail .neutral-placeholder {
     min-height: 125vw;
+  }
+
+  .about-image-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image-pair > div:nth-child(2) {
+    margin-top: 0;
   }
 
   .faq-group {

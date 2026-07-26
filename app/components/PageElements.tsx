@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { BOOKING_URL } from "../content";
+import { BOOKING_CHOOSER_URL } from "../content";
 
 export function TextLink({
   href,
@@ -72,7 +72,7 @@ export function BookingCTA({
       <p className="eyebrow">{eyebrow}</p>
       <h2>{title}</h2>
       <p>{copy}</p>
-      <a className="button button-primary" href={BOOKING_URL}>
+      <a className="button button-primary" href={BOOKING_CHOOSER_URL}>
         Book with Jen
       </a>
     </section>
@@ -84,16 +84,18 @@ export function PlaceholderImage({
   label,
   src,
   alt = "",
+  showLabel = true,
 }: {
   className?: string;
   label: string;
   src?: string;
   alt?: string;
+  showLabel?: boolean;
 }) {
   return (
     <div className={`neutral-placeholder ${className}`} role="img" aria-label={label}>
       {src ? <Image src={src} alt={alt} fill sizes="(max-width: 700px) 100vw, 48vw" /> : null}
-      <span>{label}</span>
+      {showLabel ? <span>{label}</span> : null}
     </div>
   );
 }

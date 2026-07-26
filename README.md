@@ -54,7 +54,7 @@ database, authentication, payments, or user accounts.
 ## Protected logo
 
 The supplied Lavender Lash Love logo in
-`public/brand/lavender-lash-love-logo.jpeg` is a protected brand asset. It must
+`public/brand/logo-primary-transparent.png` is a protected brand asset. It must
 be used exactly as provided:
 
 - no redrawing or AI reinterpretation
@@ -64,21 +64,18 @@ be used exactly as provided:
 
 ## Temporary assets
 
-Current-site media and licensed stock photography are committed as temporary
-prototype assets. They make the prototype realistic but are not the final
-photography direction. Each image is referenced centrally in `app/media.ts` so
-it can be replaced individually without redesigning layouts or components.
-Source and replacement details are preserved in `ASSET_INVENTORY.md`.
+Approved Jen and location photography is committed alongside remaining
+current-site media and licensed stock placeholders. Each image is referenced
+centrally in `app/media.ts` so it can be replaced individually without
+redesigning layouts or components. Source and replacement details are
+preserved in `ASSET_INVENTORY.md`.
 
 ## Remaining placeholders
 
-- Final booking URL
-- Approved phone, email, response-time, address, availability, and map details
-- Final service names, descriptions, durations, pricing, and maintenance terms
 - Approved biography, credentials, personal note, testimonials, FAQ answers,
   policies, and aftercare guidance
-- Final brand campaign, service, gallery, Jen, experience, location, aftercare,
-  contact, FAQ, and social-preview photography
+- Confirmed Thousand Oaks Google Maps directions URL
+- Final client hero, service, gallery, mapping, FAQ, and social-preview photography
 
 ## Production boundary
 
