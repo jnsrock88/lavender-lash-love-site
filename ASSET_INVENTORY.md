@@ -4,7 +4,7 @@ All media references are centralized in `app/media.ts`. Production assets are ap
 
 | Filename | Page | Section | Image role | Source ratio | Status |
 | --- | --- | --- | --- | --- | --- |
-| `public/brand/logo-primary.jpg` | Global | Header, footer, 404, metadata | Protected primary logo, rendered uncropped and proportionally | 3:2 white canvas | Approved production |
+| `public/brand/logo-primary-transparent.png` | Global | Header, footer, 404, favicon, social metadata | Official protected primary logo, rendered uncropped and proportionally | 3644:1521 transparent canvas | Approved production; sole logo asset |
 | `public/images/approved/jen-about-hero.jpeg` | Home | Meet Jen | Artist portrait | 4:5 | Approved production |
 | `public/images/approved/jen-about-hero.jpeg` | About Jen | Hero | Portrait-led artist hero | 4:5 | Approved production |
 | `public/images/approved/jen-working.jpg` | About Jen | Philosophy | Jen performing a lash application | 5:4 | Approved production |
@@ -27,11 +27,11 @@ All media references are centralized in `app/media.ts`. Production assets are ap
 | `public/images/temporary-current-site/gallery-04.jpg` | Services | Keratin Boosted Lash & Brow | Existing-site lash result | Source crop varies | Temporary production placeholder |
 | `public/images/temporary-current-site/gallery-01.png` through `gallery-08.jpg` | Home, Gallery, Experience | Portfolio and mapping | Existing-site lash portfolio | Mixed | Temporary production placeholders |
 | `public/images/beauty-portrait-02.jpeg` and `beauty-portrait-03.jpeg` | Gallery | Editorial portrait studies | Full-face portfolio balance | Mixed | Temporary stock |
-| `public/og.png` | Social sharing | Open Graph image | Current link-preview artwork | 1.75:1 | Temporary; final branded social artwork needed |
+| `public/og.png` | Media archive | Legacy Open Graph image | Retained non-logo campaign artwork, no longer used by metadata | 1.75:1 | Temporary, currently unused |
 
 ## Business-content confirmation notes
 
 - Studio City directions URL is approved as supplied.
 - Thousand Oaks directions URL is generated from the approved address and awaits confirmation.
 - Service pricing, contact information, social URLs, location details, and Vagaro URLs are centralized in `app/content.ts`.
-- The previous white-background logo was removed after all references were replaced with the approved transparent PNG.
+- The previous white-background logo was removed after every site, favicon, and social-metadata reference was replaced with the official transparent PNG.

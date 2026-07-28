@@ -10,8 +10,9 @@ export default function NotFound() {
       <Image
         src={media.brand.logo}
         alt="Lavender Lash Love by Jen Shedrock"
-        width={1280}
-        height={853}
+        width={3644}
+        height={1521}
+        sizes="(max-width: 767px) 72vw, 420px"
       />
       <p className="eyebrow">404 · Page not found</p>
       <h1>This page has slipped out of view.</h1>

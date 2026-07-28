@@ -34,13 +34,20 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title,
       description,
-      images: [{ url: `${origin}/og.png`, width: 1792, height: 1024 }],
+      images: [
+        {
+          url: `${origin}${media.brand.logo}`,
+          width: 3644,
+          height: 1521,
+          alt: "Lavender Lash Love by Jen Shedrock",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [`${origin}/og.png`],
+      images: [`${origin}${media.brand.logo}`],
     },
   };
 }
