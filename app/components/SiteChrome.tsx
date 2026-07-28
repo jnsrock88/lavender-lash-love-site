@@ -42,58 +42,67 @@ export function SiteHeader() {
   }, [open]);
 
   return (
-    <header className="site-header">
-      <Link href="/" className="logo-link" aria-label="Lavender Lash Love home">
-        <Image
-          src={media.brand.logo}
-          alt="Lavender Lash Love by Jen Shedrock"
-          width={1280}
-          height={853}
-          priority
-          className="logo"
-        />
-      </Link>
-      <nav className="desktop-nav" aria-label="Primary navigation">
-        {navigation.map((item) => (
-          <a key={item.href} href={item.href}>{item.label}</a>
-        ))}
-      </nav>
-      <a className="header-book" href={BOOKING_CHOOSER_URL}>
-        Book now
-      </a>
-      <button
-        className="menu-button"
-        type="button"
-        aria-expanded={open}
-        aria-controls="mobile-menu"
-        onClick={() => setOpen((value) => !value)}
-      >
-        <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
-        <span />
-        <span />
-      </button>
-      <div
-        id="mobile-menu"
-        className={`mobile-menu ${open ? "is-open" : ""}`}
-        aria-hidden={!open}
-      >
-        <nav aria-label="Mobile navigation">
-          {navigation.map((item, index) => (
-            <a key={item.href} href={item.href} onClick={() => setOpen(false)}>
-              <span>0{index + 1}</span>
-              {item.label}
-            </a>
-          ))}
-          <a href="/contact" onClick={() => setOpen(false)}>
-            <span>07</span>Contact
-          </a>
-        </nav>
-        <div className="mobile-menu-foot">
-          <p>Studio City · Thousand Oaks</p>
-          <a href={BOOKING_CHOOSER_URL}>Reserve your appointment</a>
-        </div>
+    <>
+      <div className="brand-announcement">
+        <span aria-hidden="true">✦</span>
+        <p>Enhance your natural beauty with luxurious lashes &amp; brows</p>
       </div>
-    </header>
+      <header className="site-header">
+        <div className="site-header-shell">
+          <Link href="/" className="logo-link" aria-label="Lavender Lash Love home">
+            <Image
+              src={media.brand.logo}
+              alt="Lavender Lash Love by Jen Shedrock"
+              width={1280}
+              height={853}
+              priority
+              className="logo"
+            />
+          </Link>
+          <nav className="desktop-nav" aria-label="Primary navigation">
+            {navigation.map((item) => (
+              <a key={item.href} href={item.href}>{item.label}</a>
+            ))}
+          </nav>
+          <a className="header-book" href={BOOKING_CHOOSER_URL}>
+            Book now
+          </a>
+          <button
+            className="menu-button"
+            type="button"
+            aria-expanded={open}
+            aria-controls="mobile-menu"
+            onClick={() => setOpen((value) => !value)}
+          >
+            <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
+            <span />
+            <span />
+            <span />
+          </button>
+        </div>
+        <div
+          id="mobile-menu"
+          className={`mobile-menu ${open ? "is-open" : ""}`}
+          aria-hidden={!open}
+        >
+          <nav aria-label="Mobile navigation">
+            {navigation.map((item, index) => (
+              <a key={item.href} href={item.href} onClick={() => setOpen(false)}>
+                <span>0{index + 1}</span>
+                {item.label}
+              </a>
+            ))}
+            <a href="/contact" onClick={() => setOpen(false)}>
+              <span>07</span>Contact
+            </a>
+          </nav>
+          <div className="mobile-menu-foot">
+            <p>Studio City · Thousand Oaks</p>
+            <a href={BOOKING_CHOOSER_URL}>Reserve your appointment</a>
+          </div>
+        </div>
+      </header>
+    </>
   );
 }
 
@@ -138,7 +147,7 @@ export function SiteFooter() {
 export function MobileBooking() {
   return (
     <a className="mobile-booking" href={BOOKING_CHOOSER_URL}>
-      <span>Reserve your appointment</span>
+      <span>Book your appointment</span>
     </a>
   );
 }

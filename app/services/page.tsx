@@ -34,20 +34,25 @@ export default function ServicesPage() {
           <article className={index % 2 ? "service-feature reverse" : "service-feature"} key={service.name}>
             <div className="service-feature-media">
               <Image src={service.image} alt={`${service.name} service imagery`} fill sizes="(max-width: 700px) 100vw, 48vw" />
+              <span className="service-media-orb" aria-hidden="true" />
+              <span className="service-media-star" aria-hidden="true">✦</span>
             </div>
             <div className="service-feature-copy">
               <span className="editorial-index">{service.number}</span>
               <p className="eyebrow">Service menu</p>
               <h2>{service.name}</h2>
               <p className="service-lead">{service.description}</p>
-              <dl className="service-facts">
-                {service.offerings.map((offering) => (
-                  <div key={offering.name}>
-                    <dt>{offering.name}</dt>
-                    <dd>{offering.price}</dd>
-                  </div>
-                ))}
-              </dl>
+              <div className="service-price-panel">
+                <p>Service pricing</p>
+                <dl className="service-facts">
+                  {service.offerings.map((offering) => (
+                    <div key={offering.name}>
+                      <dt>{offering.name}</dt>
+                      <dd>{offering.price}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
               <a className="button button-primary" href={BOOKING_CHOOSER_URL}>Book appointment</a>
             </div>
           </article>

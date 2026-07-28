@@ -33,8 +33,11 @@ export function PageHero({
   return (
     <section className="page-hero">
       <div className="page-hero-copy">
+        <div className="page-hero-lines" aria-hidden="true"><i /><i /><i /></div>
+        <span className="page-hero-orb" aria-hidden="true" />
         <p className="eyebrow">{eyebrow}</p>
         <h1>{title}</h1>
+        <div className="gold-heart-rule" aria-hidden="true"><span>♥</span></div>
         <p>{intro}</p>
       </div>
       <div className="page-hero-media">
@@ -49,8 +52,6 @@ export function PageHero({
         ) : (
           <div className="neutral-placeholder" aria-label={label} />
         )}
-        <span className="placeholder-label">{label}</span>
-        <span className="page-hero-arch" aria-hidden="true" />
         <span className="page-hero-star" aria-hidden="true">✦</span>
       </div>
     </section>
@@ -68,7 +69,8 @@ export function BookingCTA({
 }) {
   return (
     <section className="inner-booking section-pad">
-      <span className="inner-booking-arch" aria-hidden="true" />
+      <div className="inner-booking-arches" aria-hidden="true"><i /><i /><i /></div>
+      <span className="inner-booking-orb" aria-hidden="true" />
       <p className="eyebrow">{eyebrow}</p>
       <h2>{title}</h2>
       <p>{copy}</p>
