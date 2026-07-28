@@ -636,29 +636,35 @@ blockquote {
   background: var(--lilac);
 }
 
+.services .section-intro {
+  max-width: 72rem;
+  margin-bottom: clamp(3.5rem, 5vw, 5rem);
+}
+
+.services .section-intro h2 {
+  max-width: 15ch;
+  font-size: clamp(3.7rem, 5.1vw, 5.6rem);
+  line-height: 0.92;
+}
+
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: clamp(2rem, 4vw, 5rem) clamp(1.5rem, 3vw, 3rem);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(1.5rem, 2.5vw, 2.75rem);
 }
 
 .service-card {
   display: grid;
-  grid-template-rows: minmax(22rem, 34vw) auto;
+  min-width: 0;
+  grid-template-rows: minmax(19rem, 26vw) auto;
 }
 
 .service-card:nth-child(1),
-.service-card:nth-child(4) {
-  grid-column: span 7;
-}
-
+.service-card:nth-child(4),
 .service-card:nth-child(2),
 .service-card:nth-child(3) {
-  grid-column: span 5;
-}
-
-.service-card:nth-child(2) {
-  margin-top: 6rem;
+  grid-column: auto;
+  margin-top: 0;
 }
 
 .service-image {
@@ -686,8 +692,8 @@ blockquote {
 .service-card h3 {
   margin: 0.6rem 0;
   color: var(--aubergine);
-  font-size: clamp(2.8rem, 4.5vw, 5rem);
-  line-height: 0.9;
+  font-size: clamp(2.25rem, 3vw, 3.45rem);
+  line-height: 0.94;
 }
 
 .service-card-copy > p {
@@ -2078,6 +2084,10 @@ blockquote {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .benefit-strip article:nth-child(2) {
     border-right: 0;
   }
@@ -2248,13 +2258,14 @@ blockquote {
   }
 
   .home-about {
-    grid-template-columns: 0.9fr 1.1fr;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
     gap: 2rem 1.5rem;
   }
 
   .home-about-heading {
     grid-column: 2;
     align-self: end;
+    min-width: 0;
   }
 
   .home-about-heading h2 {
@@ -2263,12 +2274,14 @@ blockquote {
 
   .home-about-image {
     grid-row: 1 / span 2;
-    min-height: 26rem;
+    min-width: 0;
+    min-height: 24rem;
     border-radius: 8rem 8rem 0 0;
   }
 
   .home-about-copy {
     grid-column: 2;
+    min-width: 0;
   }
 
   .home-about-copy p {
@@ -2611,7 +2624,7 @@ blockquote {
     min-height: 3.2rem;
     align-items: center;
     justify-content: center;
-    max-width: calc(100vw - 2rem);
+    max-width: 12rem;
     padding: 0.75rem 1.25rem;
     border: 1px solid rgba(184, 139, 78, 0.68);
     border-radius: 999px;
