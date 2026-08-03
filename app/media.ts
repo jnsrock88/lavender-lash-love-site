@@ -2,7 +2,7 @@ const temporaryCurrentSite = "/images/temporary-current-site";
 
 export const media = {
   brand: {
-    logo: "/brand/logo-primary-transparent.png",
+    logo: "/brand/logo-primary-transparent-2026.png",
   },
   home: {
     hero: "/images/approved/home-hero-lash-application.jpg",

@@ -53,8 +53,8 @@ export function SiteHeader() {
             <Image
               src={media.brand.logo}
               alt="Lavender Lash Love by Jen Shedrock"
-              width={3644}
-              height={1521}
+              width={3782}
+              height={1508}
               sizes="(max-width: 767px) 48vw, 216px"
               priority
               className="logo"
@@ -114,8 +114,8 @@ export function SiteFooter() {
         <Image
           src={media.brand.logo}
           alt="Lavender Lash Love by Jen Shedrock"
-          width={3644}
-          height={1521}
+          width={3782}
+          height={1508}
           sizes="(max-width: 767px) 68vw, 272px"
         />
         <p>Luxury lash artistry in Studio City and Thousand Oaks.</p>

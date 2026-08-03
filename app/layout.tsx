@@ -37,8 +37,8 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [
         {
           url: `${origin}${media.brand.logo}`,
-          width: 3644,
-          height: 1521,
+          width: 3782,
+          height: 1508,
           alt: "Lavender Lash Love by Jen Shedrock",
         },
       ],

@@ -4,7 +4,7 @@ All media references are centralized in `app/media.ts`. Production assets are ap
 
 | Filename | Page | Section | Image role | Source ratio | Status |
 | --- | --- | --- | --- | --- | --- |
-| `public/brand/logo-primary-transparent.png` | Global | Header, footer, 404, favicon, social metadata | Official protected primary logo, rendered uncropped and proportionally | 3782:1508 transparent canvas | Approved production; sole logo asset |
+| `public/brand/logo-primary-transparent-2026.png` | Global | Header, footer, 404, favicon, social metadata | Official protected primary logo, rendered uncropped and proportionally | 3782:1508 transparent canvas | Approved production; sole logo asset |
 | `public/images/approved/jen-about-hero.jpeg` | Home | Meet Jen | Artist portrait | 4:5 | Approved production |
 | `public/images/approved/jen-about-hero.jpeg` | About Jen | Hero | Portrait-led artist hero | 4:5 | Approved production |
 | `public/images/approved/jen-working.jpg` | About Jen | Philosophy | Jen performing a lash application | 5:4 | Approved production |
@@ -34,4 +34,4 @@ All media references are centralized in `app/media.ts`. Production assets are ap
 - Studio City directions URL is approved as supplied.
 - Thousand Oaks directions URL is generated from the approved address and awaits confirmation.
 - Service pricing, contact information, social URLs, location details, and Vagaro URLs are centralized in `app/content.ts`.
-- The previous white-background logo was removed after every site, favicon, and social-metadata reference was replaced with the official transparent PNG.
+- Previous logo files were removed after every site, favicon, and social-metadata reference was replaced with the official transparent PNG.

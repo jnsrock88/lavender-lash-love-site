@@ -34,7 +34,7 @@ test("server-renders the Lavender Lash Love homepage", async () => {
   assert.match(html, /Custom lashes/);
   assert.match(html, /designed for you\./);
   assert.match(html, /Book your appointment/i);
-  assert.match(html, /\/brand\/logo-primary-transparent\.png/);
+  assert.match(html, /\/brand\/logo-primary-transparent-2026\.png/);
   assert.match(html, /<link[^>]+rel="stylesheet"[^>]+\/assets\/index-[^"]+\.css/i);
   assert.doesNotMatch(html, /Your site is taking shape|codex-preview/i);
 });
@@ -68,7 +68,7 @@ test("keeps business links and media centralized", async () => {
 
   assert.match(content, /https:\/\/www\.vagaro\.com\/lavenderlashlove/);
   assert.match(content, /https:\/\/www\.vagaro\.com\/us02\/lavlashluvgoddess/);
-  assert.match(media, /logo:\s*"\/brand\/logo-primary-transparent\.png"/);
+  assert.match(media, /logo:\s*"\/brand\/logo-primary-transparent-2026\.png"/);
   assert.match(home, /BOOKING_CHOOSER_URL/);
   assert.match(home, /business\.locations/);
   assert.match(services, /business\.serviceMenu/);
