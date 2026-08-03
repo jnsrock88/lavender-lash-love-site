@@ -65,9 +65,9 @@ export const business = {
       description: "A refined, natural-looking enhancement designed around your eye shape.",
       image: media.services.classic,
       offerings: [
-        { name: "Touch-Up", price: "$60" },
-        { name: "2 Week Fill", price: "$85" },
-        { name: "3–5 Week Fill", price: "$110" },
+        { name: "Touch-Up", price: "$85" },
+        { name: "2 Week Fill", price: "$95" },
+        { name: "3–5 Week Fill", price: "$120" },
       ],
     },
     {
