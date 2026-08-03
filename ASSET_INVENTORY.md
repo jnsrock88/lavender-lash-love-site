@@ -4,7 +4,7 @@ All media references are centralized in `app/media.ts`. Production assets are ap
 
 | Filename | Page | Section | Image role | Source ratio | Status |
 | --- | --- | --- | --- | --- | --- |
-| `public/brand/logo-primary-transparent.png` | Global | Header, footer, 404, favicon, social metadata | Official protected primary logo, rendered uncropped and proportionally | 3644:1521 transparent canvas | Approved production; sole logo asset |
+| `public/brand/logo-primary-transparent.png` | Global | Header, footer, 404, favicon, social metadata | Official protected primary logo, rendered uncropped and proportionally | 3782:1508 transparent canvas | Approved production; sole logo asset |
 | `public/images/approved/jen-about-hero.jpeg` | Home | Meet Jen | Artist portrait | 4:5 | Approved production |
 | `public/images/approved/jen-about-hero.jpeg` | About Jen | Hero | Portrait-led artist hero | 4:5 | Approved production |
 | `public/images/approved/jen-working.jpg` | About Jen | Philosophy | Jen performing a lash application | 5:4 | Approved production |
