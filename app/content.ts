@@ -76,9 +76,9 @@ export const business = {
       description: "Airy, customized fullness with an elegant finish—never one-size-fits-all.",
       image: media.services.volume,
       offerings: [
-        { name: "Touch-Up", price: "$80" },
-        { name: "2 Week Fill", price: "$105" },
-        { name: "3–5 Week Fill", price: "$130" },
+        { name: "Touch-Up", price: "$105" },
+        { name: "2 Week Fill", price: "$115" },
+        { name: "3–5 Week Fill", price: "$140" },
       ],
     },
     {
