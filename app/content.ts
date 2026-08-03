@@ -57,7 +57,7 @@ export const business = {
       name: "Lash Full Set",
       description: "A complete custom lash application shaped around your features and desired finish.",
       image: media.services.hybrid,
-      offerings: [{ name: "Full Set", price: "$400" }],
+      offerings: [{ name: "Full Set", price: "$350" }],
     },
     {
       number: "02",
