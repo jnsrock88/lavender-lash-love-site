@@ -172,7 +172,6 @@ export const INSTAGRAM_URL = business.social.instagram;
 export const navigation = [
   { label: "Services", href: "/services" },
   { label: "Gallery", href: "/gallery" },
-  { label: "The Experience", href: "/experience" },
   { label: "About Jen", href: "/about" },
   { label: "Locations", href: "/locations" },
   { label: "FAQ", href: "/faq" },

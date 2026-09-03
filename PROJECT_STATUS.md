@@ -6,7 +6,7 @@
 - **Public Cloudflare preview:** [lavender-lash-love-site-lub.pages.dev](https://lavender-lash-love-site-lub.pages.dev)
 - **Prototype status:** Prototype v1 foundation approved; approved content, photography, art-direction refinements, and mobile-navigation fix integrated
 - **Production domain status:** Untouched and not connected to this project
-- **Approved sitemap:** Home, Services, Gallery, The Experience, About Jen, Locations, FAQ, Contact, Policies, and branded 404
+- **Approved sitemap:** Home, Services, Gallery, About Jen, Locations, FAQ, Contact, Policies, and branded 404
 - **Protected logo:** Approved transparent production logo; artwork may only be resized proportionally
 - **Centralized content/media:** Business facts, booking links, social links, pricing, and locations are in `app/content.ts`; media references are in `app/media.ts`; image status is recorded in `ASSET_INVENTORY.md`
 - **Remaining placeholders:** Approved biography, credentials, personal note, testimonials, FAQ answers, policies, aftercare guidance, confirmed Thousand Oaks Maps URL, and final hero/service/gallery/mapping/FAQ/social-preview photography

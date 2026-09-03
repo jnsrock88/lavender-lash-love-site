@@ -43,7 +43,6 @@ test("server-renders every approved primary route", async () => {
   const routes = [
     ["/services", /Find the service that feels like you\./],
     ["/gallery", /Portraits in softness, shape, and light\./],
-    ["/experience", /An appointment designed to feel like care\./],
     ["/about", /Artistry, precision, and personal care\./],
     ["/locations", /Your appointment, a little closer to home\./],
     ["/faq", /A little clarity, before you arrive\./],
