@@ -821,12 +821,12 @@ blockquote {
 }
 
 .faq-callout {
-  padding-bottom: clamp(2.75rem, 4vw, 4rem);
+  padding-bottom: clamp(0.75rem, 1.2vw, 1.25rem);
   text-align: center;
 }
 
 .faq-callout + .final-cta {
-  padding-top: clamp(2.75rem, 4vw, 4rem);
+  padding-top: clamp(0.75rem, 1.2vw, 1.25rem);
 }
 
 .faq-callout .section-intro {
