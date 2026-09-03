@@ -188,6 +188,24 @@ export const services = [
   },
 ] as const;
 
+export const testimonials = [
+  {
+    name: "Angel",
+    quote:
+      "I have to say I’m immensely grateful for my lashes! I work out 4–5 days a week and many days twice a day to include hot yoga, and I am shocked by how much my lashes stay on. They look fresh even weeks later. Definitely recommend!",
+  },
+  {
+    name: "Nicole",
+    quote:
+      "By far the most amazing lash artist! I’ve been going to Lavender Lash Love for years and leave every appointment so satisfied. Jen is extremely professional, her studio feels so cozy and comfortable, and she always takes extra care to make sure your lashes stay healthy. She’s the best!",
+  },
+  {
+    name: "Nyrie",
+    quote:
+      "I'm hooked. She's methodical, detailed, and these lashes STAY ON! Swim, shower, makeup... I was delightfully shocked. Well worth the money to look amazing first thing in the morning. Love Jen!",
+  },
+] as const;
+
 export const faqs = [
   {
     question: "How do I know which lash style is right for me?",

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { BOOKING_CHOOSER_URL, business, services } from "../content";
+import { BOOKING_CHOOSER_URL, business, services, testimonials } from "../content";
 import { media } from "../media";
 
 function TextLink({
@@ -163,13 +163,16 @@ export function HomePage() {
       </section>
 
       <section className="testimonials section-pad">
-        <p className="eyebrow">Kind words · Placeholder testimonials</p>
-        <blockquote>
-          <span className="testimonial-stars" aria-label="Five stars">★★★★★</span>
-          “Approved client testimonial will appear here. This space is designed
-          for a thoughtful note about Jen’s care, artistry, and attention to detail.”
-          <cite>— Client name placeholder</cite>
-        </blockquote>
+        <p className="eyebrow">Testimonials</p>
+        <div className="testimonial-grid">
+          {testimonials.map((testimonial) => (
+            <blockquote key={testimonial.name}>
+              <span className="testimonial-stars" aria-label="Five stars">★★★★★</span>
+              <p>“{testimonial.quote}”</p>
+              <cite>— {testimonial.name}</cite>
+            </blockquote>
+          ))}
+        </div>
       </section>
 
       <section className="faq faq-callout section-pad" id="faq">

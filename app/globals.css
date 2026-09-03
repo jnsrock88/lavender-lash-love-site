@@ -787,12 +787,28 @@ blockquote {
   background: var(--lilac);
 }
 
-.testimonials blockquote {
-  max-width: 54rem;
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.25rem, 2.5vw, 2.5rem);
+  max-width: 86rem;
   margin: 0 auto;
+}
+
+.testimonial-grid blockquote {
+  margin: 0;
+  padding: clamp(1.5rem, 2.8vw, 2.5rem);
+  border: 1px solid var(--line);
+  border-radius: 1.5rem;
   color: var(--aubergine);
-  font-size: clamp(2.2rem, 4vw, 4rem);
-  line-height: 1.08;
+  background: rgba(255, 248, 239, 0.68);
+  font-family: var(--sans) !important;
+  font-size: clamp(0.92rem, 1.2vw, 1.08rem);
+  line-height: 1.7;
+}
+
+.testimonial-grid blockquote p {
+  margin: 0;
 }
 
 .testimonial-stars {
@@ -2522,7 +2538,11 @@ blockquote {
   }
 
   .testimonials blockquote {
-    font-size: 2.4rem;
+    font-size: 0.92rem;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
   }
 
   .faq-item button,
