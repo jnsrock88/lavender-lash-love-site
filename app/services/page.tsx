@@ -22,7 +22,6 @@ export default function ServicesPage() {
 
       <section className="inner-intro section-pad">
         <p className="eyebrow">Personalized, never prescribed</p>
-        <h2>Subtle refinement or expressive volume—always designed with intention.</h2>
         <p>
           Explore the approved service menu below, then choose the location that
           works best for your appointment.
