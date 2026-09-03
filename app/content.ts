@@ -4,6 +4,7 @@ const lashExtensionAppointmentDetails =
   "Appointment time includes cleansing and prep, grown-out lash removal, application, sealing, and service closeout.";
 
 export const business = {
+  foundedYear: 2012,
   booking: {
     chooser: "/locations#booking-options",
     studioCity: "https://www.vagaro.com/lavenderlashlove",

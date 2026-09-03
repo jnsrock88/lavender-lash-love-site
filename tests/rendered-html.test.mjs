@@ -50,6 +50,8 @@ test("server-renders the Lavender Lash Love homepage", async () => {
   assert.match(html, /Nyrie<\/cite>/);
   assert.equal((html.match(/<blockquote/g) ?? []).length, 3);
   assert.doesNotMatch(html, /Kind words|Placeholder testimonials|Client name placeholder/i);
+  assert.match(html.replaceAll("<!-- -->", ""), /© 2012 Lavender Lash Love/);
+  assert.doesNotMatch(html, /Copyright year placeholder/i);
   assert.match(html, /\/brand\/logo-primary-transparent-2026\.png/);
   assert.match(html, /<link[^>]+rel="stylesheet"[^>]+\/assets\/index-[^"]+\.css/i);
   assert.doesNotMatch(html, /Your site is taking shape|codex-preview/i);

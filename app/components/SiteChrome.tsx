@@ -139,7 +139,7 @@ export function SiteFooter() {
         <a href={BOOKING_CHOOSER_URL}>Book an appointment</a>
       </div>
       <div className="footer-base">
-        <span>© Lavender Lash Love · Copyright year placeholder</span>
+        <span>© {business.foundedYear} Lavender Lash Love</span>
         <span><a href="/policies">Policies</a> · <a href="/contact">Contact</a></span>
       </div>
     </footer>
