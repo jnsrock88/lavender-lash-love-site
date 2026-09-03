@@ -66,9 +66,24 @@ export const business = {
       description: "A refined, natural-looking enhancement designed around your eye shape.",
       image: media.services.classic,
       offerings: [
-        { name: "Touch-Up", price: "$85" },
-        { name: "2 Week Fill", price: "$95" },
-        { name: "3–5 Week Fill", price: "$120" },
+        {
+          name: "3–5 Week Fill",
+          price: "$120",
+          description:
+            "Classic Eyelash Extension Fill 3–5 Weeks involves the application of an individual single extension to each natural lash, enhancing both volume and length for a striking effect. As your natural lashes grow, the extensions are carefully replaced, ensuring a full and vibrant appearance that lasts, creating either a subtle or dramatic effect. The duration of this appointment may range from 1 to 2 hours, depending on the client’s natural lash density and the extent of lash shedding.",
+        },
+        {
+          name: "2 Week Fill",
+          price: "$95",
+          description:
+            "The Classic Eyelash Extension 2 Week Fill enhances your natural lashes by applying an individual single extension that increases both volume and length for a dramatic look. This service focuses on adding extensions to existing lashes while minimizing the removal of any extensions, ensuring a seamless and full appearance. The duration of this appointment may range from 1 to 1 hour and 15 minutes, depending on the client’s natural lash density and the extent of lash shedding.",
+        },
+        {
+          name: "Touch-Up",
+          price: "$85",
+          description:
+            "The Classic Extension Touch-Up is designed to refresh and enhance your lash look, perfect for special occasions or when you experience more shedding than usual. This service ensures your lashes remain full and beautifully balanced. The duration of this appointment may range from 35 to 45 minutes, depending on the client’s natural lash density and the extent of lash shedding.",
+        },
       ],
     },
     {

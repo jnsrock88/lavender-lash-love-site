@@ -8,13 +8,14 @@ export const metadata = {
   description: "Explore personalized lash services by Jen Shedrock.",
 };
 
-function PriceList({ offerings }: { offerings: readonly { name: string; price: string }[] }) {
+function PriceList({ offerings }: { offerings: readonly { name: string; price: string; description?: string }[] }) {
   return (
     <dl className="services-price-list">
       {offerings.map((offering) => (
-        <div key={offering.name}>
+        <div className={offering.description ? "has-description" : undefined} key={offering.name}>
           <dt>{offering.name}</dt>
           <dd>{offering.price}</dd>
+          {offering.description ? <p>{offering.description}</p> : null}
         </div>
       ))}
     </dl>
