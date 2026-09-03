@@ -177,7 +177,16 @@ export const navigation = [
   { label: "FAQ", href: "/faq" },
 ] as const;
 
-export const services = business.serviceMenu.slice(0, 4);
+export const services = [
+  { ...business.serviceMenu[0], href: "/services#new-client" },
+  { ...business.serviceMenu[1], href: "/services#fills" },
+  { ...business.serviceMenu[2], href: "/services#fills" },
+  {
+    ...business.serviceMenu[4],
+    name: "Korean Lash/Brow Lift",
+    href: "/services#lifts-brows",
+  },
+] as const;
 
 export const faqs = [
   {

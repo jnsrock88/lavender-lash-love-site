@@ -139,7 +139,7 @@ export function HomePage() {
                 <p className="service-card-price">
                   {service.offerings[0].name} · {service.offerings[0].price}
                 </p>
-                <TextLink href="/services">View service</TextLink>
+                <TextLink href={service.href}>View service</TextLink>
               </div>
             </article>
           ))}
@@ -147,6 +147,7 @@ export function HomePage() {
       </section>
 
       <section className="gallery section-pad" id="gallery">
+        <span className="gallery-backdrop-element" aria-hidden="true" />
         <div className="section-intro align-right">
           <p className="eyebrow">Selected work</p>
         </div>
