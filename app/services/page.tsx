@@ -58,7 +58,6 @@ export default function ServicesPage() {
       <nav className="services-category-nav" aria-label="Service categories">
         <a href="#new-client">New client set</a>
         <a href="#fills">Lash fills</a>
-        <a href="#other-services">Other services</a>
         <a href="#lifts-brows">Lifts & brows</a>
       </nav>
 
@@ -97,20 +96,17 @@ export default function ServicesPage() {
             </article>
           ))}
         </div>
-      </section>
-
-      <section className="services-group section-pad" id="other-services">
-        <div className="services-group-heading">
+        <div className="services-additional">
           <p className="eyebrow">Additional care</p>
-          <h2>Other Lash Extension Services</h2>
+          <h3>Additional Lash Services</h3>
           <p>{additional.description}</p>
+          <PriceList offerings={additional.offerings} />
+          <ServicePhoto
+            src={additional.image}
+            alt="Additional lash service example"
+            label="Additional service results"
+          />
         </div>
-        <PriceList offerings={additional.offerings} />
-        <ServicePhoto
-          src={additional.image}
-          alt="Additional lash service example"
-          label="Additional service results"
-        />
       </section>
 
       <section className="services-group services-group-tint section-pad" id="lifts-brows">
