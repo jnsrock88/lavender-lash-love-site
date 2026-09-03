@@ -1,5 +1,8 @@
 import { media } from "./media";
 
+const lashExtensionAppointmentDetails =
+  "Appointment time includes cleansing and prep, grown-out lash removal, application, sealing, and service closeout.";
+
 export const business = {
   booking: {
     chooser: "/locations#booking-options",
@@ -56,7 +59,7 @@ export const business = {
       number: "01",
       name: "Lash Full Set",
       description:
-        "A full set of eyelash extensions is completely customized and created just for you. Extensions are carefully applied to your bare natural lashes, with every detail tailored to your eye shape, natural lash health, lifestyle, and desired look. Your appointment includes a 30-minute consultation so we can design a set you’ll love. The full service typically takes 2–3 hours, depending on your natural lash density and chosen style.",
+        `A full set of eyelash extensions is completely customized and created just for you. Extensions are carefully applied to your bare natural lashes, with every detail tailored to your eye shape, natural lash health, lifestyle, and desired look. Your appointment includes a 30-minute consultation so we can design a set you’ll love. The full service typically takes 2–3 hours, depending on your natural lash density and chosen style. ${lashExtensionAppointmentDetails}`,
       image: media.services.hybrid,
       offerings: [{ name: "Full Set", price: "$350" }],
     },
@@ -70,19 +73,19 @@ export const business = {
           name: "3–5 Week Fill",
           price: "$120",
           description:
-            "Classic Eyelash Extension Fill 3–5 Weeks involves the application of an individual single extension to each natural lash, enhancing both volume and length for a striking effect. As your natural lashes grow, the extensions are carefully replaced, ensuring a full and vibrant appearance that lasts, creating either a subtle or dramatic effect. The duration of this appointment may range from 1 to 2 hours, depending on the client’s natural lash density and the extent of lash shedding.",
+            `Classic Eyelash Extension Fill 3–5 Weeks involves the application of an individual single extension to each natural lash, enhancing both volume and length for a striking effect. As your natural lashes grow, the extensions are carefully replaced, ensuring a full and vibrant appearance that lasts, creating either a subtle or dramatic effect. The duration of this appointment may range from 1 to 2 hours, depending on the client’s natural lash density and the extent of lash shedding. ${lashExtensionAppointmentDetails}`,
         },
         {
           name: "2 Week Fill",
           price: "$95",
           description:
-            "The Classic Eyelash Extension 2 Week Fill enhances your natural lashes by applying an individual single extension that increases both volume and length for a dramatic look. This service focuses on adding extensions to existing lashes while minimizing the removal of any extensions, ensuring a seamless and full appearance. The duration of this appointment may range from 1 to 1 hour and 15 minutes, depending on the client’s natural lash density and the extent of lash shedding.",
+            `The Classic Eyelash Extension 2 Week Fill enhances your natural lashes by applying an individual single extension that increases both volume and length for a dramatic look. This service focuses on adding extensions to existing lashes while minimizing the removal of any extensions, ensuring a seamless and full appearance. The duration of this appointment may range from 1 to 1 hour and 15 minutes, depending on the client’s natural lash density and the extent of lash shedding. ${lashExtensionAppointmentDetails}`,
         },
         {
           name: "Touch-Up",
           price: "$85",
           description:
-            "The Classic Extension Touch-Up is designed to refresh and enhance your lash look, perfect for special occasions or when you experience more shedding than usual. This service ensures your lashes remain full and beautifully balanced. The duration of this appointment may range from 35 to 45 minutes, depending on the client’s natural lash density and the extent of lash shedding.",
+            `The Classic Extension Touch-Up is designed to refresh and enhance your lash look, perfect for special occasions or when you experience more shedding than usual. This service ensures your lashes remain full and beautifully balanced. The duration of this appointment may range from 35 to 45 minutes, depending on the client’s natural lash density and the extent of lash shedding. ${lashExtensionAppointmentDetails}`,
         },
       ],
     },
@@ -96,19 +99,19 @@ export const business = {
           name: "3–5 Week Fill",
           price: "$140",
           description:
-            "Volume Eyelash Extension Fill 3–5 Weeks involves the application of small fans to each natural lash, enhancing both volume and length for a striking effect. As your natural lashes grow, the extensions are carefully replaced, ensuring a full and vibrant appearance that lasts, creating either a subtle or dramatic effect. The duration of this appointment may range from 1 to 2 hours, depending on the client’s natural lash density and the extent of lash shedding.",
+            `Volume Eyelash Extension Fill 3–5 Weeks involves the application of small fans to each natural lash, enhancing both volume and length for a striking effect. As your natural lashes grow, the extensions are carefully replaced, ensuring a full and vibrant appearance that lasts, creating either a subtle or dramatic effect. The duration of this appointment may range from 1 to 2 hours, depending on the client’s natural lash density and the extent of lash shedding. ${lashExtensionAppointmentDetails}`,
         },
         {
           name: "2 Week Fill",
           price: "$115",
           description:
-            "The Volume Eyelash Extension 2 Week Fill enhances your natural lashes by applying fans that increase both volume and length for a dramatic look. This service focuses on adding extensions to existing lashes while minimizing the removal of any extensions, ensuring a seamless and full appearance. The duration of this appointment may range from 1 to 1.5 hours, depending on the client’s natural lash density and the extent of lash shedding.",
+            `The Volume Eyelash Extension 2 Week Fill enhances your natural lashes by applying fans that increase both volume and length for a dramatic look. This service focuses on adding extensions to existing lashes while minimizing the removal of any extensions, ensuring a seamless and full appearance. The duration of this appointment may range from 1 to 1.5 hours, depending on the client’s natural lash density and the extent of lash shedding. ${lashExtensionAppointmentDetails}`,
         },
         {
           name: "Touch-Up",
           price: "$105",
           description:
-            "Volume Eyelash Extension Touch-Up is designed to refresh and enhance your lash look, perfect for special occasions or when you experience more shedding than usual. This service ensures your lashes remain full and beautifully balanced. The duration of this appointment may range from 35 to 45 minutes, depending on the client’s natural lash density and the extent of lash shedding.",
+            `Volume Eyelash Extension Touch-Up is designed to refresh and enhance your lash look, perfect for special occasions or when you experience more shedding than usual. This service ensures your lashes remain full and beautifully balanced. The duration of this appointment may range from 35 to 45 minutes, depending on the client’s natural lash density and the extent of lash shedding. ${lashExtensionAppointmentDetails}`,
         },
       ],
     },
@@ -122,7 +125,7 @@ export const business = {
           name: "Fill From Another Lash Artist",
           price: "$200",
           description:
-            "An outside fill is a fill appointment for eyelash extensions originally applied by another lash artist. Because every artist uses different products and techniques, outside fills can require additional time and care to assess, correct, or safely remove the existing extensions. For the best results, we kindly recommend booking a full set. Starting fresh allows us to create a beautiful, customized look just for you while protecting the health of your natural lashes. Although we’re happy to evaluate outside work, we cannot guarantee the results when filling over extensions applied elsewhere.",
+            `An outside fill is a fill appointment for eyelash extensions originally applied by another lash artist. Because every artist uses different products and techniques, outside fills can require additional time and care to assess, correct, or safely remove the existing extensions. For the best results, we kindly recommend booking a full set. Starting fresh allows us to create a beautiful, customized look just for you while protecting the health of your natural lashes. Although we’re happy to evaluate outside work, we cannot guarantee the results when filling over extensions applied elsewhere. ${lashExtensionAppointmentDetails}`,
         },
         {
           name: "Lash Removal",
