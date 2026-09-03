@@ -17,6 +17,15 @@ function PriceList({ offerings }: { offerings: readonly { name: string; price: s
           <dd>{offering.price}</dd>
           {offering.description ? <p>{offering.description}</p> : null}
           {offering.warning ? <p className="service-warning">{offering.warning}</p> : null}
+          <span className="service-book-row">
+            <a
+              className="service-book-button"
+              href={BOOKING_CHOOSER_URL}
+              aria-label={`Book ${offering.name}`}
+            >
+              Book now
+            </a>
+          </span>
         </div>
       ))}
     </dl>
@@ -60,7 +69,6 @@ export default function ServicesPage() {
           <p>{fullSet.description}</p>
           <PriceList offerings={fullSet.offerings} />
           <p className="services-note">Consultation included · Duration shown during booking</p>
-          <a className="button button-primary" href={BOOKING_CHOOSER_URL}>Book this service</a>
         </div>
         <ServicePhoto
           src={fullSet.image}

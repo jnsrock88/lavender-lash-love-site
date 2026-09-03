@@ -1304,6 +1304,31 @@ blockquote {
   letter-spacing: .045em;
 }
 
+.service-book-button {
+  display: inline-flex;
+  margin-top: .15rem;
+  padding: .62rem 1.15rem;
+  border: 1px solid var(--aubergine);
+  border-radius: 999px;
+  color: var(--aubergine);
+  font-size: .76rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  line-height: 1;
+  text-transform: uppercase;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.service-book-row {
+  flex: 0 0 100%;
+}
+
+.service-book-button:hover,
+.service-book-button:focus-visible {
+  background: var(--aubergine);
+  color: white;
+}
+
 .services-price-list dt,
 .services-price-list dd {
   margin: 0;
