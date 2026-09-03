@@ -1,8 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
-import { BOOKING_CHOOSER_URL, business, faqs, services } from "../content";
+import { BOOKING_CHOOSER_URL, business, services } from "../content";
 import { media } from "../media";
 
 function TextLink({
@@ -32,39 +31,6 @@ function SectionIntro({
     <div className={`section-intro ${align === "right" ? "align-right" : ""}`}>
       <p className="eyebrow">{eyebrow}</p>
       <h2>{title}</h2>
-    </div>
-  );
-}
-
-function FAQ() {
-  const [active, setActive] = useState<number | null>(0);
-  return (
-    <div className="faq-list">
-      {faqs.map((item, index) => {
-        const isOpen = active === index;
-        return (
-          <div className="faq-item" key={item.question}>
-            <h3>
-              <button
-                type="button"
-                aria-expanded={isOpen}
-                aria-controls={`faq-answer-${index}`}
-                onClick={() => setActive(isOpen ? null : index)}
-              >
-                <span>{item.question}</span>
-                <span aria-hidden="true">{isOpen ? "−" : "+"}</span>
-              </button>
-            </h3>
-            <div
-              id={`faq-answer-${index}`}
-              className="faq-answer"
-              hidden={!isOpen}
-            >
-              <p>{item.answer}</p>
-            </div>
-          </div>
-        );
-      })}
     </div>
   );
 }
@@ -205,9 +171,9 @@ export function HomePage() {
         </blockquote>
       </section>
 
-      <section className="faq section-pad" id="faq">
-        <SectionIntro eyebrow="A few things to know" title="Considered answers, before you arrive." />
-        <FAQ />
+      <section className="faq faq-callout section-pad" id="faq">
+        <SectionIntro eyebrow="A few things to know" title="Questions? Everything you need to know is right here." />
+        <a className="button button-primary" href="/faq">Explore FAQs</a>
       </section>
 
       <section className="final-cta section-pad">

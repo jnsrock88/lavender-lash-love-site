@@ -801,6 +801,22 @@ blockquote {
   background: var(--cream);
 }
 
+.faq-callout {
+  text-align: center;
+}
+
+.faq-callout .section-intro {
+  margin-right: auto;
+  margin-bottom: 2.5rem;
+  margin-left: auto;
+}
+
+.faq-callout .section-intro h2 {
+  max-width: 16ch;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .faq-list,
 .accordion-list {
   max-width: 70rem;
