@@ -41,7 +41,7 @@ test("server-renders the Lavender Lash Love homepage", async () => {
 
 test("server-renders every approved primary route", async () => {
   const routes = [
-    ["/services", /Every look begins with you\./],
+    ["/services", /Find the service that feels like you\./],
     ["/gallery", /Portraits in softness, shape, and light\./],
     ["/experience", /An appointment designed to feel like care\./],
     ["/about", /Artistry, precision, and personal care\./],
