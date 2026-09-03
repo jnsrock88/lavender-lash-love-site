@@ -58,8 +58,8 @@ export default function ServicesPage() {
       <nav className="services-category-nav" aria-label="Service categories">
         <a href="#new-client">New client set</a>
         <a href="#fills">Lash fills</a>
-        <a href="#lifts-brows">Lifts & brows</a>
         <a href="#other-services">Other services</a>
+        <a href="#lifts-brows">Lifts & brows</a>
       </nav>
 
       <section className="services-featured section-pad" id="new-client">
@@ -99,21 +99,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="services-group section-pad" id="lifts-brows">
-        <div className="services-group-heading">
-          <p className="eyebrow">Low maintenance beauty</p>
-          <h2>Lifts, Brows, and Tints</h2>
-          <p>{keratin.description}</p>
-        </div>
-        <PriceList offerings={keratin.offerings} />
-        <ServicePhoto
-          src={keratin.image}
-          alt="Lash lift and brow service example"
-          label="Lift, brow, and tint results"
-        />
-      </section>
-
-      <section className="services-group services-group-tint section-pad" id="other-services">
+      <section className="services-group section-pad" id="other-services">
         <div className="services-group-heading">
           <p className="eyebrow">Additional care</p>
           <h2>Other Services</h2>
@@ -124,6 +110,20 @@ export default function ServicesPage() {
           src={additional.image}
           alt="Additional lash service example"
           label="Additional service results"
+        />
+      </section>
+
+      <section className="services-group services-group-tint section-pad" id="lifts-brows">
+        <div className="services-group-heading">
+          <p className="eyebrow">Low maintenance beauty</p>
+          <h2>Lifts, Brows, and Tints</h2>
+          <p>{keratin.description}</p>
+        </div>
+        <PriceList offerings={keratin.offerings} />
+        <ServicePhoto
+          src={keratin.image}
+          alt="Lash lift and brow service example"
+          label="Lift, brow, and tint results"
         />
       </section>
 
