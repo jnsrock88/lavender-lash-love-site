@@ -92,9 +92,24 @@ export const business = {
       description: "Airy, customized fullness with an elegant finish—never one-size-fits-all.",
       image: media.services.volume,
       offerings: [
-        { name: "Touch-Up", price: "$105" },
-        { name: "2 Week Fill", price: "$115" },
-        { name: "3–5 Week Fill", price: "$140" },
+        {
+          name: "3–5 Week Fill",
+          price: "$140",
+          description:
+            "Volume Eyelash Extension Fill 3–5 Weeks involves the application of small fans to each natural lash, enhancing both volume and length for a striking effect. As your natural lashes grow, the extensions are carefully replaced, ensuring a full and vibrant appearance that lasts, creating either a subtle or dramatic effect. The duration of this appointment may range from 1 to 2 hours, depending on the client’s natural lash density and the extent of lash shedding.",
+        },
+        {
+          name: "2 Week Fill",
+          price: "$115",
+          description:
+            "The Volume Eyelash Extension 2 Week Fill enhances your natural lashes by applying fans that increase both volume and length for a dramatic look. This service focuses on adding extensions to existing lashes while minimizing the removal of any extensions, ensuring a seamless and full appearance. The duration of this appointment may range from 1 to 1.5 hours, depending on the client’s natural lash density and the extent of lash shedding.",
+        },
+        {
+          name: "Touch-Up",
+          price: "$105",
+          description:
+            "Volume Eyelash Extension Touch-Up is designed to refresh and enhance your lash look, perfect for special occasions or when you experience more shedding than usual. This service ensures your lashes remain full and beautifully balanced. The duration of this appointment may range from 35 to 45 minutes, depending on the client’s natural lash density and the extent of lash shedding.",
+        },
       ],
     },
     {
