@@ -98,14 +98,9 @@ export default function ServicesPage() {
         </div>
         <div className="services-additional">
           <p className="eyebrow">Additional care</p>
-          <h3>Additional Lash Services</h3>
+          <h3>Additional Lash Extension Services</h3>
           <p>{additional.description}</p>
           <PriceList offerings={additional.offerings} />
-          <ServicePhoto
-            src={additional.image}
-            alt="Additional lash service example"
-            label="Additional service results"
-          />
         </div>
       </section>
 

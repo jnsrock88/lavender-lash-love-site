@@ -1425,11 +1425,6 @@ blockquote {
   line-height: 1.65;
 }
 
-.services-additional .services-category-photo {
-  min-height: clamp(18rem, 32vw, 30rem);
-  margin-top: 2rem;
-}
-
 .services-group > .services-price-list {
   max-width: 64rem;
 }
