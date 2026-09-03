@@ -18,7 +18,7 @@ export const media = {
     hybrid: `${temporaryCurrentSite}/service-hybrid.png`,
     volume: `${temporaryCurrentSite}/service-volume.jpg`,
     fourthPlaceholder: "/images/beauty-portrait-02.jpeg",
-    keratin: `${temporaryCurrentSite}/gallery-04.jpg`,
+    keratin: "/images/approved/korean-lash-lift-tint.jpg",
   },
   about: {
     homePortrait: "/images/approved/jen-about-hero.jpeg",

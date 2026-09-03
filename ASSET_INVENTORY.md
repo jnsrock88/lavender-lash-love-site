@@ -24,7 +24,7 @@ All media references are centralized in `app/media.ts`. Production assets are ap
 | `public/images/temporary-current-site/service-hybrid.png` | Home, Services | Lash Full Set | Existing-site lash result | 1:1 | Temporary production placeholder |
 | `public/images/temporary-current-site/service-volume.jpg` | Home, Services | Volume Lashes | Existing-site lash result | 1:1 | Temporary production placeholder |
 | `public/images/beauty-portrait-02.jpeg` | Home, Services | Additional Services | Editorial beauty image | 2:3 | Temporary stock |
-| `public/images/temporary-current-site/gallery-04.jpg` | Services | Keratin Boosted Lash & Brow | Existing-site lash result | Source crop varies | Temporary production placeholder |
+| `public/images/approved/korean-lash-lift-tint.jpg` | Home, Services | Korean Lash/Brow Lift and Tint | Owner-supplied finished client portrait | 4:3 | Approved production |
 | `public/images/temporary-current-site/gallery-01.png` through `gallery-08.jpg` | Home, Gallery, Experience | Portfolio and mapping | Existing-site lash portfolio | Mixed | Temporary production placeholders |
 | `public/images/beauty-portrait-02.jpeg` and `beauty-portrait-03.jpeg` | Gallery | Editorial portrait studies | Full-face portfolio balance | Mixed | Temporary stock |
 | `public/og.png` | Media archive | Legacy Open Graph image | Retained non-logo campaign artwork, no longer used by metadata | 1.75:1 | Temporary, currently unused |

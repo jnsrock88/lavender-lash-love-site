@@ -86,6 +86,7 @@ test("keeps business links and media centralized", async () => {
   assert.match(content, /https:\/\/www\.vagaro\.com\/lavenderlashlove/);
   assert.match(content, /https:\/\/www\.vagaro\.com\/us02\/lavlashluvgoddess/);
   assert.match(media, /logo:\s*"\/brand\/logo-primary-transparent-2026\.png"/);
+  assert.match(media, /keratin:\s*"\/images\/approved\/korean-lash-lift-tint\.jpg"/);
   assert.match(home, /BOOKING_CHOOSER_URL/);
   assert.match(home, /business\.locations/);
   assert.match(services, /business\.serviceMenu/);
