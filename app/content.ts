@@ -55,7 +55,8 @@ export const business = {
     {
       number: "01",
       name: "Lash Full Set",
-      description: "A complete custom lash application shaped around your features and desired finish.",
+      description:
+        "A full set of eyelash extensions is completely customized and created just for you. Extensions are carefully applied to your bare natural lashes, with every detail tailored to your eye shape, natural lash health, lifestyle, and desired look. Your appointment includes a 30-minute consultation so we can design a set you’ll love. The full service typically takes 2–3 hours, depending on your natural lash density and chosen style.",
       image: media.services.hybrid,
       offerings: [{ name: "Full Set", price: "$350" }],
     },
