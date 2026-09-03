@@ -102,7 +102,7 @@ export default function ServicesPage() {
       <section className="services-group section-pad" id="other-services">
         <div className="services-group-heading">
           <p className="eyebrow">Additional care</p>
-          <h2>Other Services</h2>
+          <h2>Other Lash Extension Services</h2>
           <p>{additional.description}</p>
         </div>
         <PriceList offerings={additional.offerings} />
