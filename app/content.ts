@@ -143,12 +143,14 @@ export const business = {
           price: "$175",
           description:
             "A Korean lash lift and tint is a gentle, precision-focused treatment designed to lift the lashes from the root for a clean, elongated, and beautifully defined look. Unlike a traditional lash lift, the Korean technique creates a softer, more customized shape while helping the lashes appear longer and more open. A tint is included to darken the natural lashes for added definition and a mascara-like finish. The result is a polished, low-maintenance look that typically lasts 6–8 weeks.",
+          warning: "BE AWARE YOU CANNOT GET YOUR LASHES WET FOR 24 HOURS POST SERVICE",
         },
         {
           name: "Korean Lash/Brow Lift",
           price: "$145",
           description:
             "A Korean lash/brow lift is a gentle, precision-focused treatment designed to lift the lashes from the root for a clean, elongated, and beautifully defined look. Unlike a traditional lash lift, the Korean technique creates a softer, more customized shape while helping the lashes appear longer and more open.",
+          warning: "BE AWARE YOU CANNOT GET YOUR LASHES WET FOR 24 HOURS POST SERVICE",
         },
         {
           name: "Lash/Brow Tint",

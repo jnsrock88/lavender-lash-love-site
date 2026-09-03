@@ -1297,6 +1297,13 @@ blockquote {
   line-height: 1.65;
 }
 
+.services-price-list div.has-description p.service-warning {
+  margin-top: .45rem;
+  color: var(--aubergine);
+  font-weight: 700;
+  letter-spacing: .045em;
+}
+
 .services-price-list dt,
 .services-price-list dd {
   margin: 0;

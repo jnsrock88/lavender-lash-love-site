@@ -8,7 +8,7 @@ export const metadata = {
   description: "Explore personalized lash services by Jen Shedrock.",
 };
 
-function PriceList({ offerings }: { offerings: readonly { name: string; price: string; description?: string }[] }) {
+function PriceList({ offerings }: { offerings: readonly { name: string; price: string; description?: string; warning?: string }[] }) {
   return (
     <dl className="services-price-list">
       {offerings.map((offering) => (
@@ -16,6 +16,7 @@ function PriceList({ offerings }: { offerings: readonly { name: string; price: s
           <dt>{offering.name}</dt>
           <dd>{offering.price}</dd>
           {offering.description ? <p>{offering.description}</p> : null}
+          {offering.warning ? <p className="service-warning">{offering.warning}</p> : null}
         </div>
       ))}
     </dl>
