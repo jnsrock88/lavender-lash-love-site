@@ -101,12 +101,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="benefit-strip" aria-label="Lavender Lash Love benefits">
-        <article><span aria-hidden="true">01</span><div><h2>Custom lash artistry</h2><p>Tailored to your features and desired finish.</p></div></article>
-        <article><span aria-hidden="true">02</span><div><h2>Lash &amp; brow services</h2><p>Polished options designed around your routine.</p></div></article>
-        <article><span aria-hidden="true">♥</span><div><h2>Personal approach</h2><p>Thoughtful listening before every recommendation.</p></div></article>
-        <article><span aria-hidden="true">✦</span><div><h2>Expert care</h2><p>Precision, comfort, and an unhurried appointment.</p></div></article>
-      </section>
+      <div className="home-color-divider" aria-hidden="true" />
 
       <section className="home-about section-pad" id="jen">
         <div className="home-about-heading">
@@ -139,47 +134,6 @@ export function HomePage() {
         </aside>
       </section>
 
-      <section className="services section-pad" id="services">
-        <SectionIntro eyebrow="The service collection" title="Considered artistry, shaped around you." />
-        <div className="services-grid">
-          {services.map((service, index) => (
-            <article className="service-card" key={service.name}>
-              <div className="service-image">
-                <Image
-                  src={service.image}
-                  alt={`${service.name} service imagery`}
-                  fill
-                  sizes="(max-width: 760px) 100vw, 25vw"
-                />
-              </div>
-              <div className="service-card-copy">
-                <span className="service-number">0{index + 1}</span>
-                <h3>{service.name}</h3>
-                <p>{service.description}</p>
-                <p className="service-card-price">
-                  {service.offerings[0].name} · {service.offerings[0].price}
-                </p>
-                <TextLink href="/services">View service</TextLink>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="gallery section-pad" id="gallery">
-        <SectionIntro eyebrow="Selected work" title="Softness, shape, and light." align="right" />
-        <div className="editorial-gallery">
-          {media.gallery.slice(0, 5).map((item, index) => (
-            <figure key={item.src}>
-              <Image src={item.src} alt={item.alt} fill sizes="(max-width: 760px) 90vw, 32vw" />
-              <figcaption>{item.label}</figcaption>
-              {index === 1 ? <span className="gallery-star" aria-hidden="true">✦</span> : null}
-            </figure>
-          ))}
-        </div>
-        <div className="section-action"><TextLink href="/gallery">View full gallery</TextLink></div>
-      </section>
-
       <section className="locations section-pad" id="locations">
         <SectionIntro eyebrow="Two locations" title="Your appointment, a little closer to home." />
         <div className="location-line">
@@ -198,6 +152,47 @@ export function HomePage() {
             </article>
           ))}
         </div>
+      </section>
+
+      <section className="services section-pad" id="services">
+        <SectionIntro eyebrow="The service collection" title="Considered artistry, shaped around you." />
+        <div className="services-grid">
+          {services.map((service, index) => (
+            <article className="service-card" key={service.name}>
+              <div className="service-image">
+                <Image
+                  src={service.image}
+                  alt={`${service.name} service imagery`}
+                  fill
+                  sizes="(max-width: 760px) 100vw, 25vw"
+                />
+              </div>
+              <div className="service-card-copy">
+                <span className="service-number">0{index + 1}</span>
+                <h3>{service.name}</h3>
+                <p className="service-card-price">
+                  {service.offerings[0].name} · {service.offerings[0].price}
+                </p>
+                <TextLink href="/services">View service</TextLink>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="gallery section-pad" id="gallery">
+        <div className="section-intro align-right">
+          <p className="eyebrow">Selected work</p>
+        </div>
+        <div className="editorial-gallery">
+          {media.gallery.slice(0, 6).map((item) => (
+            <figure key={item.src}>
+              <Image src={item.src} alt={item.alt} fill sizes="(max-width: 760px) 90vw, 32vw" />
+              <figcaption>{item.label}</figcaption>
+            </figure>
+          ))}
+        </div>
+        <div className="section-action"><TextLink href="/gallery">View full gallery</TextLink></div>
       </section>
 
       <section className="testimonials section-pad">

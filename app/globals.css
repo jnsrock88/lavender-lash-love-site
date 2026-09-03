@@ -485,68 +485,11 @@ blockquote {
   font-size: 2.3rem;
 }
 
-/* Benefits */
-.benefit-strip {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  background:
-    radial-gradient(circle at 96% 120%, rgba(222, 205, 227, 0.75) 0 8rem, transparent 8.1rem),
-    var(--lilac);
-}
-
-.benefit-strip::after {
-  position: absolute;
-  right: -1rem;
-  bottom: 0;
-  width: 16rem;
-  height: 85%;
-  border: 1px solid rgba(184, 139, 78, 0.24);
-  border-bottom: 0;
-  border-radius: 50% 50% 0 0;
-  content: "";
-}
-
-.benefit-strip article {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  min-height: 11rem;
-  grid-template-columns: 3rem 1fr;
-  align-items: center;
-  gap: 1rem;
-  padding: 2rem clamp(1.3rem, 3vw, 3.2rem);
-  border-right: 1px solid var(--line);
-}
-
-.benefit-strip article:last-child {
-  border-right: 0;
-}
-
-.benefit-strip article > span {
-  color: var(--champagne);
-  font-family: var(--display);
-  font-size: 1.5rem;
-  text-align: center;
-}
-
-.benefit-strip h2 {
-  margin: 0 0 0.45rem;
-  color: var(--aubergine);
-  font-family: var(--sans);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.benefit-strip p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.78rem;
-  line-height: 1.65;
+/* Homepage section divider */
+.home-color-divider {
+  height: clamp(1rem, 2vw, 1.6rem);
+  border-block: 1px solid rgba(184, 139, 78, 0.42);
+  background: linear-gradient(90deg, var(--aubergine), var(--purple) 48%, var(--lilac-strong));
 }
 
 /* Homepage About */
@@ -655,7 +598,7 @@ blockquote {
 .service-card {
   display: grid;
   min-width: 0;
-  grid-template-rows: minmax(19rem, 26vw) auto;
+  grid-template-rows: auto auto;
 }
 
 .service-card:nth-child(1),
@@ -669,7 +612,8 @@ blockquote {
 .service-image {
   position: relative;
   overflow: hidden;
-  border-radius: 14rem 14rem 0.7rem 0.7rem;
+  aspect-ratio: 1;
+  border-radius: 2rem;
 }
 
 .service-image img {
@@ -726,45 +670,20 @@ blockquote {
 
 .editorial-gallery {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 2.5rem 2rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 3.5rem 2rem;
 }
 
 .editorial-gallery figure {
   position: relative;
-  min-height: 32rem;
+  min-height: 0;
+  aspect-ratio: 1;
   margin: 0;
   overflow: visible;
 }
 
-.editorial-gallery figure:nth-child(1) {
-  grid-column: 1 / span 5;
-  min-height: 44rem;
-}
-
-.editorial-gallery figure:nth-child(2) {
-  grid-column: 7 / span 4;
-  min-height: 35rem;
-  margin-top: 6rem;
-}
-
-.editorial-gallery figure:nth-child(3) {
-  grid-column: 2 / span 4;
-  min-height: 29rem;
-}
-
-.editorial-gallery figure:nth-child(4) {
-  grid-column: 7 / span 5;
-  min-height: 43rem;
-}
-
-.editorial-gallery figure:nth-child(5) {
-  grid-column: 3 / span 6;
-  min-height: 30rem;
-}
-
 .editorial-gallery img {
-  border-radius: 12rem 12rem 0.6rem 0.6rem;
+  border-radius: 2rem;
   filter: saturate(0.82);
 }
 
@@ -2323,20 +2242,8 @@ blockquote {
     background: linear-gradient(180deg, var(--cream), transparent);
   }
 
-  .benefit-strip {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .services-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .benefit-strip article:nth-child(2) {
-    border-right: 0;
-  }
-
-  .benefit-strip article:nth-child(-n + 2) {
-    border-bottom: 1px solid var(--line);
   }
 
   .home-about {
@@ -2481,25 +2388,6 @@ blockquote {
     margin: 1.3rem 0;
   }
 
-  .benefit-strip {
-    grid-template-columns: 1fr;
-    padding: 1.5rem 1.25rem;
-  }
-
-  .benefit-strip article,
-  .benefit-strip article:nth-child(2),
-  .benefit-strip article:nth-child(-n + 2) {
-    min-height: 8.5rem;
-    grid-template-columns: 3.6rem 1fr;
-    padding: 1.3rem 0;
-    border-right: 0;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .benefit-strip article:last-child {
-    border-bottom: 0;
-  }
-
   .home-about {
     grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
     gap: 2rem 1.5rem;
@@ -2556,12 +2444,12 @@ blockquote {
   .service-card:nth-child(3),
   .service-card:nth-child(4) {
     grid-column: auto;
-    grid-template-rows: 32rem auto;
+    grid-template-rows: auto auto;
     margin-top: 0;
   }
 
   .service-image {
-    border-radius: 45vw 45vw 0.7rem 0.7rem;
+    border-radius: 1.5rem;
   }
 
   .service-card h3 {
@@ -2569,29 +2457,18 @@ blockquote {
   }
 
   .editorial-gallery {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem 1rem;
   }
 
-  .editorial-gallery figure:nth-child(1),
-  .editorial-gallery figure:nth-child(4) {
-    grid-column: 1 / span 5;
-    min-height: 125vw;
-  }
-
-  .editorial-gallery figure:nth-child(2),
-  .editorial-gallery figure:nth-child(5) {
-    grid-column: 2 / span 5;
-    min-height: 105vw;
+  .editorial-gallery figure {
+    grid-column: auto;
+    min-height: 0;
     margin-top: 0;
   }
 
-  .editorial-gallery figure:nth-child(3) {
-    grid-column: 1 / span 4;
-    min-height: 90vw;
-  }
-
   .editorial-gallery img {
-    border-radius: 45vw 45vw 0.6rem 0.6rem;
+    border-radius: 1.25rem;
   }
 
   .location-line {
