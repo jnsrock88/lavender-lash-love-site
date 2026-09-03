@@ -119,7 +119,7 @@ export const business = {
       image: media.services.fourthPlaceholder,
       offerings: [
         {
-          name: "Outside Fill",
+          name: "Fill From Another Lash Artist",
           price: "$200",
           description:
             "An outside fill is a fill appointment for eyelash extensions originally applied by another lash artist. Because every artist uses different products and techniques, outside fills can require additional time and care to assess, correct, or safely remove the existing extensions. For the best results, we kindly recommend booking a full set. Starting fresh allows us to create a beautiful, customized look just for you while protecting the health of your natural lashes. Although we’re happy to evaluate outside work, we cannot guarantee the results when filling over extensions applied elsewhere.",
