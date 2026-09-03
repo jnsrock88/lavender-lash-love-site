@@ -14,7 +14,7 @@ const display = Cormorant_Garamond({
 const sans = Montserrat({
   variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -57,7 +57,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${display.variable} ${sans.variable}`}>
+      <body className={`${display.variable} ${sans.variable} ${sans.className}`}>
         <a className="skip-link" href="#main">Skip to content</a>
         <SiteHeader />
         {children}
