@@ -234,9 +234,34 @@ export const faqGroups = [
   {
     title: "Before the appointment",
     items: [
-      ["How should I arrive for my appointment?", "Placeholder: Approved preparation instructions will be added here. Guidance may include arriving with clean lashes and avoiding eye makeup."],
-      ["How do I choose the right service?", "Placeholder: Jen’s approved consultation guidance will explain how eye shape, natural lashes, lifestyle, and desired finish inform the recommendation."],
-      ["Can I wear contact lenses?", "Placeholder: Approved contact-lens guidance will be added before launch."],
+      [
+        "How should I arrive for my appointment?",
+        {
+          bullets: [
+            "Please arrive with clean lashes and no mascara, eyeliner, eye makeup, strip lash adhesive, or oil-based products around the eyes.",
+            "Please use the restroom before your service, since your eyes will remain closed throughout the appointment.",
+            "New clients receive a personalized consultation before the service begins.",
+          ],
+        },
+      ],
+      [
+        "How do I choose the right service?",
+        {
+          paragraphs: [
+            "Jen will help you select a style based on your natural lashes, eye shape, lifestyle, and desired look. Whether you prefer soft and natural or full glam, every set is customized for you.",
+            "Jen provides a full consultation covering how your natural lashes grow, what happens during the appointment, and how to care for your lashes afterward.",
+          ],
+          services: business.serviceMenu,
+        },
+      ],
+      [
+        "Can I wear contact lenses?",
+        {
+          paragraphs: [
+            "For your comfort, please remove contact lenses before your lash service. Bring your glasses or a contact lens case and solution. A contact case can be provided if needed.",
+          ],
+        },
+      ],
     ],
   },
   {

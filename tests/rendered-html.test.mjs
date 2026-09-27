@@ -75,6 +75,27 @@ test("server-renders every approved primary route", async () => {
   }
 });
 
+test("renders the approved appointment FAQ guidance and complete service guide", async () => {
+  const response = await render("/faq");
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, /Please arrive with clean lashes and no mascara/i);
+  assert.match(html, /Please use the restroom before your service/i);
+  assert.match(html, /personalized consultation before the service begins/i);
+  assert.match(html, /how your natural lashes grow/i);
+  assert.match(html, /what happens during the appointment/i);
+  assert.match(html, /how to care for your lashes afterward/i);
+  assert.match(html, /remove contact lenses before your lash service/i);
+  assert.match(html, /A contact case can be provided if needed/i);
+  assert.match(html, /Full Set/);
+  assert.match(html, /3–5 Week Fill/);
+  assert.match(html, /Fill From Another Lash Artist/);
+  assert.match(html, /Korean Lash Lift &amp; Tint/);
+  assert.doesNotMatch(html, /Approved preparation instructions will be added here/i);
+  assert.doesNotMatch(html, /Approved contact-lens guidance will be added before launch/i);
+});
+
 test("keeps business links and media centralized", async () => {
   const [content, media, home, services] = await Promise.all([
     readFile(new URL("../app/content.ts", import.meta.url), "utf8"),
