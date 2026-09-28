@@ -65,7 +65,7 @@ test("server-renders every approved primary route", async () => {
     ["/locations", /Your appointment, a little closer to home\./],
     ["/faq", /A little clarity, before you arrive\./],
     ["/contact", /A thoughtful answer is never far away\./],
-    ["/policies", /Clear expectations create a more relaxed experience\./],
+    ["/policies", /Booking Policies/],
   ];
 
   for (const [pathname, expected] of routes) {
@@ -135,6 +135,24 @@ test("renders approved fill maintenance and sensitivity guidance", async () => {
   assert.doesNotMatch(html, /Approved maintenance intervals and eligibility requirements/i);
   assert.doesNotMatch(html, /Approved sensitivity, consultation, and patch-test guidance/i);
   assert.doesNotMatch(html, /Approved safety guidance and referral language/i);
+});
+
+test("renders the approved booking policies without placeholders", async () => {
+  const response = await render("/policies");
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, /Booking Policies/i);
+  assert.match(html, /\$50 deposit required to book/i);
+  assert.match(html, /50% of the scheduled service/i);
+  assert.match(html, /100% of the scheduled service/i);
+  assert.match(html, /PLEASE PLAN AHEAD FOR PARKING AND RESTROOM USE/i);
+  assert.match(html, /\$75 Special Appointment Fee/i);
+  assert.match(html, /Trained service animals are welcome/i);
+  assert.match(html, /All services are non-refundable/i);
+  assert.match(html, /read, understood, and agreed to these policies/i);
+  assert.doesNotMatch(html, /Placeholder policy/i);
+  assert.doesNotMatch(html, /Prototype notice/i);
 });
 
 test("keeps business links and media centralized", async () => {

@@ -2187,12 +2187,30 @@ blockquote {
 }
 
 .policy-list h2 {
+  margin: 0 0 1rem;
   font-size: clamp(2.5rem, 4vw, 4rem);
 }
 
 .policy-list p {
+  margin: 0.7rem 0 0;
   color: var(--muted);
   line-height: 1.8;
+}
+
+.policy-list strong {
+  color: var(--ink);
+}
+
+.policy-list .policy-notice {
+  margin: 0 0 1.5rem;
+  padding: 1rem 1.15rem;
+  border-left: 3px solid var(--champagne);
+  color: var(--aubergine);
+  background: var(--lilac);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.7;
 }
 
 /* Lightbox */

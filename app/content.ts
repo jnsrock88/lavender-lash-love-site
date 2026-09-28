@@ -418,3 +418,75 @@ export const faqGroups = [
     ],
   },
 ] as const;
+
+export const bookingPolicies = [
+  {
+    title: "Deposits",
+    paragraphs: [
+      "**Full Sets:** $50 deposit required to book.",
+      "**Fills:** No deposit required.",
+      "Your Full Set deposit is applied toward your service and may be transferred when rescheduling with at least **24 hours' notice**.",
+    ],
+  },
+  {
+    title: "Cancellations & Rescheduling",
+    paragraphs: [
+      "**24+ hours' notice:** No cancellation fee.",
+      "**Less than 24 hours:** **50% of the scheduled service** will be charged.",
+      "Any Full Set deposit already paid will be applied toward the cancellation fee.",
+    ],
+  },
+  {
+    title: "No-Call / No-Show",
+    paragraphs: [
+      "No-call/no-shows will be charged **100% of the scheduled service**.",
+      "Future appointments may require **100% prepayment** to book.",
+    ],
+  },
+  {
+    title: "Late Arrivals",
+    notice:
+      "PLEASE PLAN AHEAD FOR PARKING AND RESTROOM USE SO YOU ARE READY TO BEGIN YOUR SERVICE AT YOUR SCHEDULED APPOINTMENT TIME.",
+    paragraphs: [
+      "Your scheduled time is the time your service begins. Please allow yourself a few extra minutes to park, use the restroom, and get settled before your appointment.",
+      "**Less than 30 minutes late:** Your appointment time will not be extended. Your service may need to be shortened, and the **full scheduled service price will still apply**.",
+      "**30+ minutes late:** The appointment will be canceled and a **50% same-day cancellation fee** will apply.",
+      "If you know you are running late, please contact Jen as soon as possible.",
+    ],
+  },
+  {
+    title: "Can I Request an After-Hours or Day-Off Appointment?",
+    paragraphs: [
+      "Appointments requested **outside Jen's regular business hours or on a scheduled day off** may be available by special request and are subject to a **$75 Special Appointment Fee**.",
+      "This fee is added to the regular service price and must be **approved by Jen before booking**. Special appointment availability is not guaranteed.",
+    ],
+  },
+  {
+    title: "Can I Bring a Guest, Child, or Animal?",
+    paragraphs: [
+      "To maintain a quiet, safe, and relaxing environment, it is recommended that you attend your appointment alone. **Guests and children should not accompany you unless approved by Jen in advance.**",
+      "**Pets are not permitted. Trained service animals are welcome.** Please let Jen know before your appointment if you will be accompanied by a service animal so the room can be prepared comfortably for your visit.",
+    ],
+  },
+  {
+    title: "Appointment Changes",
+    paragraphs: [
+      "Please book the correct service so enough time is reserved for your appointment. Adding or changing services on the day of your appointment **cannot be guaranteed**.",
+    ],
+  },
+  {
+    title: "Are Services Refundable?",
+    paragraphs: [
+      "**All services are non-refundable.**",
+      "If you experience a concern with your lashes, please contact Jen within **72 hours of your appointment**. Jen will evaluate the concern and, when appropriate, may offer a **complimentary adjustment or another appropriate service**.",
+      "A change of mind, personal preference after the agreed-upon service has been completed, or issues resulting from improper aftercare **do not qualify for a complimentary correction or refund**.",
+    ],
+  },
+  {
+    title: "Agreement to Policies",
+    paragraphs: [
+      "By booking an appointment with Lavender Lash Love, you confirm that you have **read, understood, and agreed to these policies**.",
+      "You also authorize Lavender Lash Love to charge the **card on file for applicable cancellation, late-cancellation, no-show, or other authorized fees described in these policies**.",
+    ],
+  },
+] as const;
