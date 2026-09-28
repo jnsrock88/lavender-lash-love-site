@@ -14,7 +14,6 @@ export default function FAQPage() {
       <PageHero
         eyebrow="Frequently asked questions"
         title="A little clarity, before you arrive."
-        intro="This prototype organizes the questions clients ask most. Final answers will be reviewed and approved by Jen before launch."
         image={media.pageHeroes.faq}
         imageAlt="Close-up of finished lash artistry"
         label="Temporary current-site imagery"

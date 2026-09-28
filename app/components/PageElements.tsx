@@ -25,7 +25,7 @@ export function PageHero({
 }: {
   eyebrow: string;
   title: string;
-  intro: string;
+  intro?: string;
   image?: string;
   imageAlt?: string;
   label?: string;
@@ -38,7 +38,7 @@ export function PageHero({
         <p className="eyebrow">{eyebrow}</p>
         <h1>{title}</h1>
         <div className="gold-heart-rule" aria-hidden="true"><span>♥</span></div>
-        <p>{intro}</p>
+        {intro ? <p>{intro}</p> : null}
       </div>
       <div className="page-hero-media">
         {image ? (

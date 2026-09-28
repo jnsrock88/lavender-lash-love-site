@@ -173,3 +173,15 @@ test("keeps business links and media centralized", async () => {
   assert.doesNotMatch(home, /https:\/\/www\.vagaro\.com/);
   assert.doesNotMatch(services, /https:\/\/www\.vagaro\.com/);
 });
+
+test("does not render placeholder or prototype review copy on public pages", async () => {
+  for (const pathname of ["/", "/about", "/faq", "/locations", "/policies", "/services"]) {
+    const response = await render(pathname);
+    assert.equal(response.status, 200, pathname);
+    const html = await response.text();
+    assert.doesNotMatch(html, /Placeholder:|Placeholder biography|Personal note placeholder|Credential placeholder|Advanced training placeholder|copyright year placeholder/i, pathname);
+    assert.doesNotMatch(html, /This prototype organizes the questions clients ask most/i, pathname);
+    assert.doesNotMatch(html, /Final answers will be reviewed and approved by Jen/i, pathname);
+    assert.doesNotMatch(html, /copyright year placeholder/i, pathname);
+  }
+});

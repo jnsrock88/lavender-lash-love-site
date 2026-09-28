@@ -19,7 +19,7 @@ export default function PoliciesPage() {
         eyebrow="Appointment policies"
         title="Booking Policies"
         intro="Please review before booking. Your appointment time is reserved especially for you. ♡"
-        label="Policy page photography placeholder"
+        label="Booking policies"
       />
       <section className="policies-page section-pad">
         <aside>

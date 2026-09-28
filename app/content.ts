@@ -207,29 +207,6 @@ export const testimonials = [
   },
 ] as const;
 
-export const faqs = [
-  {
-    question: "How do I know which lash style is right for me?",
-    answer:
-      "Placeholder: Your appointment can begin with a personalized conversation about your features, preferences, and day-to-day routine before a look is selected.",
-  },
-  {
-    question: "What should I expect at my first appointment?",
-    answer:
-      "Placeholder: Arrive with clean lashes and time to settle in. Final preparation details will be added when Jen’s approved appointment guidance is supplied.",
-  },
-  {
-    question: "How should I care for my lashes afterward?",
-    answer:
-      "Placeholder: Jen’s approved aftercare instructions and product recommendations will be placed here before launch.",
-  },
-  {
-    question: "Where are appointments available?",
-    answer:
-      "Appointments are offered at D. Miller Hair Lounge in Studio City and Goddess Beauty Salon in Thousand Oaks.",
-  },
-] as const;
-
 export const faqGroups = [
   {
     title: "Before the appointment",
@@ -408,13 +385,6 @@ export const faqGroups = [
           ],
         },
       ],
-    ],
-  },
-  {
-    title: "Cancellations and policies",
-    items: [
-      ["What is the cancellation policy?", "Placeholder: The approved cancellation window and related terms will be added here."],
-      ["What happens if I am late?", "Placeholder: Approved late-arrival guidance will be added here."],
     ],
   },
 ] as const;
