@@ -116,6 +116,27 @@ test("renders approved appointment timing, experience, retention, and aftercare 
   assert.doesNotMatch(html, /Placeholder: Jen’s approved post-appointment timing/i);
 });
 
+test("renders approved fill maintenance and sensitivity guidance", async () => {
+  const response = await render("/faq");
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, /Most clients schedule their fills every/i);
+  assert.match(html, /40% of your lash extensions remaining/i);
+  assert.match(html, /Can Jen fill lashes applied by another artist\?/i);
+  assert.match(html, /case-by-case basis/i);
+  assert.match(html, /Sensitivities &amp; Safety/i);
+  assert.match(html, /Are lash extensions safe\?/i);
+  assert.match(html, /What if I have sensitive eyes or allergies\?/i);
+  assert.match(html, /What is a reaction or contact dermatitis\?/i);
+  assert.match(html, /a patch test cannot guarantee that a reaction will not occur/i);
+  assert.match(html, /contact a healthcare professional for proper evaluation and treatment/i);
+  assert.match(html, /Can I book with an eye condition or illness\?/i);
+  assert.doesNotMatch(html, /Approved maintenance intervals and eligibility requirements/i);
+  assert.doesNotMatch(html, /Approved sensitivity, consultation, and patch-test guidance/i);
+  assert.doesNotMatch(html, /Approved safety guidance and referral language/i);
+});
+
 test("keeps business links and media centralized", async () => {
   const [content, media, home, services] = await Promise.all([
     readFile(new URL("../app/content.ts", import.meta.url), "utf8"),

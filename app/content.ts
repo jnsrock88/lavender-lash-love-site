@@ -335,15 +335,79 @@ export const faqGroups = [
   {
     title: "Fills and maintenance",
     items: [
-      ["When should I schedule a fill?", "Placeholder: Approved maintenance intervals and eligibility requirements will be added here."],
-      ["What qualifies as a fill?", "Placeholder: Jen’s approved fill criteria will be added here."],
+      [
+        "When should I schedule a fill?",
+        {
+          paragraphs: [
+            "Most clients schedule their fills every **3–5 weeks**, depending on their natural lash cycle, retention, home care, lifestyle, and desired level of fullness.",
+            "If you prefer your lashes to look consistently full and freshly done, you may choose to come in **every 2 weeks** for a smaller touch-up.",
+            "Everyone’s lashes shed and grow differently, so Jen will help recommend the best maintenance schedule for your natural lashes and the look you want to maintain.",
+          ],
+        },
+      ],
+      [
+        "What qualifies as a fill?",
+        {
+          paragraphs: [
+            "To qualify for a fill, you must have at least **40% of your lash extensions remaining** and they must be properly applied and in good condition.",
+            "During your fill, grown-out extensions are carefully removed and replaced while new extensions are applied to your natural lash growth.",
+            "Significant lash loss, excessive outgrowth, or going too long between appointments may require additional time or a **new full set**. If you’re unsure which service to book, please reach out before your appointment.",
+          ],
+        },
+      ],
+      [
+        "Can Jen fill lashes applied by another artist?",
+        {
+          paragraphs: [
+            "Outside fills are accepted on a **case-by-case basis** and are generally not preferred. Because every lash artist uses different products, techniques, and styling methods, Jen cannot guarantee that an outside fill will blend seamlessly with the existing extensions or provide the same results and retention as a full set of her own work.",
+            "Jen will evaluate the condition, application, and overall health of your existing extensions. If they cannot be safely or effectively filled, a **removal and new full set** will be recommended.",
+            "Starting with a fresh set allows Jen to fully customize your lashes and ensure the quality, consistency, and integrity of the finished result.",
+          ],
+        },
+      ],
     ],
   },
   {
-    title: "Sensitivities and safety",
+    title: "Sensitivities & Safety",
     items: [
-      ["What if I have sensitive eyes?", "Placeholder: Approved sensitivity, consultation, and patch-test guidance will be added here."],
-      ["Can I book if I have an eye condition?", "Placeholder: Approved safety guidance and referral language will be added here."],
+      [
+        "Are lash extensions safe?",
+        {
+          paragraphs: [
+            "Lash extensions are generally safe when applied by a trained professional using proper application techniques. Jen carefully selects the appropriate length, weight, and design to complement your natural lashes while maintaining their health and integrity.",
+            "Pulling, rubbing, improper aftercare, or extensions that are too long or heavy for the natural lashes can contribute to damage. Proper application and home care work together to help keep your natural lashes healthy.",
+          ],
+        },
+      ],
+      [
+        "What if I have sensitive eyes or allergies?",
+        {
+          paragraphs: [
+            "Please let Jen know about any known allergies, sensitivities, or previous reactions to lash extensions or adhesives before your appointment.",
+            "A patch test may be recommended for clients with known sensitivities; however, **a patch test cannot guarantee that a reaction will not occur** during or after a full application.",
+          ],
+        },
+      ],
+      [
+        "What is a reaction or contact dermatitis?",
+        {
+          paragraphs: [
+            "What is commonly referred to as a “lash allergy” may actually be **contact dermatitis**, which is inflammation that develops when the skin reacts to or is irritated by something it has been exposed to.",
+            "Contact dermatitis around the eye area may cause **redness, itching, swelling, dryness, tenderness, or irritated skin** and may develop after repeated exposure even if you have had lash extensions previously without an issue.",
+            "There are different types of contact dermatitis, including **irritant contact dermatitis** and **allergic contact dermatitis**, and the symptoms can look very similar. Because it is not possible for a lash artist to determine the medical cause of a reaction, Jen cannot diagnose whether your symptoms are an allergy, irritation, or another condition.",
+            "If you develop significant, worsening, or persistent symptoms, please contact a healthcare professional for proper evaluation and treatment.",
+          ],
+        },
+      ],
+      [
+        "Can I book with an eye condition or illness?",
+        {
+          paragraphs: [
+            "Please contact Jen **before your appointment** if you have an eye infection, significant irritation or inflammation, a contagious illness, a recent eye procedure or surgery, or another condition that could affect the safety of your service.",
+            "Your appointment may need to be postponed or rescheduled to protect your health and the health of others. If you have recently undergone an eye procedure or have an ongoing eye condition, you may be asked to receive clearance from your healthcare provider before receiving a lash service.",
+          ],
+        },
+      ],
     ],
   },
   {
