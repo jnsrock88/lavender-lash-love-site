@@ -267,15 +267,69 @@ export const faqGroups = [
   {
     title: "During the appointment",
     items: [
-      ["What does the appointment feel like?", "Placeholder: A reassuring description of the application experience will be supplied by Jen."],
-      ["How long will I be there?", "Placeholder: Appointment durations vary by service and will be added when approved."],
+      [
+        "What does the appointment feel like?",
+        {
+          paragraphs: [
+            "Settle in and unwind while Jen creates a personalized lash look designed just for you. Your appointment is your time to relax in a private, peaceful setting, complete with a cozy heated lash bed, soft blankets, and calming music.",
+            "Whether you choose to drift off for a lash nap, enjoy the quiet, or chat throughout your service, the experience is entirely yours. Every detail is designed to make your appointment feel comfortable, unrushed, and a little luxurious.",
+          ],
+        },
+      ],
+      [
+        "How long will my appointment take?",
+        {
+          paragraphs: [
+            "For a new full set, please plan to set aside approximately **2–3 hours** for your appointment. This time includes your consultation, where we’ll discuss your desired look, assess your natural lashes, customize your lash design, complete your application, and allow time for finishing touches and checkout.",
+            "Appointment times for fills and other services will vary depending on the service selected, the condition and amount of your natural lashes and existing extensions, and your desired result.",
+            "Each appointment is intentionally scheduled with enough time to create beautiful, detailed results without feeling rushed. Lash fill appointments typically take **1–2 hours**, depending on your lash retention and the amount of new growth. During your fill, the lashes are cleansed and prepped, grown-out extensions are carefully removed, and fresh extensions are applied to new natural lashes and any lashes where extensions were removed.",
+          ],
+        },
+      ],
     ],
   },
   {
     title: "Aftercare",
     items: [
-      ["How do I care for my lashes?", "Placeholder: Approved cleansing, brushing, and product guidance will be added here."],
-      ["Can I get my lashes wet?", "Placeholder: Jen’s approved post-appointment timing and care instructions will be added here."],
+      [
+        "How do I care for my lash extensions?",
+        {
+          paragraphs: [
+            "Keeping your lashes clean is one of the most important parts of proper aftercare. Gently cleanse them daily with a lash-safe cleanser, brush them as instructed, and avoid pulling, picking, or rubbing your extensions. Jen will show you how to properly cleanse and care for your lashes during your appointment to help keep them healthy, clean, and looking their best.",
+          ],
+          sections: [
+            {
+              title: "Can I wear mascara with lash extensions?",
+              paragraphs: [
+                "Mascara is not recommended on lash extensions, as it can create buildup, affect retention, and make your extensions more difficult to properly clean. **Waterproof mascara and waterproof eyeliner should always be avoided.** Mascara may be worn on your bottom lashes.",
+              ],
+            },
+            {
+              title: "Can I swim with lash extensions?",
+              paragraphs: [
+                "Yes! You can absolutely swim with lash extensions. After swimming, gently cleanse your lashes to remove chlorine, salt water, sunscreen, and other residue that can build up along the lash line and potentially affect retention.",
+              ],
+            },
+            {
+              title: "Can I get my lash extensions wet?",
+              paragraphs: [
+                "Yes! Lash extensions can—and should—get wet. Regular cleansing is an essential part of keeping your lashes clean and healthy.",
+                "After cleansing, gently pat around the eye area dry. You can allow your extensions to air-dry or use a small fan or the **cool setting** of a blow dryer. Once dry, gently brush through them with a clean lash wand to restore their soft, fluffy finish.",
+              ],
+            },
+          ],
+        },
+      ],
+      [
+        "What can affect lash retention?",
+        {
+          paragraphs: [
+            "Lash retention can vary from person to person and is influenced by several factors, including your natural lash cycle, skincare and makeup products, heat and humidity, medications, hormones, supplements, stress, lifestyle, and proper home care.",
+            "Great retention is also a **partnership between you and your lash artist**. Proper preparation, application technique, adhesive use, and product selection all play an important role on the artist’s end, while regular cleansing and proper aftercare help maintain your extensions between appointments.",
+            "Even with excellent application and aftercare, some natural shedding is completely normal as your lashes move through their natural growth cycle.",
+          ],
+        },
+      ],
     ],
   },
   {

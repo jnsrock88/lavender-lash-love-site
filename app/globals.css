@@ -923,6 +923,38 @@ blockquote {
   color: var(--champagne);
 }
 
+.faq-answer-sections {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+
+.faq-answer-sections section {
+  padding: 1.25rem 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--cream) 76%, transparent);
+}
+
+.faq-answer-sections h4 {
+  margin: 0 0 0.65rem;
+  color: var(--aubergine);
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.faq-answer-sections p {
+  margin: 0.65rem 0 0;
+  font-size: 0.84rem;
+  line-height: 1.75;
+}
+
+.faq-answer-sections strong,
+.faq-answer > p strong {
+  color: var(--ink);
+}
+
 .faq-service-guide {
   margin-top: 2rem;
 }

@@ -15,13 +15,25 @@ type AccordionServiceCategory = {
   readonly offerings: readonly AccordionService[];
 };
 
+type AnswerSection = {
+  readonly title: string;
+  readonly paragraphs: readonly string[];
+};
+
 type StructuredAnswer = {
   readonly paragraphs?: readonly string[];
   readonly bullets?: readonly string[];
+  readonly sections?: readonly AnswerSection[];
   readonly services?: readonly AccordionServiceCategory[];
 };
 
 export type AccordionItem = readonly [string, string | StructuredAnswer];
+
+function FormattedText({ children }: { children: string }) {
+  return children.split("**").map((part, index) =>
+    index % 2 === 1 ? <strong key={`${part}-${index}`}>{part}</strong> : part,
+  );
+}
 
 function AnswerContent({ answer }: { answer: string | StructuredAnswer }) {
   if (typeof answer === "string") {
@@ -31,7 +43,9 @@ function AnswerContent({ answer }: { answer: string | StructuredAnswer }) {
   return (
     <>
       {answer.paragraphs?.map((paragraph) => (
-        <p key={paragraph}>{paragraph}</p>
+        <p key={paragraph}>
+          <FormattedText>{paragraph}</FormattedText>
+        </p>
       ))}
       {answer.bullets ? (
         <ul className="faq-checklist">
@@ -39,6 +53,20 @@ function AnswerContent({ answer }: { answer: string | StructuredAnswer }) {
             <li key={item}>{item}</li>
           ))}
         </ul>
+      ) : null}
+      {answer.sections ? (
+        <div className="faq-answer-sections">
+          {answer.sections.map((section) => (
+            <section key={section.title}>
+              <h4>{section.title}</h4>
+              {section.paragraphs.map((paragraph) => (
+                <p key={paragraph}>
+                  <FormattedText>{paragraph}</FormattedText>
+                </p>
+              ))}
+            </section>
+          ))}
+        </div>
       ) : null}
       {answer.services ? (
         <div className="faq-service-guide">

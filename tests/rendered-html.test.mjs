@@ -96,6 +96,26 @@ test("renders the approved appointment FAQ guidance and complete service guide",
   assert.doesNotMatch(html, /Approved contact-lens guidance will be added before launch/i);
 });
 
+test("renders approved appointment timing, experience, retention, and aftercare guidance", async () => {
+  const response = await render("/faq");
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, /cozy heated lash bed, soft blankets, and calming music/i);
+  assert.match(html, /How long will my appointment take\?/i);
+  assert.match(html, /2–3 hours/i);
+  assert.match(html, /Lash fill appointments typically take/i);
+  assert.match(html, /How do I care for my lash extensions\?/i);
+  assert.match(html, /Can I wear mascara with lash extensions\?/i);
+  assert.match(html, /Can I swim with lash extensions\?/i);
+  assert.match(html, /Can I get my lash extensions wet\?/i);
+  assert.match(html, /What can affect lash retention\?/i);
+  assert.match(html, /partnership between you and your lash artist/i);
+  assert.doesNotMatch(html, /How long will I be there\?/i);
+  assert.doesNotMatch(html, /Placeholder: Approved cleansing, brushing, and product guidance/i);
+  assert.doesNotMatch(html, /Placeholder: Jen’s approved post-appointment timing/i);
+});
+
 test("keeps business links and media centralized", async () => {
   const [content, media, home, services] = await Promise.all([
     readFile(new URL("../app/content.ts", import.meta.url), "utf8"),
