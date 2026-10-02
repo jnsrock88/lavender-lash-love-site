@@ -37,23 +37,23 @@ export default function ContactPage() {
           <span>01 · Los Angeles</span>
           <h2>Studio City</h2>
           <p>{business.locations.studioCity.salon}<br />{business.locations.studioCity.address}</p>
-          <a className="text-link" href={business.booking.studioCity} target="_blank" rel="noreferrer">Book Studio City on Vagaro</a>
+          <a className="text-link" href={business.booking.studioCity} target="_blank" rel="noreferrer">Book Studio City</a>
         </article>
         <article>
           <span>02 · Conejo Valley</span>
           <h2>Thousand Oaks</h2>
           <p>{business.locations.thousandOaks.salon}<br />{business.locations.thousandOaks.address}</p>
-          <a className="text-link" href={business.booking.thousandOaks} target="_blank" rel="noreferrer">Book Thousand Oaks on Vagaro</a>
+          <a className="text-link" href={business.booking.thousandOaks} target="_blank" rel="noreferrer">Book Thousand Oaks</a>
         </article>
       </section>
       <section className="inner-booking section-pad">
         <span className="inner-booking-arch" aria-hidden="true" />
         <p className="eyebrow">Ready to reserve?</p>
         <h2>Choose the location that works for you.</h2>
-        <p>Each location continues to its own Vagaro booking page.</p>
+        <p>Continue to GlossGenius to choose your service and appointment time.</p>
         <div className="booking-options">
-          <a className="button button-primary" href={business.booking.studioCity} target="_blank" rel="noreferrer">Book Studio City on Vagaro</a>
-          <a className="button button-primary" href={business.booking.thousandOaks} target="_blank" rel="noreferrer">Book Thousand Oaks on Vagaro</a>
+          <a className="button button-primary" href={business.booking.studioCity} target="_blank" rel="noreferrer">Book Studio City</a>
+          <a className="button button-primary" href={business.booking.thousandOaks} target="_blank" rel="noreferrer">Book Thousand Oaks</a>
         </div>
       </section>
     </main>

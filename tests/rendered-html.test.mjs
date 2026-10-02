@@ -156,22 +156,35 @@ test("renders the approved booking policies without placeholders", async () => {
 });
 
 test("keeps business links and media centralized", async () => {
-  const [content, media, home, services] = await Promise.all([
+  const [content, media, home, services, contact, locations, chrome] = await Promise.all([
     readFile(new URL("../app/content.ts", import.meta.url), "utf8"),
     readFile(new URL("../app/media.ts", import.meta.url), "utf8"),
     readFile(new URL("../app/components/HomePage.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/services/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/contact/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/locations/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/components/SiteChrome.tsx", import.meta.url), "utf8"),
   ]);
 
-  assert.match(content, /https:\/\/www\.vagaro\.com\/lavenderlashlove/);
-  assert.match(content, /https:\/\/www\.vagaro\.com\/us02\/lavlashluvgoddess/);
+  assert.match(content, /https:\/\/lavlashluv\.glossgenius\.com\/\?location_token=1003d-e180752e-e5f7-4415-ad1c-55891524f2c4/);
   assert.match(media, /logo:\s*"\/brand\/logo-primary-transparent-2026\.png"/);
   assert.match(media, /keratin:\s*"\/images\/approved\/korean-lash-lift-tint\.jpg"/);
   assert.match(home, /BOOKING_CHOOSER_URL/);
   assert.match(home, /business\.locations/);
   assert.match(services, /business\.serviceMenu/);
-  assert.doesNotMatch(home, /https:\/\/www\.vagaro\.com/);
-  assert.doesNotMatch(services, /https:\/\/www\.vagaro\.com/);
+  assert.doesNotMatch([content, home, services, contact, locations, chrome].join("\n"), /vagaro/i);
+});
+
+test("routes every booking action to GlossGenius", async () => {
+  const bookingUrl = "https://lavlashluv.glossgenius.com/?location_token=1003d-e180752e-e5f7-4415-ad1c-55891524f2c4";
+
+  for (const pathname of ["/", "/services", "/locations", "/contact", "/faq", "/policies"]) {
+    const response = await render(pathname);
+    assert.equal(response.status, 200, pathname);
+    const html = await response.text();
+    assert.match(html, new RegExp(bookingUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")), pathname);
+    assert.doesNotMatch(html, /vagaro/i, pathname);
+  }
 });
 
 test("does not render placeholder or prototype review copy on public pages", async () => {

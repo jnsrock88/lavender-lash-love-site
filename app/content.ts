@@ -1,14 +1,17 @@
 import { media } from "./media";
 
+const GLOSSGENIUS_BOOKING_URL =
+  "https://lavlashluv.glossgenius.com/?location_token=1003d-e180752e-e5f7-4415-ad1c-55891524f2c4";
+
 const lashExtensionAppointmentDetails =
   "Appointment time includes cleansing and prep, grown-out lash removal, application, sealing, and service closeout.";
 
 export const business = {
   foundedYear: 2012,
   booking: {
-    chooser: "/locations#booking-options",
-    studioCity: "https://www.vagaro.com/lavenderlashlove",
-    thousandOaks: "https://www.vagaro.com/us02/lavlashluvgoddess",
+    chooser: GLOSSGENIUS_BOOKING_URL,
+    studioCity: GLOSSGENIUS_BOOKING_URL,
+    thousandOaks: GLOSSGENIUS_BOOKING_URL,
   },
   contact: {
     phoneDisplay: "661-733-5266",
@@ -33,7 +36,7 @@ export const business = {
         "Thursday: Closed",
         "Friday: 10:00 AM–8:00 PM",
       ],
-      bookingUrl: "https://www.vagaro.com/lavenderlashlove",
+      bookingUrl: GLOSSGENIUS_BOOKING_URL,
       mapsUrl:
         "https://www.google.com/maps/dir/?api=1&destination=4054%20Laurel%20Canyon%20Blvd%2C%20Studio%20City%2C%20CA%2091604%2C%20USA",
       mapsStatus: "approved",
@@ -49,7 +52,7 @@ export const business = {
         "Sunday: Closed",
         "Monday: Closed",
       ],
-      bookingUrl: "https://www.vagaro.com/us02/lavlashluvgoddess",
+      bookingUrl: GLOSSGENIUS_BOOKING_URL,
       mapsUrl:
         "https://www.google.com/maps/dir/?api=1&destination=1421%20E%20Thousand%20Oaks%20Blvd%2C%20Thousand%20Oaks%2C%20CA%2091362%2C%20USA",
       mapsStatus: "generated-awaiting-confirmation",

@@ -18,7 +18,7 @@ export default function LocationsPage() {
       <PageHero
         eyebrow="Two convenient locations"
         title="Your appointment, a little closer to home."
-        intro="Choose between Studio City and Thousand Oaks, each with its own schedule and Vagaro booking page."
+        intro="Choose between Studio City and Thousand Oaks, then continue to GlossGenius to reserve your appointment."
         image={media.about.studio}
         imageAlt="Lavender Lash Love appointment studio"
         label="Lavender Lash Love studio"
@@ -44,7 +44,7 @@ export default function LocationsPage() {
               </dl>
               <div className="location-actions">
                 <a className="button button-primary" href={location.bookingUrl} target="_blank" rel="noreferrer">
-                  Book {location.city} on Vagaro
+                  Book {location.city}
                 </a>
                 <a className="text-link" href={location.mapsUrl} target="_blank" rel="noreferrer">
                   Get directions
