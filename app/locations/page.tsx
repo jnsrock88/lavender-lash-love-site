@@ -17,8 +17,8 @@ const locations = [
   {
     ...business.locations.thousandOaks,
     visual: "thousand-oaks",
-    image: media.locations.thousandOaks,
-    imageAlt: `Interior of ${business.locations.thousandOaks.salon} in Thousand Oaks`,
+    image: media.locations.thousandOaksExterior,
+    imageAlt: "Exterior of Goddess Beauty Salon in Thousand Oaks",
   },
 ] as const;
 

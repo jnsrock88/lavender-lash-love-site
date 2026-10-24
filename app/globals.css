@@ -2005,7 +2005,8 @@ blockquote {
   box-shadow: var(--shadow);
 }
 
-.location-detail .neutral-placeholder.studio-city {
+.location-detail .neutral-placeholder.studio-city,
+.location-detail .neutral-placeholder.thousand-oaks {
   min-height: 0;
   aspect-ratio: 1;
   border-radius: 2rem;

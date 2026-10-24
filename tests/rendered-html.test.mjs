@@ -222,7 +222,7 @@ test("renders the updated Studio City schedule", async () => {
   assert.doesNotMatch(html, /Tuesday: 11:00 AM–8:00 PM|Thursday: Closed|Friday: 10:00 AM–8:00 PM/);
 });
 
-test("uses the D. Miller exterior photo only on the Locations page", async () => {
+test("uses the location exterior photos only on the Locations page", async () => {
   const [locationsResponse, homeResponse] = await Promise.all([
     render("/locations"),
     render("/"),
@@ -236,8 +236,12 @@ test("uses the D. Miller exterior photo only on the Locations page", async () =>
   ]);
   assert.match(locationsHtml, /\/images\/approved\/studio-city-d-miller-exterior\.jpg/);
   assert.match(locationsHtml, /Exterior of D\. Miller Hair Lounge in Studio City/);
+  assert.match(locationsHtml, /\/images\/approved\/thousand-oaks-goddess-exterior\.jpg/);
+  assert.match(locationsHtml, /Exterior of Goddess Beauty Salon in Thousand Oaks/);
   assert.doesNotMatch(homeHtml, /studio-city-d-miller-exterior\.jpg/);
+  assert.doesNotMatch(homeHtml, /thousand-oaks-goddess-exterior\.jpg/);
   assert.match(homeHtml, /home-location-studio-city\.jpg/);
+  assert.match(homeHtml, /home-location-thousand-oaks\.jpg/);
 });
 
 test("renders the traditional lash and brow lift as a separate bookable service", async () => {

@@ -35,6 +35,7 @@ export const media = {
     studioCity: "/images/approved/home-location-studio-city.jpg",
     studioCityExterior: "/images/approved/studio-city-d-miller-exterior.jpg",
     thousandOaks: "/images/approved/home-location-thousand-oaks.jpg",
+    thousandOaksExterior: "/images/approved/thousand-oaks-goddess-exterior.jpg",
   },
   experience: {
     hero: "/images/approved/jen-studio.jpg",

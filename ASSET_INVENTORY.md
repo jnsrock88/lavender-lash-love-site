@@ -17,7 +17,8 @@ All media references are centralized in `app/media.ts`. Production assets are ap
 | `public/images/approved/studio-detail.jpg` | Contact | Hero | Studio detail | 3:4 | Approved production |
 | `public/images/approved/home-location-studio-city.jpg` | Home | Studio City | D. Miller Hair Lounge interior | 5:6 | Approved production |
 | `public/images/approved/studio-city-d-miller-exterior.jpg` | Locations | Studio City | D. Miller Hair Lounge exterior | 1:1 | Approved production |
-| `public/images/approved/home-location-thousand-oaks.jpg` | Home, Locations | Thousand Oaks | Goddess Beauty Salon interior | 4:3 | Approved production |
+| `public/images/approved/home-location-thousand-oaks.jpg` | Home | Thousand Oaks | Goddess Beauty Salon interior | 4:3 | Approved production |
+| `public/images/approved/thousand-oaks-goddess-exterior.jpg` | Locations | Thousand Oaks | Goddess Beauty Salon exterior | 1080:923 | Approved production, web optimized from owner-supplied PNG |
 | `public/images/approved/jen-personality.jpg` | Media registry | Reserved Jen personality portrait | Optional future editorial use | 3:4 | Approved, currently unused |
 | `public/images/approved/home-hero-lash-application.jpg` | Home | Hero | Jen applying eyelash extensions to a client | 2:3 | Approved production |
 | `public/images/beauty-portrait-01.jpeg` | Media registry | Reserved editorial beauty portrait | Optional future editorial use | 2:3 | Temporary stock, currently unused |
