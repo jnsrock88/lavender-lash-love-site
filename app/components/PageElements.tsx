@@ -74,7 +74,7 @@ export function BookingCTA({
       <p className="eyebrow">{eyebrow}</p>
       <h2>{title}</h2>
       <p>{copy}</p>
-      <a className="button button-primary" href={BOOKING_CHOOSER_URL}>
+      <a className="button button-primary" href={BOOKING_CHOOSER_URL} target="_blank" rel="noopener noreferrer">
         Book with Jen
       </a>
     </section>

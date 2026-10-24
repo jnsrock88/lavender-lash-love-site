@@ -184,6 +184,13 @@ test("routes every booking action to GlossGenius", async () => {
     const html = await response.text();
     assert.match(html, new RegExp(bookingUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")), pathname);
     assert.doesNotMatch(html, /vagaro/i, pathname);
+
+    const bookingAnchors = html.match(/<a\b[^>]*href="https:\/\/lavlashluv\.glossgenius\.com\/\?location_token=1003d-e180752e-e5f7-4415-ad1c-55891524f2c4"[^>]*>/g) ?? [];
+    assert.ok(bookingAnchors.length > 0, `${pathname} should include a booking link`);
+    for (const anchor of bookingAnchors) {
+      assert.match(anchor, /target="_blank"/, `${pathname} booking links should open in a new window`);
+      assert.match(anchor, /rel="noopener noreferrer"|rel="noreferrer"/, `${pathname} booking links should be safe`);
+    }
   }
 });
 

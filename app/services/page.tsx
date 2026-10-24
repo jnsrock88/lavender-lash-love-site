@@ -21,6 +21,8 @@ function PriceList({ offerings }: { offerings: readonly { name: string; price: s
             <a
               className="service-book-button"
               href={BOOKING_CHOOSER_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label={`Book ${offering.name}`}
             >
               Book now

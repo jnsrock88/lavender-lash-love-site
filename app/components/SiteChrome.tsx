@@ -65,7 +65,7 @@ export function SiteHeader() {
               <a key={item.href} href={item.href}>{item.label}</a>
             ))}
           </nav>
-          <a className="header-book" href={BOOKING_CHOOSER_URL}>
+          <a className="header-book" href={BOOKING_CHOOSER_URL} target="_blank" rel="noopener noreferrer">
             Book now
           </a>
           <button
@@ -99,7 +99,7 @@ export function SiteHeader() {
           </nav>
           <div className="mobile-menu-foot">
             <p>Studio City · Thousand Oaks</p>
-            <a href={BOOKING_CHOOSER_URL}>Reserve your appointment</a>
+            <a href={BOOKING_CHOOSER_URL} target="_blank" rel="noopener noreferrer">Reserve your appointment</a>
           </div>
         </div>
       </header>
@@ -136,7 +136,7 @@ export function SiteFooter() {
       </div>
       <div className="footer-book">
         <p>Ready when you are.</p>
-        <a href={BOOKING_CHOOSER_URL}>Book an appointment</a>
+        <a href={BOOKING_CHOOSER_URL} target="_blank" rel="noopener noreferrer">Book an appointment</a>
       </div>
       <div className="footer-base">
         <span>© {business.foundedYear} Lavender Lash Love</span>
@@ -148,7 +148,7 @@ export function SiteFooter() {
 
 export function MobileBooking() {
   return (
-    <a className="mobile-booking" href={BOOKING_CHOOSER_URL}>
+    <a className="mobile-booking" href={BOOKING_CHOOSER_URL} target="_blank" rel="noopener noreferrer">
       <span>Book your appointment</span>
     </a>
   );

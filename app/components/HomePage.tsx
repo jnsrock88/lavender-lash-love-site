@@ -51,7 +51,7 @@ export function HomePage() {
             glamour, shaped around your features and the way you want to feel.
           </p>
           <div className="hero-actions">
-            <a className="button button-primary" href={BOOKING_CHOOSER_URL}>
+            <a className="button button-primary" href={BOOKING_CHOOSER_URL} target="_blank" rel="noopener noreferrer">
               Book your appointment
             </a>
           </div>
@@ -96,7 +96,7 @@ export function HomePage() {
           <span className="card-star" aria-hidden="true">✦</span>
           <p className="eyebrow">Ready to glow?</p>
           <h3>Book Your Appointment</h3>
-          <a className="button button-primary" href={BOOKING_CHOOSER_URL}>Book now</a>
+          <a className="button button-primary" href={BOOKING_CHOOSER_URL} target="_blank" rel="noopener noreferrer">Book now</a>
         </aside>
       </section>
 
@@ -186,7 +186,7 @@ export function HomePage() {
         <p className="eyebrow">Ready to glow?</p>
         <h2>Book Your Appointment</h2>
         <p>Choose your preferred location and continue to its external booking page.</p>
-        <a className="button button-primary" href={BOOKING_CHOOSER_URL}>Book with Jen</a>
+        <a className="button button-primary" href={BOOKING_CHOOSER_URL} target="_blank" rel="noopener noreferrer">Book with Jen</a>
       </section>
     </main>
   );

@@ -20,7 +20,7 @@ export default function NotFound() {
       <div>
         <Link className="button button-primary" href="/">Return home</Link>
         <a className="text-link" href="/services">Explore services</a>
-        <a className="text-link" href={BOOKING_CHOOSER_URL}>Book now</a>
+        <a className="text-link" href={BOOKING_CHOOSER_URL} target="_blank" rel="noopener noreferrer">Book now</a>
       </div>
     </main>
   );
