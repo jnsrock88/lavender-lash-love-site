@@ -28,8 +28,8 @@ export const business = {
       city: "Studio City",
       region: "Los Angeles",
       salon: "D. Miller Hair Lounge",
-      addressLines: ["4054 Laurel Canyon Blvd", "Studio City, CA 91604"],
-      address: "4054 Laurel Canyon Blvd, Studio City, CA 91604",
+      addressLines: ["11326 Venture Blvd", "Studio City, CA 91604"],
+      address: "11326 Venture Blvd, Studio City, CA 91604",
       schedule: [
         "Tuesday: 11:00 AM–8:00 PM",
         "Wednesday: 11:00 AM–8:00 PM",
@@ -38,7 +38,7 @@ export const business = {
       ],
       bookingUrl: GLOSSGENIUS_BOOKING_URL,
       mapsUrl:
-        "https://www.google.com/maps/dir/?api=1&destination=4054%20Laurel%20Canyon%20Blvd%2C%20Studio%20City%2C%20CA%2091604%2C%20USA",
+        "https://www.google.com/maps/dir/?api=1&destination=11326%20Venture%20Blvd%2C%20Studio%20City%2C%20CA%2091604%2C%20USA",
       mapsStatus: "approved",
     },
     thousandOaks: {

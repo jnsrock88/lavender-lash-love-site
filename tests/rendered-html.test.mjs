@@ -199,6 +199,17 @@ test("routes every booking action to GlossGenius", async () => {
   }
 });
 
+test("renders the updated Studio City address everywhere", async () => {
+  for (const pathname of ["/", "/locations", "/contact"]) {
+    const response = await render(pathname);
+    assert.equal(response.status, 200, pathname);
+    const html = await response.text();
+    assert.match(html, /11326 Venture Blvd/i, pathname);
+    assert.match(html, /Studio City, CA 91604/i, pathname);
+    assert.doesNotMatch(html, /4054|Laurel Canyon/i, pathname);
+  }
+});
+
 test("renders the traditional lash and brow lift as a separate bookable service", async () => {
   const response = await render("/services");
   assert.equal(response.status, 200);
