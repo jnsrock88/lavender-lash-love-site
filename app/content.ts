@@ -160,6 +160,13 @@ export const business = {
           warning: "BE AWARE YOU CANNOT GET YOUR LASHES WET FOR 24 HOURS POST SERVICE",
         },
         {
+          name: "Traditional Lash/Brow Lift",
+          price: "$130 · 80 min",
+          description:
+            "A classic, efficient treatment for either lashes or brows. For lashes, fast-acting professional formulas lift and curl the natural lashes for a beautifully defined, eye-opening effect, while a custom tint adds rich, mascara-like definition. For brows, the treatment smooths and redirects the natural brow hairs for a fuller, more polished shape with a quicker processing time.",
+          warning: "BE AWARE YOU CANNOT GET YOUR LASHES WET FOR 24 HOURS POST SERVICE",
+        },
+        {
           name: "Lash/Brow Tint",
           price: "$30",
           description:

@@ -187,6 +187,22 @@ test("routes every booking action to GlossGenius", async () => {
   }
 });
 
+test("renders the traditional lash and brow lift as a separate bookable service", async () => {
+  const response = await render("/services");
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, /Korean Lash\/Brow Lift/);
+  assert.match(html, /Traditional Lash\/Brow Lift/);
+  assert.match(html, /\$130 · 80 min/);
+  assert.match(html, /A classic, efficient treatment for either lashes or brows/);
+  assert.match(
+    html,
+    /BE AWARE YOU CANNOT GET YOUR LASHES WET FOR 24 HOURS POST SERVICE/,
+  );
+  assert.match(html, /aria-label="Book Traditional Lash\/Brow Lift"/);
+});
+
 test("does not render placeholder or prototype review copy on public pages", async () => {
   for (const pathname of ["/", "/about", "/faq", "/locations", "/policies", "/services"]) {
     const response = await render(pathname);
