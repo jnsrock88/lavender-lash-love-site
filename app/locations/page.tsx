@@ -8,8 +8,18 @@ export const metadata = {
 };
 
 const locations = [
-  { ...business.locations.studioCity, visual: "studio-city", image: media.locations.studioCity },
-  { ...business.locations.thousandOaks, visual: "thousand-oaks", image: media.locations.thousandOaks },
+  {
+    ...business.locations.studioCity,
+    visual: "studio-city",
+    image: media.locations.studioCityExterior,
+    imageAlt: "Exterior of D. Miller Hair Lounge in Studio City",
+  },
+  {
+    ...business.locations.thousandOaks,
+    visual: "thousand-oaks",
+    image: media.locations.thousandOaks,
+    imageAlt: `Interior of ${business.locations.thousandOaks.salon} in Thousand Oaks`,
+  },
 ] as const;
 
 export default function LocationsPage() {
@@ -30,7 +40,7 @@ export default function LocationsPage() {
               className={location.visual}
               label={`${location.city} salon interior`}
               src={location.image}
-              alt={`Interior of ${location.salon} in ${location.city}`}
+              alt={location.imageAlt}
               showLabel={false}
             />
             <div className="location-detail-copy">

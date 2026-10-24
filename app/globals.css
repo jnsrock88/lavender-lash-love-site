@@ -2005,6 +2005,12 @@ blockquote {
   box-shadow: var(--shadow);
 }
 
+.location-detail .neutral-placeholder.studio-city {
+  min-height: 0;
+  aspect-ratio: 1;
+  border-radius: 2rem;
+}
+
 .location-detail h2 {
   margin: 0;
   color: var(--aubergine);
