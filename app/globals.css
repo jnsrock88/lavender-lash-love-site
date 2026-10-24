@@ -2166,7 +2166,12 @@ blockquote {
   display: grid;
   grid-template-columns: 0.42fr 1fr;
   gap: clamp(3rem, 9vw, 10rem);
+  padding-bottom: clamp(1rem, 2vw, 2rem);
   background: var(--cream);
+}
+
+.policies-page + .inner-booking {
+  padding-top: clamp(2.5rem, 4vw, 4rem);
 }
 
 .policies-page aside {
