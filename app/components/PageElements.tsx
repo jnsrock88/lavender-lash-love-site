@@ -15,6 +15,14 @@ export function TextLink({
   );
 }
 
+export function BookingPolicyNotice() {
+  return (
+    <p className="booking-policy-notice">
+      By booking, you agree to our <a href="/policies">Booking Policies</a>.
+    </p>
+  );
+}
+
 export function PageHero({
   eyebrow,
   title,
@@ -74,6 +82,7 @@ export function BookingCTA({
       <p className="eyebrow">{eyebrow}</p>
       <h2>{title}</h2>
       <p>{copy}</p>
+      <BookingPolicyNotice />
       <a className="button button-primary" href={BOOKING_CHOOSER_URL} target="_blank" rel="noopener noreferrer">
         Book with Jen
       </a>

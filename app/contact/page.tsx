@@ -1,7 +1,7 @@
 import {
   business,
 } from "../content";
-import { PageHero } from "../components/PageElements";
+import { BookingPolicyNotice, PageHero } from "../components/PageElements";
 import { media } from "../media";
 
 export const metadata = {
@@ -38,12 +38,14 @@ export default function ContactPage() {
           <h2>Studio City</h2>
           <p>{business.locations.studioCity.salon}<br />{business.locations.studioCity.address}</p>
           <a className="text-link" href={business.booking.studioCity} target="_blank" rel="noreferrer">Book Studio City</a>
+          <BookingPolicyNotice />
         </article>
         <article>
           <span>02 · Conejo Valley</span>
           <h2>Thousand Oaks</h2>
           <p>{business.locations.thousandOaks.salon}<br />{business.locations.thousandOaks.address}</p>
           <a className="text-link" href={business.booking.thousandOaks} target="_blank" rel="noreferrer">Book Thousand Oaks</a>
+          <BookingPolicyNotice />
         </article>
       </section>
       <section className="inner-booking section-pad">
@@ -51,6 +53,7 @@ export default function ContactPage() {
         <p className="eyebrow">Ready to reserve?</p>
         <h2>Choose the location that works for you.</h2>
         <p>Continue to GlossGenius to choose your service and appointment time.</p>
+        <BookingPolicyNotice />
         <div className="booking-options">
           <a className="button button-primary" href={business.booking.studioCity} target="_blank" rel="noreferrer">Book Studio City</a>
           <a className="button button-primary" href={business.booking.thousandOaks} target="_blank" rel="noreferrer">Book Thousand Oaks</a>

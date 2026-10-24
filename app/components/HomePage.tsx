@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { BOOKING_CHOOSER_URL, business, services, testimonials } from "../content";
 import { media } from "../media";
+import { BookingPolicyNotice } from "./PageElements";
 
 function TextLink({
   href,
@@ -54,6 +55,7 @@ export function HomePage() {
             <a className="button button-primary" href={BOOKING_CHOOSER_URL} target="_blank" rel="noopener noreferrer">
               Book your appointment
             </a>
+            <BookingPolicyNotice />
           </div>
         </div>
         <div className="hero-visual">
@@ -97,6 +99,7 @@ export function HomePage() {
           <p className="eyebrow">Ready to glow?</p>
           <h3>Book Your Appointment</h3>
           <a className="button button-primary" href={BOOKING_CHOOSER_URL} target="_blank" rel="noopener noreferrer">Book now</a>
+          <BookingPolicyNotice />
         </aside>
       </section>
 
@@ -115,6 +118,7 @@ export function HomePage() {
               <h3>{location.city}</h3>
               <p>{location.salon}<br />{location.address}</p>
               <a className="button button-primary" href={location.bookingUrl} target="_blank" rel="noreferrer">Book {location.city}</a>
+              <BookingPolicyNotice />
             </article>
           ))}
         </div>
@@ -186,6 +190,7 @@ export function HomePage() {
         <p className="eyebrow">Ready to glow?</p>
         <h2>Book Your Appointment</h2>
         <p>Choose your preferred location and continue to its external booking page.</p>
+        <BookingPolicyNotice />
         <a className="button button-primary" href={BOOKING_CHOOSER_URL} target="_blank" rel="noopener noreferrer">Book with Jen</a>
       </section>
     </main>

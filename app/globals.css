@@ -1432,6 +1432,20 @@ blockquote {
   flex: 0 0 100%;
 }
 
+.booking-policy-notice {
+  margin: 0.55rem 0 0;
+  color: var(--muted);
+  font-size: 0.68rem;
+  line-height: 1.5;
+}
+
+.booking-policy-notice a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
 .service-book-button:hover,
 .service-book-button:focus-visible {
   background: var(--aubergine);
@@ -2195,6 +2209,56 @@ blockquote {
   margin: 0.7rem 0 0;
   color: var(--muted);
   line-height: 1.8;
+}
+
+.policy-list h3 {
+  margin: 1.5rem 0 0.55rem;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.policy-list ul {
+  margin: 0.65rem 0 1rem;
+  padding-left: 1.25rem;
+  color: var(--muted);
+}
+
+.policy-list li {
+  margin: 0.45rem 0;
+  padding-left: 0.25rem;
+  line-height: 1.7;
+}
+
+.policy-table-wrap {
+  overflow-x: auto;
+  margin-top: 1.5rem;
+}
+
+.policy-table-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 34rem;
+  color: var(--ink);
+}
+
+.policy-table-wrap th,
+.policy-table-wrap td {
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.policy-table-wrap th {
+  background: var(--lilac);
+  color: var(--aubergine);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .policy-list strong {

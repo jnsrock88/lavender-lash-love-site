@@ -125,7 +125,7 @@ export function SiteFooter() {
         {navigation.slice(0, 5).map((item) => (
           <a key={item.href} href={item.href}>{item.label}</a>
         ))}
-        <a href="/policies">Policies</a>
+        <a href="/policies">Booking Policies</a>
       </div>
       <div className="footer-nav">
         <p>Connect</p>
@@ -140,7 +140,7 @@ export function SiteFooter() {
       </div>
       <div className="footer-base">
         <span>© {business.foundedYear} Lavender Lash Love</span>
-        <span><a href="/policies">Policies</a> · <a href="/contact">Contact</a></span>
+        <span><a href="/policies">Booking Policies</a> · <a href="/contact">Contact</a></span>
       </div>
     </footer>
   );

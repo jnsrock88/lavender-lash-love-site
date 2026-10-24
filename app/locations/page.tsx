@@ -1,5 +1,5 @@
 import { business } from "../content";
-import { BookingCTA, PageHero, PlaceholderImage } from "../components/PageElements";
+import { BookingCTA, BookingPolicyNotice, PageHero, PlaceholderImage } from "../components/PageElements";
 import { media } from "../media";
 
 export const metadata = {
@@ -50,6 +50,7 @@ export default function LocationsPage() {
                   Get directions
                 </a>
               </div>
+              <BookingPolicyNotice />
             </div>
           </article>
         ))}

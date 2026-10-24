@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { BOOKING_CHOOSER_URL, business } from "../content";
-import { BookingCTA, PageHero } from "../components/PageElements";
+import { BookingCTA, BookingPolicyNotice, PageHero } from "../components/PageElements";
 import { media } from "../media";
 
 export const metadata = {
@@ -27,6 +27,7 @@ function PriceList({ offerings }: { offerings: readonly { name: string; price: s
             >
               Book now
             </a>
+            <BookingPolicyNotice />
           </span>
         </div>
       ))}

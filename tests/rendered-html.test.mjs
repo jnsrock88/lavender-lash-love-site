@@ -65,7 +65,7 @@ test("server-renders every approved primary route", async () => {
     ["/locations", /Your appointment, a little closer to home\./],
     ["/faq", /A little clarity, before you arrive\./],
     ["/contact", /A thoughtful answer is never far away\./],
-    ["/policies", /Booking Policies/],
+    ["/policies", /Complete Salon Policies &amp; Client Guidelines/],
   ];
 
   for (const [pathname, expected] of routes) {
@@ -142,15 +142,18 @@ test("renders the approved booking policies without placeholders", async () => {
   assert.equal(response.status, 200);
 
   const html = await response.text();
-  assert.match(html, /Booking Policies/i);
-  assert.match(html, /\$50 deposit required to book/i);
+  assert.match(html, /Complete Salon Policies &amp; Client Guidelines/i);
+  assert.match(html, /Cancellation &amp; Rescheduling Policy/i);
+  assert.match(html, /A \$50 deposit is required to book/i);
   assert.match(html, /50% of the scheduled service/i);
   assert.match(html, /100% of the scheduled service/i);
-  assert.match(html, /PLEASE PLAN AHEAD FOR PARKING AND RESTROOM USE/i);
-  assert.match(html, /\$75 Special Appointment Fee/i);
-  assert.match(html, /Trained service animals are welcome/i);
-  assert.match(html, /All services are non-refundable/i);
-  assert.match(html, /read, understood, and agreed to these policies/i);
+  assert.match(html, /A \$75 special appointment fee/i);
+  assert.match(html, /Trained service animals are permitted/i);
+  assert.match(html, /All services provided by Lavender Lash Love are non-refundable/i);
+  assert.match(html, /Photography &amp; Video Release Policy/i);
+  assert.match(html, /Client Consent, Risks &amp; Liability Release/i);
+  assert.match(html, /Quick Reference: Your Main Fees &amp; Rules/i);
+  assert.match(html, /Marketing photography/i);
   assert.doesNotMatch(html, /Placeholder policy/i);
   assert.doesNotMatch(html, /Prototype notice/i);
 });
@@ -184,6 +187,8 @@ test("routes every booking action to GlossGenius", async () => {
     const html = await response.text();
     assert.match(html, new RegExp(bookingUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")), pathname);
     assert.doesNotMatch(html, /vagaro/i, pathname);
+    assert.match(html, /By booking, you agree to our/i, pathname);
+    assert.match(html, /href="\/policies"[^>]*>Booking Policies<\/a>/i, pathname);
 
     const bookingAnchors = html.match(/<a\b[^>]*href="https:\/\/lavlashluv\.glossgenius\.com\/\?location_token=1003d-e180752e-e5f7-4415-ad1c-55891524f2c4"[^>]*>/g) ?? [];
     assert.ok(bookingAnchors.length > 0, `${pathname} should include a booking link`);
