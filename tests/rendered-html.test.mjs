@@ -210,6 +210,18 @@ test("renders the updated Studio City address everywhere", async () => {
   }
 });
 
+test("renders the updated Studio City schedule", async () => {
+  const response = await render("/locations");
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, /Tuesday: 10:00 AM–6:00 PM/);
+  assert.match(html, /Wednesday: 10:00 AM–6:00 PM/);
+  assert.match(html, /Thursday: 12:00 PM–6:00 PM/);
+  assert.match(html, /Friday: 10:00 AM–6:00 PM/);
+  assert.doesNotMatch(html, /Tuesday: 11:00 AM–8:00 PM|Thursday: Closed|Friday: 10:00 AM–8:00 PM/);
+});
+
 test("renders the traditional lash and brow lift as a separate bookable service", async () => {
   const response = await render("/services");
   assert.equal(response.status, 200);

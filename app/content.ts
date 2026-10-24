@@ -31,10 +31,10 @@ export const business = {
       addressLines: ["11326 Venture Blvd", "Studio City, CA 91604"],
       address: "11326 Venture Blvd, Studio City, CA 91604",
       schedule: [
-        "Tuesday: 11:00 AM–8:00 PM",
-        "Wednesday: 11:00 AM–8:00 PM",
-        "Thursday: Closed",
-        "Friday: 10:00 AM–8:00 PM",
+        "Tuesday: 10:00 AM–6:00 PM",
+        "Wednesday: 10:00 AM–6:00 PM",
+        "Thursday: 12:00 PM–6:00 PM",
+        "Friday: 10:00 AM–6:00 PM",
       ],
       bookingUrl: GLOSSGENIUS_BOOKING_URL,
       mapsUrl:
