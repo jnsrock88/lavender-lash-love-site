@@ -750,10 +750,11 @@ blockquote {
 
 .location-visual {
   position: relative;
-  min-height: clamp(24rem, 38vw, 36rem);
+  min-height: 0;
+  aspect-ratio: 1;
   margin-bottom: 2rem;
   overflow: hidden;
-  border-radius: 15rem 15rem 0.6rem 0.6rem;
+  border-radius: 1.5rem;
   box-shadow: var(--shadow);
 }
 
@@ -2868,8 +2869,8 @@ blockquote {
   }
 
   .location-visual {
-    min-height: 110vw;
-    border-radius: 45vw 45vw 0.6rem 0.6rem;
+    min-height: 0;
+    border-radius: 1.25rem;
   }
 
   .testimonials blockquote {

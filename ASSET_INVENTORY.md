@@ -15,10 +15,10 @@ All media references are centralized in `app/media.ts`. Production assets are ap
 | `public/images/approved/jen-working.jpg` | The Experience | Application | Jen applying lashes | 5:4 | Approved production |
 | `public/images/approved/studio-detail.jpg` | The Experience | Reveal and aftercare | Studio detail | 3:4 | Approved production |
 | `public/images/approved/studio-detail.jpg` | Contact | Hero | Studio detail | 3:4 | Approved production |
-| `public/images/approved/home-location-studio-city.jpg` | Home | Studio City | D. Miller Hair Lounge interior | 5:6 | Approved production |
-| `public/images/approved/studio-city-d-miller-exterior.jpg` | Locations | Studio City | D. Miller Hair Lounge exterior | 1:1 | Approved production |
-| `public/images/approved/home-location-thousand-oaks.jpg` | Home | Thousand Oaks | Goddess Beauty Salon interior | 4:3 | Approved production |
-| `public/images/approved/thousand-oaks-goddess-exterior.jpg` | Locations | Thousand Oaks | Goddess Beauty Salon exterior | 1080:923 | Approved production, web optimized from owner-supplied PNG |
+| `public/images/approved/home-location-studio-city.jpg` | Media registry | Reserved Studio City interior | Optional future editorial use | 5:6 | Approved, currently unused |
+| `public/images/approved/studio-city-d-miller-exterior.jpg` | Home, Locations | Studio City | D. Miller Hair Lounge exterior | 1:1 | Approved production |
+| `public/images/approved/home-location-thousand-oaks.jpg` | Media registry | Reserved Thousand Oaks interior | Optional future editorial use | 4:3 | Approved, currently unused |
+| `public/images/approved/thousand-oaks-goddess-exterior.jpg` | Home, Locations | Thousand Oaks | Goddess Beauty Salon exterior | 1080:923 | Approved production, web optimized from owner-supplied PNG |
 | `public/images/approved/locations-hero-studio-room.jpg` | Locations | Hero | Lavender Lash Love treatment room | 3:4 | Approved production, web optimized from owner-supplied PNG |
 | `public/images/approved/jen-personality.jpg` | Media registry | Reserved Jen personality portrait | Optional future editorial use | 3:4 | Approved, currently unused |
 | `public/images/approved/home-hero-lash-application.jpg` | Home | Hero | Jen applying eyelash extensions to a client | 2:3 | Approved production |

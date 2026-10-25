@@ -89,8 +89,10 @@ export function HomePage() {
         </div>
         <div className="home-about-copy">
           <p>
-            Jen approaches every set as a portrait—looking closely, listening
-            carefully, and designing for the person in front of her.
+            A licensed cosmetologist since 2008 and lash artist since 2012, Jen
+            combines experience, precision, and creativity with a love for
+            beautiful transformations. Her favorite part? Seeing a client&apos;s
+            reaction when they open their eyes to their new lashes.
           </p>
           <a className="button button-primary" href="/about">Learn more about Jen</a>
         </div>
@@ -107,12 +109,20 @@ export function HomePage() {
         <SectionIntro eyebrow="Two locations" title="Your appointment, a little closer to home." />
         <div className="location-line">
           {[
-            { location: business.locations.studioCity, image: media.locations.studioCity },
-            { location: business.locations.thousandOaks, image: media.locations.thousandOaks },
-          ].map(({ location, image }, index) => (
+            {
+              location: business.locations.studioCity,
+              image: media.locations.studioCityExterior,
+              imageAlt: "Exterior of D. Miller Hair Lounge in Studio City",
+            },
+            {
+              location: business.locations.thousandOaks,
+              image: media.locations.thousandOaksExterior,
+              imageAlt: "Exterior of Goddess Beauty Salon in Thousand Oaks",
+            },
+          ].map(({ location, image, imageAlt }, index) => (
             <article key={location.city}>
               <div className="location-visual">
-                <Image src={image} alt={`Interior of ${location.salon} in ${location.city}`} fill sizes="(max-width: 760px) 90vw, 42vw" />
+                <Image src={image} alt={imageAlt} fill sizes="(max-width: 760px) 90vw, 42vw" />
               </div>
               <span>0{index + 1} · {location.region}</span>
               <h3>{location.city}</h3>

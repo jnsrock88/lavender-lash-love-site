@@ -50,6 +50,8 @@ test("server-renders the Lavender Lash Love homepage", async () => {
   assert.match(html, /Nyrie<\/cite>/);
   assert.equal((html.match(/<blockquote/g) ?? []).length, 3);
   assert.doesNotMatch(html, /Kind words|Placeholder testimonials|Client name placeholder/i);
+  assert.match(html, /licensed cosmetologist since 2008 and lash artist since 2012/i);
+  assert.match(html, /reaction when they open their eyes to their new lashes/i);
   assert.match(html.replaceAll("<!-- -->", ""), /© 2012 Lavender Lash Love/);
   assert.doesNotMatch(html, /Copyright year placeholder/i);
   assert.match(html, /\/brand\/logo-primary-transparent-2026\.png/);
@@ -243,7 +245,7 @@ test("renders the updated Studio City schedule", async () => {
   assert.doesNotMatch(html, /Tuesday: 11:00 AM–8:00 PM|Thursday: Closed|Friday: 10:00 AM–8:00 PM/);
 });
 
-test("uses the location exterior photos only on the Locations page", async () => {
+test("uses the approved location exterior photos on Home and Locations", async () => {
   const [locationsResponse, homeResponse] = await Promise.all([
     render("/locations"),
     render("/"),
@@ -259,10 +261,12 @@ test("uses the location exterior photos only on the Locations page", async () =>
   assert.match(locationsHtml, /Exterior of D\. Miller Hair Lounge in Studio City/);
   assert.match(locationsHtml, /\/images\/approved\/thousand-oaks-goddess-exterior\.jpg/);
   assert.match(locationsHtml, /Exterior of Goddess Beauty Salon in Thousand Oaks/);
-  assert.doesNotMatch(homeHtml, /studio-city-d-miller-exterior\.jpg/);
-  assert.doesNotMatch(homeHtml, /thousand-oaks-goddess-exterior\.jpg/);
-  assert.match(homeHtml, /home-location-studio-city\.jpg/);
-  assert.match(homeHtml, /home-location-thousand-oaks\.jpg/);
+  assert.match(homeHtml, /studio-city-d-miller-exterior\.jpg/);
+  assert.match(homeHtml, /Exterior of D\. Miller Hair Lounge in Studio City/);
+  assert.match(homeHtml, /thousand-oaks-goddess-exterior\.jpg/);
+  assert.match(homeHtml, /Exterior of Goddess Beauty Salon in Thousand Oaks/);
+  assert.doesNotMatch(homeHtml, /home-location-studio-city\.jpg/);
+  assert.doesNotMatch(homeHtml, /home-location-thousand-oaks\.jpg/);
 });
 
 test("uses the approved treatment room photo for the Locations hero only", async () => {
