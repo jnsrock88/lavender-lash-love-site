@@ -29,8 +29,8 @@ export default function LocationsPage() {
         eyebrow="Two convenient locations"
         title="Your appointment, a little closer to home."
         intro="Choose between Studio City and Thousand Oaks, then continue to GlossGenius to reserve your appointment."
-        image={media.about.studio}
-        imageAlt="Lavender Lash Love appointment studio"
+        image={media.pageHeroes.locations}
+        imageAlt="Lavender Lash Love treatment room"
         label="Lavender Lash Love studio"
       />
       <section className="locations-page section-pad" id="booking-options">

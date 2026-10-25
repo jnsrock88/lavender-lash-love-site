@@ -99,5 +99,6 @@ export const media = {
     gallery: `${temporaryCurrentSite}/gallery-02.png`,
     contact: "/images/beauty-portrait-03.jpeg",
     faq: `${temporaryCurrentSite}/gallery-03.png`,
+    locations: "/images/approved/locations-hero-studio-room.jpg",
   },
 } as const;

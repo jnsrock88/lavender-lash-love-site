@@ -244,6 +244,23 @@ test("uses the location exterior photos only on the Locations page", async () =>
   assert.match(homeHtml, /home-location-thousand-oaks\.jpg/);
 });
 
+test("uses the approved treatment room photo for the Locations hero only", async () => {
+  const [locationsResponse, aboutResponse] = await Promise.all([
+    render("/locations"),
+    render("/about"),
+  ]);
+  assert.equal(locationsResponse.status, 200);
+  assert.equal(aboutResponse.status, 200);
+
+  const [locationsHtml, aboutHtml] = await Promise.all([
+    locationsResponse.text(),
+    aboutResponse.text(),
+  ]);
+  assert.match(locationsHtml, /locations-hero-studio-room\.jpg/);
+  assert.match(locationsHtml, /Lavender Lash Love treatment room/);
+  assert.doesNotMatch(aboutHtml, /locations-hero-studio-room\.jpg/);
+});
+
 test("renders the traditional lash and brow lift as a separate bookable service", async () => {
   const response = await render("/services");
   assert.equal(response.status, 200);
