@@ -1801,6 +1801,113 @@ blockquote {
 }
 
 /* About */
+.about-title {
+  position: relative;
+  display: flex;
+  align-items: end;
+  min-height: clamp(27rem, 45vw, 39rem);
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 78% 30%, rgba(177, 143, 190, 0.24) 0 8rem, transparent 8.1rem),
+    linear-gradient(135deg, var(--cream) 0 68%, var(--lilac) 68% 100%);
+}
+
+.about-title::after {
+  position: absolute;
+  right: 9%;
+  bottom: 16%;
+  width: 7rem;
+  height: 7rem;
+  border: 1px solid rgba(104, 39, 113, 0.28);
+  border-radius: 50%;
+  content: "";
+}
+
+.about-title h1 {
+  position: relative;
+  z-index: 1;
+  max-width: 12ch;
+  margin: 0;
+  color: var(--aubergine);
+  font-size: clamp(4.5rem, 8vw, 8rem);
+  line-height: 0.86;
+}
+
+.about-chapter {
+  display: grid;
+  grid-template-columns: minmax(20rem, 0.82fr) minmax(0, 1.18fr);
+  align-items: center;
+  gap: clamp(3rem, 8vw, 8rem);
+  background: var(--cream);
+}
+
+.about-chapter:nth-child(even) {
+  background: var(--lilac);
+}
+
+.about-chapter-media {
+  position: relative;
+  min-height: clamp(30rem, 45vw, 44rem);
+  overflow: hidden;
+  border: 1px solid rgba(104, 39, 113, 0.12);
+  border-radius: 1.5rem;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(255, 251, 244, 0.28) 0 6rem, transparent 6.1rem),
+    linear-gradient(145deg, #d8c5d8, #94719b);
+  box-shadow: var(--shadow);
+}
+
+.about-chapter-media::after {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 1px solid rgba(255, 251, 244, 0.55);
+  border-radius: 50%;
+  content: "";
+}
+
+.about-chapter-number,
+.about-chapter-kicker {
+  color: var(--champagne);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.about-chapter-number {
+  margin-bottom: 1rem;
+}
+
+.about-chapter-copy h2 {
+  max-width: 13ch;
+  margin: 0 0 1rem;
+  color: var(--aubergine);
+  font-size: clamp(3.5rem, 5.5vw, 6rem);
+  line-height: 0.9;
+}
+
+.about-chapter-kicker {
+  margin-bottom: 2rem;
+}
+
+.about-chapter-copy > p:not(.about-chapter-number):not(.about-chapter-kicker) {
+  max-width: 43rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.about-chapter-copy .about-chapter-emphasis {
+  color: var(--aubergine);
+  font-weight: 700;
+}
+
+.about-chapter-copy .button {
+  margin-top: 1.25rem;
+}
+
 .about-story {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
@@ -2911,11 +3018,33 @@ blockquote {
   }
 
   .about-story,
+  .about-chapter,
   .philosophy,
   .credentials,
   .contact-page,
   .policies-page {
     grid-template-columns: 1fr;
+  }
+
+  .about-title {
+    min-height: 28rem;
+  }
+
+  .about-title h1 {
+    font-size: clamp(4rem, 18vw, 5.5rem);
+  }
+
+  .about-chapter {
+    gap: 3rem;
+  }
+
+  .about-chapter-media {
+    min-height: 112vw;
+    border-radius: 1.25rem;
+  }
+
+  .about-chapter-copy h2 {
+    font-size: 3.8rem;
   }
 
   .about-bio {

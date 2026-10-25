@@ -75,6 +75,26 @@ test("server-renders every approved primary route", async () => {
   }
 });
 
+test("renders the four approved About Jen chapters with photo spaces", async () => {
+  const response = await render("/about");
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, /Artistry, precision, and personal care\./);
+  assert.match(html, /Meet Jen/);
+  assert.match(html, /The Art Behind the Lashes/);
+  assert.match(html, /More Than an Appointment/);
+  assert.match(html, /Your Lash Experience Starts Here/);
+  assert.match(html, /licensed cosmetologist in 2008/);
+  assert.match(html, /opportunity to learn eyelash extensions came along in 2012/);
+  assert.match(html, /over 14 years of lash experience/);
+  assert.equal((html.match(/class="about-chapter-media"/g) ?? []).length, 4);
+  assert.match(html, /Book Your Appointment/);
+  assert.doesNotMatch(html, /I want every client to feel seen before a single lash is placed/);
+  assert.doesNotMatch(html, /Enhance the expression\. Never overwhelm the person\./);
+  assert.doesNotMatch(html, /Why clients return/);
+});
+
 test("renders the approved appointment FAQ guidance and complete service guide", async () => {
   const response = await render("/faq");
   assert.equal(response.status, 200);
