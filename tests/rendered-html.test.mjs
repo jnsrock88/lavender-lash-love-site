@@ -36,7 +36,8 @@ test("server-renders the Lavender Lash Love homepage", async () => {
   assert.match(html, /Book your appointment/i);
   assert.doesNotMatch(html, /Custom lash artistry/);
   assert.doesNotMatch(html, /Softness, shape, and light\./);
-  assert.equal((html.match(/<figure/g) ?? []).length, 6);
+  assert.equal((html.match(/<figure/g) ?? []).length, 0);
+  assert.doesNotMatch(html, /Selected work|View full gallery/i);
   assert.ok(html.indexOf('id="locations"') < html.indexOf('id="services"'));
   assert.match(html, /Questions\? Everything you need to know is right here\./);
   assert.match(html, /href="\/faq"[^>]*>Explore FAQs/i);

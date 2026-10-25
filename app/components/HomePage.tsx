@@ -160,22 +160,6 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="gallery section-pad" id="gallery">
-        <span className="gallery-backdrop-element" aria-hidden="true" />
-        <div className="section-intro align-right">
-          <p className="eyebrow">Selected work</p>
-        </div>
-        <div className="editorial-gallery">
-          {media.gallery.slice(0, 6).map((item) => (
-            <figure key={item.src}>
-              <Image src={item.src} alt={item.alt} fill sizes="(max-width: 760px) 90vw, 32vw" />
-              <figcaption>{item.label}</figcaption>
-            </figure>
-          ))}
-        </div>
-        <div className="section-action"><TextLink href="/gallery">View full gallery</TextLink></div>
-      </section>
-
       <section className="testimonials section-pad">
         <p className="eyebrow">Testimonials</p>
         <div className="testimonial-grid">
