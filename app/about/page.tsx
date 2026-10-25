@@ -64,7 +64,7 @@ export default function AboutPage() {
             <p>Whether you&apos;re visiting for your first set, maintaining your signature look, or trying something new, Jen looks forward to creating something uniquely yours.</p>
             <p className="about-chapter-emphasis">Because the best part of every transformation isn&apos;t just how you look. It&apos;s how you feel.</p>
             <a className="button button-primary" href={BOOKING_CHOOSER_URL} target="_blank" rel="noopener noreferrer">
-              Book Your Appointment 💜
+              Book Your Appointment
             </a>
           </div>
         </section>

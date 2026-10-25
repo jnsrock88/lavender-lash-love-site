@@ -90,6 +90,7 @@ test("renders the four approved About Jen chapters with photo spaces", async () 
   assert.match(html, /over 14 years of lash experience/);
   assert.equal((html.match(/class="about-chapter-media"/g) ?? []).length, 4);
   assert.match(html, /Book Your Appointment/);
+  assert.doesNotMatch(html.replaceAll("<!-- -->", ""), /Book Your Appointment 💜/);
   assert.doesNotMatch(html, /I want every client to feel seen before a single lash is placed/);
   assert.doesNotMatch(html, /Enhance the expression\. Never overwhelm the person\./);
   assert.doesNotMatch(html, /Why clients return/);
